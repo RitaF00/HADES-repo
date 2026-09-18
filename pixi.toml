@@ -1,0 +1,15 @@
+[workspace]
+authors = ["RitaF00 <rita.feriozzi@gssi.it>"]
+channels = ["conda-forge"]
+name = "HADES_DATA"
+platforms = ["linux-64"]
+version = "0.1.0"
+
+[tasks]
+
+[dependencies]
+python = "3.12.*"
+ipykernel = ">=7.3.0,<8"
+
+[pypi-dependencies]
+legend-pygeom-hades = ">=0.2.1, <0.3"

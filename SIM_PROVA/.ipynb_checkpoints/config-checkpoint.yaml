@@ -1,0 +1,10 @@
+detector: V13049A # the detector name
+daq_settings: # details about the data taking
+  flashcam:
+    card_interface: efb2
+run: run0001 # the run number
+measurement: th_HS2_top_psa # the measurement name
+source_position: # the source position
+  phi_in_deg: 0.0
+  r_in_mm: 0.0
+  z_in_mm: 38.0

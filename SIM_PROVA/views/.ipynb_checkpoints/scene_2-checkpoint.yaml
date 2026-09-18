@@ -1,0 +1,13 @@
+
+fine_mesh: true
+
+window_size: [1000, 800]
+export_scale: 2
+
+default:
+  focus: [0, 0, 0]
+  up: [0, 0, 1]
+  camera: [8000.000, -0.000, 250.000]
+  parallel: false
+
+export_and_exit: "SIM_PROVA/views/view_2.png"
