@@ -1,0 +1,34 @@
+run0001:
+  campaign: c1
+  daq_settings:
+    flashcam:
+      card_interface: efb1
+      decay_time_in_ns: 46000
+      shaping_time_in_ns: 6000
+      signal_depth_in_samples: 22290
+      trigger_threshold: 600
+  detector: V09372A
+  elog: https://elog.legend-exp.org/HADES/265
+  high_voltage_in_V: 4500
+  measurement: bkg
+  run: run0001
+  run_live_time_in_s: 61200
+  run_start_time: 220125T151123
+  shifter: Simon
+run0002:
+  campaign: c1
+  daq_settings:
+    flashcam:
+      card_interface: efb3
+      decay_time_in_ns: 46000
+      shaping_time_in_ns: 6000
+      signal_depth_in_samples: 22290
+      trigger_threshold: 600
+  detector: V09372A
+  elog: https://elog.legend-exp.org/HADES/267
+  high_voltage_in_V: 4500
+  measurement: bkg
+  run: run0002
+  run_live_time_in_s: 61200
+  run_start_time: 220127T154015
+  shifter: Simon

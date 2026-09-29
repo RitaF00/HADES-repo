@@ -1,0 +1,88 @@
+run0001:
+  campaign: c1
+  collimator: false
+  daq_settings:
+    flashcam:
+      card_interface: efb1
+      decay_time_in_ns: 46000
+      shaping_time_in_ns: 6000
+      signal_depth_in_samples: 22290
+      trigger_threshold: 600
+  detector: V03421A
+  elog: https://elog.legend-exp.org/HADES/375
+  high_voltage_in_V: 3500
+  measurement: ba_HS4_top_dlt
+  run: run0001
+  run_live_time_in_s: 1800
+  run_start_time: 240315T092228
+  shifter: Simon
+  source_position:
+    phi_in_deg: 0.0
+    r_in_mm: 0.0
+    z_in_mm: 198.0
+run0002:
+  campaign: c1
+  collimator: false
+  daq_settings:
+    flashcam:
+      card_interface: efb1
+      decay_time_in_ns: 46000
+      shaping_time_in_ns: 6000
+      signal_depth_in_samples: 22290
+      trigger_threshold: 600
+  detector: V03421A
+  elog: https://elog.legend-exp.org/HADES/375
+  high_voltage_in_V: 3500
+  measurement: ba_HS4_top_dlt
+  run: run0002
+  run_live_time_in_s: 1800
+  run_start_time: 240315T095528
+  shifter: Simon
+  source_position:
+    phi_in_deg: 0.0
+    r_in_mm: 0.0
+    z_in_mm: 84.0
+run0003:
+  campaign: c1
+  collimator: false
+  daq_settings:
+    flashcam:
+      card_interface: efb1
+      decay_time_in_ns: 46000
+      shaping_time_in_ns: 6000
+      signal_depth_in_samples: 22290
+      trigger_threshold: 600
+  detector: V03421A
+  elog: https://elog.legend-exp.org/HADES/381
+  high_voltage_in_V: 2600
+  measurement: ba_HS4_top_dlt
+  run: run0003
+  run_live_time_in_s: 1800
+  run_start_time: 240319T111341
+  shifter: Mariia
+  source_position:
+    phi_in_deg: 0.0
+    r_in_mm: 0.0
+    z_in_mm: 198.0
+run0004:
+  campaign: c1
+  collimator: false
+  daq_settings:
+    flashcam:
+      card_interface: efb1
+      decay_time_in_ns: 46000
+      shaping_time_in_ns: 6000
+      signal_depth_in_samples: 22290
+      trigger_threshold: 600
+  detector: V03421A
+  elog: https://elog.legend-exp.org/HADES/381
+  high_voltage_in_V: 2600
+  measurement: ba_HS4_top_dlt
+  run: run0004
+  run_live_time_in_s: 1800
+  run_start_time: 240319T115643
+  shifter: Mariia
+  source_position:
+    phi_in_deg: 0.0
+    r_in_mm: 0.0
+    z_in_mm: 81.0

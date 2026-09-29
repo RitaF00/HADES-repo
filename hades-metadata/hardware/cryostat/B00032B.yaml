@@ -1,0 +1,37 @@
+detector:
+  name: B00032B
+  position: 5.0
+holder:
+  geometry:
+    bottom_cyl:
+      inner:
+        height_in_mm: 0
+        radius_in_mm: 0
+      outer:
+        height_in_mm: 0
+        radius_in_mm: 0
+    cylinder:
+      inner:
+        height_in_mm: 62.5
+        radius_in_mm: 36.9
+      outer:
+        height_in_mm: 65.5
+        radius_in_mm: 38.4
+    edge:
+      height_in_mm: 0
+      radius_in_mm: 0
+    rings:
+      height_in_mm: 8.6
+      position_bottom_ring_in_mm: 0
+      position_top_ring_in_mm: 14.7
+      radius_in_mm: 40.0
+  position: 4.0
+wrap:
+  geometry:
+    inner:
+      height_in_mm: 49.0
+      radius_in_mm: 36.1
+    outer:
+      height_in_mm: 50.0
+      radius_in_mm: 36.6
+  position: 4.0

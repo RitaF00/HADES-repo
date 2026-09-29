@@ -1,0 +1,88 @@
+run0001:
+  campaign: c1
+  collimator: false
+  daq_settings:
+    flashcam:
+      card_interface: efb2
+      decay_time_in_ns: 46000
+      shaping_time_in_ns: 6000
+      signal_depth_in_samples: 22290
+      trigger_threshold: 1000
+  detector: V04549B
+  elog: https://elog.legend-exp.org/HADES/133
+  high_voltage_in_V: 5000
+  measurement: th_HS2_lat_psa
+  run: run0001
+  run_live_time_in_s: 57600
+  run_start_time: 201013T134901
+  shifter: Luca
+  source_position:
+    phi_in_deg: 0.0
+    r_in_mm: 0.0
+    z_in_mm: 42.0
+run0002:
+  campaign: c1
+  collimator: false
+  daq_settings:
+    flashcam:
+      card_interface: efb2
+      decay_time_in_ns: 46000
+      shaping_time_in_ns: 6000
+      signal_depth_in_samples: 22290
+      trigger_threshold: 1000
+  detector: V04549B
+  elog: https://elog.legend-exp.org/HADES/133
+  high_voltage_in_V: 5000
+  measurement: th_HS2_lat_psa
+  run: run0002
+  run_live_time_in_s: 57600
+  run_start_time: 201014T112352
+  shifter: Luca
+  source_position:
+    phi_in_deg: 90.0
+    r_in_mm: 0.0
+    z_in_mm: 42.0
+run0003:
+  campaign: c1
+  collimator: false
+  daq_settings:
+    flashcam:
+      card_interface: efb2
+      decay_time_in_ns: 46000
+      shaping_time_in_ns: 6000
+      signal_depth_in_samples: 22290
+      trigger_threshold: 1000
+  detector: V04549B
+  elog: https://elog.legend-exp.org/HADES/134
+  high_voltage_in_V: 5000
+  measurement: th_HS2_lat_psa
+  run: run0003
+  run_live_time_in_s: 57600
+  run_start_time: 201015T111605
+  shifter: Luca
+  source_position:
+    phi_in_deg: 270.0
+    r_in_mm: 0.0
+    z_in_mm: 42.0
+run0004:
+  campaign: c1
+  collimator: false
+  daq_settings:
+    flashcam:
+      card_interface: efb2
+      decay_time_in_ns: 46000
+      shaping_time_in_ns: 6000
+      signal_depth_in_samples: 22290
+      trigger_threshold: 1000
+  detector: V04549B
+  elog: https://elog.legend-exp.org/HADES/133
+  high_voltage_in_V: 5000
+  measurement: th_HS2_lat_psa
+  run: run0004
+  run_live_time_in_s: 57600
+  run_start_time: 201016T101359
+  shifter: Luca
+  source_position:
+    phi_in_deg: 180.0
+    r_in_mm: 0.0
+    z_in_mm: 42.0

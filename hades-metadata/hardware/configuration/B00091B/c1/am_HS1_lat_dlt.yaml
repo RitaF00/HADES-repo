@@ -1,0 +1,21 @@
+run0001:
+  campaign: c1
+  daq_settings:
+    flashcam:
+      card_interface: efb3
+      decay_time_in_ns: 46000
+      shaping_time_in_ns: 6000
+      signal_depth_in_samples: 22290
+      trigger_threshold: 300
+  detector: B00091B
+  elog: https://elog.legend-exp.org/HADES/160
+  high_voltage_in_V: 3500
+  measurement: am_HS1_lat_dlt
+  run: run0001
+  run_live_time_in_s: 18000
+  run_start_time: 210127T070915
+  shifter: Yoann
+  source_position:
+    phi_in_deg: 0.0
+    r_in_mm: 8.0
+    z_in_mm: 240.0

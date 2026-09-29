@@ -10,6 +10,10 @@ version = "0.1.0"
 [dependencies]
 python = "3.12.*"
 ipykernel = ">=7.3.0,<8"
+legend-pygeom-l200 = ">=0.10.2,<0.11"
+reboost = ">=1.2.0,<2"
+remage = ">=1.1.0,<2"
 
 [pypi-dependencies]
 legend-pygeom-hades = ">=0.2.1, <0.3"
+revertex = { git = "https://github.com/legend-exp/revertex.git" }

@@ -1,0 +1,37 @@
+detector:
+  name: B00000D
+  position: 5.0
+holder:
+  geometry:
+    bottom_cyl:
+      inner:
+        height_in_mm: 0
+        radius_in_mm: 0
+      outer:
+        height_in_mm: 0
+        radius_in_mm: 0
+    cylinder:
+      inner:
+        height_in_mm: 62.5
+        radius_in_mm: 39.2
+      outer:
+        height_in_mm: 65.5
+        radius_in_mm: 40.7
+    edge:
+      height_in_mm: 0
+      radius_in_mm: 0
+    rings:
+      height_in_mm: 8.6
+      position_bottom_ring_in_mm: 0
+      position_top_ring_in_mm: 14.7
+      radius_in_mm: 42.2
+  position: 4.0
+wrap:
+  geometry:
+    inner:
+      height_in_mm: 49.0
+      radius_in_mm: 38.4
+    outer:
+      height_in_mm: 50.0
+      radius_in_mm: 38.9
+  position: 4.0

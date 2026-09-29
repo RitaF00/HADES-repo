@@ -1,0 +1,51 @@
+run0001:
+  campaign: c1
+  daq_settings:
+    flashcam:
+      card_interface: efb1
+      decay_time_in_ns: 46000
+      shaping_time_in_ns: 6000
+      signal_depth_in_samples: 22290
+      trigger_threshold: 600
+  detector: V03421A
+  elog: https://elog.legend-exp.org/HADES/369
+  high_voltage_in_V: 3500
+  measurement: bkg
+  run: run0001
+  run_live_time_in_s: 61200
+  run_start_time: 240313T142230
+  shifter: Slava
+run0002:
+  campaign: c1
+  daq_settings:
+    flashcam:
+      card_interface: efb1
+      decay_time_in_ns: 46000
+      shaping_time_in_ns: 6000
+      signal_depth_in_samples: 22290
+      trigger_threshold: 600
+  detector: V03421A
+  elog: https://elog.legend-exp.org/HADES/382
+  high_voltage_in_V: 2600
+  measurement: bkg
+  run: run0002
+  run_live_time_in_s: 61200
+  run_start_time: 240319T152205
+  shifter: Mariia
+run0003:
+  campaign: c1
+  daq_settings:
+    flashcam:
+      card_interface: efb3
+      decay_time_in_ns: 46000
+      shaping_time_in_ns: 6000
+      signal_depth_in_samples: 22290
+      trigger_threshold: 600
+  detector: V03421A
+  elog: https://elog.legend-exp.org/HADES/389
+  high_voltage_in_V: 2600
+  measurement: bkg
+  run: run0003
+  run_live_time_in_s: 25200
+  run_start_time: 240321T172258
+  shifter: Mariia

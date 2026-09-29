@@ -1,0 +1,37 @@
+detector:
+  name: V08682B
+  position: 6.0
+holder:
+  geometry:
+    bottom_cyl:
+      inner:
+        height_in_mm: 20.4
+        radius_in_mm: 8.0
+      outer:
+        height_in_mm: 25.4
+        radius_in_mm: 13.0
+    cylinder:
+      inner:
+        height_in_mm: 66.7
+        radius_in_mm: 46.5
+      outer:
+        height_in_mm: 69.8
+        radius_in_mm: 47.3
+    edge:
+      height_in_mm: 0.0
+      radius_in_mm: 49.5
+    rings:
+      height_in_mm: 8.6
+      position_bottom_ring_in_mm: 19.4
+      position_top_ring_in_mm: 0.0
+      radius_in_mm: 49.5
+  position: 5.0
+wrap:
+  geometry:
+    inner:
+      height_in_mm: 59.0
+      radius_in_mm: 45.4
+    outer:
+      height_in_mm: 60.0
+      radius_in_mm: 46.2
+  position: 5.0

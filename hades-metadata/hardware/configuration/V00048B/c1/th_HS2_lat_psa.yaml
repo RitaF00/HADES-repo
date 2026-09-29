@@ -1,0 +1,44 @@
+run0001:
+  campaign: c1
+  collimator: false
+  daq_settings:
+    flashcam:
+      card_interface: efb1
+      decay_time_in_ns: 46000
+      shaping_time_in_ns: 6000
+      signal_depth_in_samples: 22290
+      trigger_threshold: 300
+  detector: V00048B
+  elog: https://elog.legend-exp.org/HADES/169
+  high_voltage_in_V: 3600
+  measurement: th_HS2_lat_psa
+  run: run0001
+  run_live_time_in_s: 172800
+  run_start_time: 210128T143349
+  shifter: Yoann
+  source_position:
+    phi_in_deg: 0.0
+    r_in_mm: 45.0
+    z_in_mm: 49.0
+run0002:
+  campaign: c1
+  collimator: false
+  daq_settings:
+    flashcam:
+      card_interface: efb1
+      decay_time_in_ns: 46000
+      shaping_time_in_ns: 6000
+      signal_depth_in_samples: 22290
+      trigger_threshold: 300
+  detector: V00048B
+  elog: https://elog.legend-exp.org/HADES/169
+  high_voltage_in_V: 3200
+  measurement: th_HS2_lat_psa
+  run: run0002
+  run_live_time_in_s: 50400
+  run_start_time: 210130T175444
+  shifter: Yoann
+  source_position:
+    phi_in_deg: 0.0
+    r_in_mm: 45.0
+    z_in_mm: 49.0

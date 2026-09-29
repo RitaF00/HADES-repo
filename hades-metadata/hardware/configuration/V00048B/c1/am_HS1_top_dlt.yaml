@@ -1,0 +1,88 @@
+run0001:
+  campaign: c1
+  collimator: true
+  daq_settings:
+    flashcam:
+      card_interface: efb1
+      decay_time_in_ns: 46000
+      shaping_time_in_ns: 6000
+      signal_depth_in_samples: 22290
+      trigger_threshold: 300
+  detector: V00048B
+  elog: https://elog.legend-exp.org/HADES/166
+  high_voltage_in_V: 3600
+  measurement: am_HS1_top_dlt
+  run: run0001
+  run_live_time_in_s: 3600
+  run_start_time: 210127T140757
+  shifter: Yoann
+  source_position:
+    phi_in_deg: 0.0
+    r_in_mm: 0.0
+    z_in_mm: 10.0
+run0002:
+  campaign: c1
+  collimator: true
+  daq_settings:
+    flashcam:
+      card_interface: efb1
+      decay_time_in_ns: 46000
+      shaping_time_in_ns: 6000
+      signal_depth_in_samples: 22290
+      trigger_threshold: 300
+  detector: V00048B
+  elog: https://elog.legend-exp.org/HADES/171
+  high_voltage_in_V: 4000
+  measurement: am_HS1_top_dlt
+  run: run0002
+  run_live_time_in_s: 21600
+  run_start_time: 210420T141624
+  shifter: Yoann
+  source_position:
+    phi_in_deg: 0.0
+    r_in_mm: 20.0
+    z_in_mm: 10.0
+run0003:
+  campaign: c1
+  collimator: true
+  daq_settings:
+    flashcam:
+      card_interface: efb1
+      decay_time_in_ns: 46000
+      shaping_time_in_ns: 6000
+      signal_depth_in_samples: 22290
+      trigger_threshold: 300
+  detector: V00048B
+  elog: https://elog.legend-exp.org/HADES/171
+  high_voltage_in_V: 4000
+  measurement: am_HS1_top_dlt
+  run: run0003
+  run_live_time_in_s: 43200
+  run_start_time: 210421T174559
+  shifter: Yoann
+  source_position:
+    phi_in_deg: 0.0
+    r_in_mm: 20.0
+    z_in_mm: 10.0
+run0004:
+  campaign: c1
+  collimator: true
+  daq_settings:
+    flashcam:
+      card_interface: efb1
+      decay_time_in_ns: 46000
+      shaping_time_in_ns: 6000
+      signal_depth_in_samples: 22290
+      trigger_threshold: 300
+  detector: V00048B
+  elog: https://elog.legend-exp.org/HADES/172
+  high_voltage_in_V: 4000
+  measurement: am_HS1_top_dlt
+  run: run0004
+  run_live_time_in_s: 43200
+  run_start_time: 210426T093944
+  shifter: Yoann
+  source_position:
+    phi_in_deg: 0.0
+    r_in_mm: 20.0
+    z_in_mm: 10.0

@@ -1,0 +1,2646 @@
+run0001:
+  campaign: c1
+  daq_settings:
+    flashcam:
+      card_interface: efb3
+      decay_time_in_ns: 46000
+      shaping_time_in_ns: 6000
+      signal_depth_in_samples: 22290
+      trigger_threshold: 600
+  detector: V14618A
+  elog: https://elog.legend-exp.org/HADES/422
+  high_voltage_in_V: 4500
+  measurement: am_HS1_lat_ssh
+  run: run0001
+  run_live_time_in_s: 300
+  run_start_time: 250603T084522
+  shifter: Simon
+  source_position:
+    phi_in_deg: 0.0
+    r_in_mm: 5.0
+    z_in_mm: 217.0
+run0002:
+  campaign: c1
+  daq_settings:
+    flashcam:
+      card_interface: efb3
+      decay_time_in_ns: 46000
+      shaping_time_in_ns: 6000
+      signal_depth_in_samples: 22290
+      trigger_threshold: 600
+  detector: V14618A
+  elog: https://elog.legend-exp.org/HADES/422
+  high_voltage_in_V: 4500
+  measurement: am_HS1_lat_ssh
+  run: run0002
+  run_live_time_in_s: 300
+  run_start_time: 250603T084522
+  shifter: Simon
+  source_position:
+    phi_in_deg: 0.0
+    r_in_mm: 5.0
+    z_in_mm: 219.0
+run0003:
+  campaign: c1
+  daq_settings:
+    flashcam:
+      card_interface: efb3
+      decay_time_in_ns: 46000
+      shaping_time_in_ns: 6000
+      signal_depth_in_samples: 22290
+      trigger_threshold: 600
+  detector: V14618A
+  elog: https://elog.legend-exp.org/HADES/422
+  high_voltage_in_V: 4500
+  measurement: am_HS1_lat_ssh
+  run: run0003
+  run_live_time_in_s: 300
+  run_start_time: 250603T084522
+  shifter: Simon
+  source_position:
+    phi_in_deg: 0.0
+    r_in_mm: 5.0
+    z_in_mm: 221.0
+run0004:
+  campaign: c1
+  daq_settings:
+    flashcam:
+      card_interface: efb3
+      decay_time_in_ns: 46000
+      shaping_time_in_ns: 6000
+      signal_depth_in_samples: 22290
+      trigger_threshold: 600
+  detector: V14618A
+  elog: https://elog.legend-exp.org/HADES/422
+  high_voltage_in_V: 4500
+  measurement: am_HS1_lat_ssh
+  run: run0004
+  run_live_time_in_s: 300
+  run_start_time: 250603T084522
+  shifter: Simon
+  source_position:
+    phi_in_deg: 0.0
+    r_in_mm: 5.0
+    z_in_mm: 223.0
+run0005:
+  campaign: c1
+  daq_settings:
+    flashcam:
+      card_interface: efb3
+      decay_time_in_ns: 46000
+      shaping_time_in_ns: 6000
+      signal_depth_in_samples: 22290
+      trigger_threshold: 600
+  detector: V14618A
+  elog: https://elog.legend-exp.org/HADES/422
+  high_voltage_in_V: 4500
+  measurement: am_HS1_lat_ssh
+  run: run0005
+  run_live_time_in_s: 300
+  run_start_time: 250603T084522
+  shifter: Simon
+  source_position:
+    phi_in_deg: 0.0
+    r_in_mm: 5.0
+    z_in_mm: 225.0
+run0006:
+  campaign: c1
+  daq_settings:
+    flashcam:
+      card_interface: efb3
+      decay_time_in_ns: 46000
+      shaping_time_in_ns: 6000
+      signal_depth_in_samples: 22290
+      trigger_threshold: 600
+  detector: V14618A
+  elog: https://elog.legend-exp.org/HADES/422
+  high_voltage_in_V: 4500
+  measurement: am_HS1_lat_ssh
+  run: run0006
+  run_live_time_in_s: 300
+  run_start_time: 250603T084522
+  shifter: Simon
+  source_position:
+    phi_in_deg: 0.0
+    r_in_mm: 5.0
+    z_in_mm: 227.0
+run0007:
+  campaign: c1
+  daq_settings:
+    flashcam:
+      card_interface: efb3
+      decay_time_in_ns: 46000
+      shaping_time_in_ns: 6000
+      signal_depth_in_samples: 22290
+      trigger_threshold: 600
+  detector: V14618A
+  elog: https://elog.legend-exp.org/HADES/422
+  high_voltage_in_V: 4500
+  measurement: am_HS1_lat_ssh
+  run: run0007
+  run_live_time_in_s: 300
+  run_start_time: 250603T084522
+  shifter: Simon
+  source_position:
+    phi_in_deg: 0.0
+    r_in_mm: 5.0
+    z_in_mm: 229.0
+run0008:
+  campaign: c1
+  daq_settings:
+    flashcam:
+      card_interface: efb3
+      decay_time_in_ns: 46000
+      shaping_time_in_ns: 6000
+      signal_depth_in_samples: 22290
+      trigger_threshold: 600
+  detector: V14618A
+  elog: https://elog.legend-exp.org/HADES/422
+  high_voltage_in_V: 4500
+  measurement: am_HS1_lat_ssh
+  run: run0008
+  run_live_time_in_s: 300
+  run_start_time: 250603T084522
+  shifter: Simon
+  source_position:
+    phi_in_deg: 0.0
+    r_in_mm: 5.0
+    z_in_mm: 231.0
+run0009:
+  campaign: c1
+  daq_settings:
+    flashcam:
+      card_interface: efb3
+      decay_time_in_ns: 46000
+      shaping_time_in_ns: 6000
+      signal_depth_in_samples: 22290
+      trigger_threshold: 600
+  detector: V14618A
+  elog: https://elog.legend-exp.org/HADES/422
+  high_voltage_in_V: 4500
+  measurement: am_HS1_lat_ssh
+  run: run0009
+  run_live_time_in_s: 300
+  run_start_time: 250603T084522
+  shifter: Simon
+  source_position:
+    phi_in_deg: 0.0
+    r_in_mm: 5.0
+    z_in_mm: 233.0
+run0010:
+  campaign: c1
+  daq_settings:
+    flashcam:
+      card_interface: efb3
+      decay_time_in_ns: 46000
+      shaping_time_in_ns: 6000
+      signal_depth_in_samples: 22290
+      trigger_threshold: 600
+  detector: V14618A
+  elog: https://elog.legend-exp.org/HADES/422
+  high_voltage_in_V: 4500
+  measurement: am_HS1_lat_ssh
+  run: run0010
+  run_live_time_in_s: 300
+  run_start_time: 250603T084522
+  shifter: Simon
+  source_position:
+    phi_in_deg: 0.0
+    r_in_mm: 5.0
+    z_in_mm: 235.0
+run0011:
+  campaign: c1
+  daq_settings:
+    flashcam:
+      card_interface: efb3
+      decay_time_in_ns: 46000
+      shaping_time_in_ns: 6000
+      signal_depth_in_samples: 22290
+      trigger_threshold: 600
+  detector: V14618A
+  elog: https://elog.legend-exp.org/HADES/422
+  high_voltage_in_V: 4500
+  measurement: am_HS1_lat_ssh
+  run: run0011
+  run_live_time_in_s: 300
+  run_start_time: 250603T084522
+  shifter: Simon
+  source_position:
+    phi_in_deg: 0.0
+    r_in_mm: 5.0
+    z_in_mm: 237.0
+run0012:
+  campaign: c1
+  daq_settings:
+    flashcam:
+      card_interface: efb3
+      decay_time_in_ns: 46000
+      shaping_time_in_ns: 6000
+      signal_depth_in_samples: 22290
+      trigger_threshold: 600
+  detector: V14618A
+  elog: https://elog.legend-exp.org/HADES/422
+  high_voltage_in_V: 4500
+  measurement: am_HS1_lat_ssh
+  run: run0012
+  run_live_time_in_s: 300
+  run_start_time: 250603T084522
+  shifter: Simon
+  source_position:
+    phi_in_deg: 0.0
+    r_in_mm: 5.0
+    z_in_mm: 239.0
+run0013:
+  campaign: c1
+  daq_settings:
+    flashcam:
+      card_interface: efb3
+      decay_time_in_ns: 46000
+      shaping_time_in_ns: 6000
+      signal_depth_in_samples: 22290
+      trigger_threshold: 600
+  detector: V14618A
+  elog: https://elog.legend-exp.org/HADES/422
+  high_voltage_in_V: 4500
+  measurement: am_HS1_lat_ssh
+  run: run0013
+  run_live_time_in_s: 300
+  run_start_time: 250603T084522
+  shifter: Simon
+  source_position:
+    phi_in_deg: 0.0
+    r_in_mm: 5.0
+    z_in_mm: 241.0
+run0014:
+  campaign: c1
+  daq_settings:
+    flashcam:
+      card_interface: efb3
+      decay_time_in_ns: 46000
+      shaping_time_in_ns: 6000
+      signal_depth_in_samples: 22290
+      trigger_threshold: 600
+  detector: V14618A
+  elog: https://elog.legend-exp.org/HADES/422
+  high_voltage_in_V: 4500
+  measurement: am_HS1_lat_ssh
+  run: run0014
+  run_live_time_in_s: 300
+  run_start_time: 250603T084522
+  shifter: Simon
+  source_position:
+    phi_in_deg: 0.0
+    r_in_mm: 5.0
+    z_in_mm: 243.0
+run0015:
+  campaign: c1
+  daq_settings:
+    flashcam:
+      card_interface: efb3
+      decay_time_in_ns: 46000
+      shaping_time_in_ns: 6000
+      signal_depth_in_samples: 22290
+      trigger_threshold: 600
+  detector: V14618A
+  elog: https://elog.legend-exp.org/HADES/422
+  high_voltage_in_V: 4500
+  measurement: am_HS1_lat_ssh
+  run: run0015
+  run_live_time_in_s: 300
+  run_start_time: 250603T084522
+  shifter: Simon
+  source_position:
+    phi_in_deg: 0.0
+    r_in_mm: 5.0
+    z_in_mm: 245.0
+run0016:
+  campaign: c1
+  daq_settings:
+    flashcam:
+      card_interface: efb3
+      decay_time_in_ns: 46000
+      shaping_time_in_ns: 6000
+      signal_depth_in_samples: 22290
+      trigger_threshold: 600
+  detector: V14618A
+  elog: https://elog.legend-exp.org/HADES/422
+  high_voltage_in_V: 4500
+  measurement: am_HS1_lat_ssh
+  run: run0016
+  run_live_time_in_s: 300
+  run_start_time: 250603T084522
+  shifter: Simon
+  source_position:
+    phi_in_deg: 0.0
+    r_in_mm: 5.0
+    z_in_mm: 247.0
+run0017:
+  campaign: c1
+  daq_settings:
+    flashcam:
+      card_interface: efb3
+      decay_time_in_ns: 46000
+      shaping_time_in_ns: 6000
+      signal_depth_in_samples: 22290
+      trigger_threshold: 600
+  detector: V14618A
+  elog: https://elog.legend-exp.org/HADES/422
+  high_voltage_in_V: 4500
+  measurement: am_HS1_lat_ssh
+  run: run0017
+  run_live_time_in_s: 300
+  run_start_time: 250603T084522
+  shifter: Simon
+  source_position:
+    phi_in_deg: 0.0
+    r_in_mm: 5.0
+    z_in_mm: 249.0
+run0018:
+  campaign: c1
+  daq_settings:
+    flashcam:
+      card_interface: efb3
+      decay_time_in_ns: 46000
+      shaping_time_in_ns: 6000
+      signal_depth_in_samples: 22290
+      trigger_threshold: 600
+  detector: V14618A
+  elog: https://elog.legend-exp.org/HADES/422
+  high_voltage_in_V: 4500
+  measurement: am_HS1_lat_ssh
+  run: run0018
+  run_live_time_in_s: 300
+  run_start_time: 250603T084522
+  shifter: Simon
+  source_position:
+    phi_in_deg: 0.0
+    r_in_mm: 5.0
+    z_in_mm: 251.0
+run0019:
+  campaign: c1
+  daq_settings:
+    flashcam:
+      card_interface: efb3
+      decay_time_in_ns: 46000
+      shaping_time_in_ns: 6000
+      signal_depth_in_samples: 22290
+      trigger_threshold: 600
+  detector: V14618A
+  elog: https://elog.legend-exp.org/HADES/422
+  high_voltage_in_V: 4500
+  measurement: am_HS1_lat_ssh
+  run: run0019
+  run_live_time_in_s: 300
+  run_start_time: 250603T084522
+  shifter: Simon
+  source_position:
+    phi_in_deg: 0.0
+    r_in_mm: 5.0
+    z_in_mm: 253.0
+run0020:
+  campaign: c1
+  daq_settings:
+    flashcam:
+      card_interface: efb3
+      decay_time_in_ns: 46000
+      shaping_time_in_ns: 6000
+      signal_depth_in_samples: 22290
+      trigger_threshold: 600
+  detector: V14618A
+  elog: https://elog.legend-exp.org/HADES/422
+  high_voltage_in_V: 4500
+  measurement: am_HS1_lat_ssh
+  run: run0020
+  run_live_time_in_s: 300
+  run_start_time: 250603T084522
+  shifter: Simon
+  source_position:
+    phi_in_deg: 0.0
+    r_in_mm: 5.0
+    z_in_mm: 255.0
+run0021:
+  campaign: c1
+  daq_settings:
+    flashcam:
+      card_interface: efb3
+      decay_time_in_ns: 46000
+      shaping_time_in_ns: 6000
+      signal_depth_in_samples: 22290
+      trigger_threshold: 600
+  detector: V14618A
+  elog: https://elog.legend-exp.org/HADES/422
+  high_voltage_in_V: 4500
+  measurement: am_HS1_lat_ssh
+  run: run0021
+  run_live_time_in_s: 300
+  run_start_time: 250603T084522
+  shifter: Simon
+  source_position:
+    phi_in_deg: 0.0
+    r_in_mm: 5.0
+    z_in_mm: 257.0
+run0022:
+  campaign: c1
+  daq_settings:
+    flashcam:
+      card_interface: efb3
+      decay_time_in_ns: 46000
+      shaping_time_in_ns: 6000
+      signal_depth_in_samples: 22290
+      trigger_threshold: 600
+  detector: V14618A
+  elog: https://elog.legend-exp.org/HADES/422
+  high_voltage_in_V: 4500
+  measurement: am_HS1_lat_ssh
+  run: run0022
+  run_live_time_in_s: 300
+  run_start_time: 250603T084522
+  shifter: Simon
+  source_position:
+    phi_in_deg: 0.0
+    r_in_mm: 5.0
+    z_in_mm: 259.0
+run0023:
+  campaign: c1
+  daq_settings:
+    flashcam:
+      card_interface: efb3
+      decay_time_in_ns: 46000
+      shaping_time_in_ns: 6000
+      signal_depth_in_samples: 22290
+      trigger_threshold: 600
+  detector: V14618A
+  elog: https://elog.legend-exp.org/HADES/422
+  high_voltage_in_V: 4500
+  measurement: am_HS1_lat_ssh
+  run: run0023
+  run_live_time_in_s: 300
+  run_start_time: 250603T084522
+  shifter: Simon
+  source_position:
+    phi_in_deg: 0.0
+    r_in_mm: 5.0
+    z_in_mm: 261.0
+run0024:
+  campaign: c1
+  daq_settings:
+    flashcam:
+      card_interface: efb3
+      decay_time_in_ns: 46000
+      shaping_time_in_ns: 6000
+      signal_depth_in_samples: 22290
+      trigger_threshold: 600
+  detector: V14618A
+  elog: https://elog.legend-exp.org/HADES/422
+  high_voltage_in_V: 4500
+  measurement: am_HS1_lat_ssh
+  run: run0024
+  run_live_time_in_s: 300
+  run_start_time: 250603T084522
+  shifter: Simon
+  source_position:
+    phi_in_deg: 0.0
+    r_in_mm: 5.0
+    z_in_mm: 263.0
+run0025:
+  campaign: c1
+  daq_settings:
+    flashcam:
+      card_interface: efb3
+      decay_time_in_ns: 46000
+      shaping_time_in_ns: 6000
+      signal_depth_in_samples: 22290
+      trigger_threshold: 600
+  detector: V14618A
+  elog: https://elog.legend-exp.org/HADES/422
+  high_voltage_in_V: 4500
+  measurement: am_HS1_lat_ssh
+  run: run0025
+  run_live_time_in_s: 300
+  run_start_time: 250603T084522
+  shifter: Simon
+  source_position:
+    phi_in_deg: 0.0
+    r_in_mm: 5.0
+    z_in_mm: 265.0
+run0026:
+  campaign: c1
+  daq_settings:
+    flashcam:
+      card_interface: efb3
+      decay_time_in_ns: 46000
+      shaping_time_in_ns: 6000
+      signal_depth_in_samples: 22290
+      trigger_threshold: 600
+  detector: V14618A
+  elog: https://elog.legend-exp.org/HADES/422
+  high_voltage_in_V: 4500
+  measurement: am_HS1_lat_ssh
+  run: run0026
+  run_live_time_in_s: 300
+  run_start_time: 250603T084522
+  shifter: Simon
+  source_position:
+    phi_in_deg: 0.0
+    r_in_mm: 5.0
+    z_in_mm: 267.0
+run0027:
+  campaign: c1
+  daq_settings:
+    flashcam:
+      card_interface: efb3
+      decay_time_in_ns: 46000
+      shaping_time_in_ns: 6000
+      signal_depth_in_samples: 22290
+      trigger_threshold: 600
+  detector: V14618A
+  elog: https://elog.legend-exp.org/HADES/422
+  high_voltage_in_V: 4500
+  measurement: am_HS1_lat_ssh
+  run: run0027
+  run_live_time_in_s: 300
+  run_start_time: 250603T084522
+  shifter: Simon
+  source_position:
+    phi_in_deg: 0.0
+    r_in_mm: 5.0
+    z_in_mm: 269.0
+run0028:
+  campaign: c1
+  daq_settings:
+    flashcam:
+      card_interface: efb3
+      decay_time_in_ns: 46000
+      shaping_time_in_ns: 6000
+      signal_depth_in_samples: 22290
+      trigger_threshold: 600
+  detector: V14618A
+  elog: https://elog.legend-exp.org/HADES/422
+  high_voltage_in_V: 4500
+  measurement: am_HS1_lat_ssh
+  run: run0028
+  run_live_time_in_s: 300
+  run_start_time: 250603T084522
+  shifter: Simon
+  source_position:
+    phi_in_deg: 0.0
+    r_in_mm: 5.0
+    z_in_mm: 271.0
+run0029:
+  campaign: c1
+  daq_settings:
+    flashcam:
+      card_interface: efb3
+      decay_time_in_ns: 46000
+      shaping_time_in_ns: 6000
+      signal_depth_in_samples: 22290
+      trigger_threshold: 600
+  detector: V14618A
+  elog: https://elog.legend-exp.org/HADES/422
+  high_voltage_in_V: 4500
+  measurement: am_HS1_lat_ssh
+  run: run0029
+  run_live_time_in_s: 300
+  run_start_time: 250603T084522
+  shifter: Simon
+  source_position:
+    phi_in_deg: 0.0
+    r_in_mm: 5.0
+    z_in_mm: 273.0
+run0030:
+  campaign: c1
+  daq_settings:
+    flashcam:
+      card_interface: efb3
+      decay_time_in_ns: 46000
+      shaping_time_in_ns: 6000
+      signal_depth_in_samples: 22290
+      trigger_threshold: 600
+  detector: V14618A
+  elog: https://elog.legend-exp.org/HADES/422
+  high_voltage_in_V: 4500
+  measurement: am_HS1_lat_ssh
+  run: run0030
+  run_live_time_in_s: 300
+  run_start_time: 250603T084522
+  shifter: Simon
+  source_position:
+    phi_in_deg: 0.0
+    r_in_mm: 5.0
+    z_in_mm: 275.0
+run0031:
+  campaign: c1
+  daq_settings:
+    flashcam:
+      card_interface: efb3
+      decay_time_in_ns: 46000
+      shaping_time_in_ns: 6000
+      signal_depth_in_samples: 22290
+      trigger_threshold: 600
+  detector: V14618A
+  elog: https://elog.legend-exp.org/HADES/422
+  high_voltage_in_V: 4500
+  measurement: am_HS1_lat_ssh
+  run: run0031
+  run_live_time_in_s: 300
+  run_start_time: 250603T084522
+  shifter: Simon
+  source_position:
+    phi_in_deg: 0.0
+    r_in_mm: 5.0
+    z_in_mm: 277.0
+run0032:
+  campaign: c1
+  daq_settings:
+    flashcam:
+      card_interface: efb3
+      decay_time_in_ns: 46000
+      shaping_time_in_ns: 6000
+      signal_depth_in_samples: 22290
+      trigger_threshold: 600
+  detector: V14618A
+  elog: https://elog.legend-exp.org/HADES/422
+  high_voltage_in_V: 4500
+  measurement: am_HS1_lat_ssh
+  run: run0032
+  run_live_time_in_s: 300
+  run_start_time: 250603T084522
+  shifter: Simon
+  source_position:
+    phi_in_deg: 0.0
+    r_in_mm: 5.0
+    z_in_mm: 279.0
+run0033:
+  campaign: c1
+  daq_settings:
+    flashcam:
+      card_interface: efb3
+      decay_time_in_ns: 46000
+      shaping_time_in_ns: 6000
+      signal_depth_in_samples: 22290
+      trigger_threshold: 600
+  detector: V14618A
+  elog: https://elog.legend-exp.org/HADES/422
+  high_voltage_in_V: 4500
+  measurement: am_HS1_lat_ssh
+  run: run0033
+  run_live_time_in_s: 300
+  run_start_time: 250603T084522
+  shifter: Simon
+  source_position:
+    phi_in_deg: 0.0
+    r_in_mm: 5.0
+    z_in_mm: 281.0
+run0034:
+  campaign: c1
+  daq_settings:
+    flashcam:
+      card_interface: efb3
+      decay_time_in_ns: 46000
+      shaping_time_in_ns: 6000
+      signal_depth_in_samples: 22290
+      trigger_threshold: 600
+  detector: V14618A
+  elog: https://elog.legend-exp.org/HADES/422
+  high_voltage_in_V: 4500
+  measurement: am_HS1_lat_ssh
+  run: run0034
+  run_live_time_in_s: 300
+  run_start_time: 250603T084522
+  shifter: Simon
+  source_position:
+    phi_in_deg: 0.0
+    r_in_mm: 5.0
+    z_in_mm: 283.0
+run0035:
+  campaign: c1
+  daq_settings:
+    flashcam:
+      card_interface: efb3
+      decay_time_in_ns: 46000
+      shaping_time_in_ns: 6000
+      signal_depth_in_samples: 22290
+      trigger_threshold: 600
+  detector: V14618A
+  elog: https://elog.legend-exp.org/HADES/422
+  high_voltage_in_V: 4500
+  measurement: am_HS1_lat_ssh
+  run: run0035
+  run_live_time_in_s: 300
+  run_start_time: 250603T084522
+  shifter: Simon
+  source_position:
+    phi_in_deg: 0.0
+    r_in_mm: 5.0
+    z_in_mm: 285.0
+run0036:
+  campaign: c1
+  daq_settings:
+    flashcam:
+      card_interface: efb3
+      decay_time_in_ns: 46000
+      shaping_time_in_ns: 6000
+      signal_depth_in_samples: 22290
+      trigger_threshold: 600
+  detector: V14618A
+  elog: https://elog.legend-exp.org/HADES/422
+  high_voltage_in_V: 4500
+  measurement: am_HS1_lat_ssh
+  run: run0036
+  run_live_time_in_s: 300
+  run_start_time: 250603T084522
+  shifter: Simon
+  source_position:
+    phi_in_deg: 0.0
+    r_in_mm: 5.0
+    z_in_mm: 287.0
+run0037:
+  campaign: c1
+  daq_settings:
+    flashcam:
+      card_interface: efb3
+      decay_time_in_ns: 46000
+      shaping_time_in_ns: 6000
+      signal_depth_in_samples: 22290
+      trigger_threshold: 600
+  detector: V14618A
+  elog: https://elog.legend-exp.org/HADES/422
+  high_voltage_in_V: 4500
+  measurement: am_HS1_lat_ssh
+  run: run0037
+  run_live_time_in_s: 300
+  run_start_time: 250603T084522
+  shifter: Simon
+  source_position:
+    phi_in_deg: 0.0
+    r_in_mm: 5.0
+    z_in_mm: 289.0
+run0038:
+  campaign: c1
+  daq_settings:
+    flashcam:
+      card_interface: efb3
+      decay_time_in_ns: 46000
+      shaping_time_in_ns: 6000
+      signal_depth_in_samples: 22290
+      trigger_threshold: 600
+  detector: V14618A
+  elog: https://elog.legend-exp.org/HADES/422
+  high_voltage_in_V: 4500
+  measurement: am_HS1_lat_ssh
+  run: run0038
+  run_live_time_in_s: 300
+  run_start_time: 250603T084522
+  shifter: Simon
+  source_position:
+    phi_in_deg: 0.0
+    r_in_mm: 5.0
+    z_in_mm: 291.0
+run0039:
+  campaign: c1
+  daq_settings:
+    flashcam:
+      card_interface: efb3
+      decay_time_in_ns: 46000
+      shaping_time_in_ns: 6000
+      signal_depth_in_samples: 22290
+      trigger_threshold: 600
+  detector: V14618A
+  elog: https://elog.legend-exp.org/HADES/422
+  high_voltage_in_V: 4500
+  measurement: am_HS1_lat_ssh
+  run: run0039
+  run_live_time_in_s: 300
+  run_start_time: 250603T084522
+  shifter: Simon
+  source_position:
+    phi_in_deg: 0.0
+    r_in_mm: 5.0
+    z_in_mm: 293.0
+run0040:
+  campaign: c1
+  daq_settings:
+    flashcam:
+      card_interface: efb3
+      decay_time_in_ns: 46000
+      shaping_time_in_ns: 6000
+      signal_depth_in_samples: 22290
+      trigger_threshold: 600
+  detector: V14618A
+  elog: https://elog.legend-exp.org/HADES/422
+  high_voltage_in_V: 4500
+  measurement: am_HS1_lat_ssh
+  run: run0040
+  run_live_time_in_s: 300
+  run_start_time: 250603T084522
+  shifter: Simon
+  source_position:
+    phi_in_deg: 0.0
+    r_in_mm: 5.0
+    z_in_mm: 295.0
+run0041:
+  campaign: c1
+  daq_settings:
+    flashcam:
+      card_interface: efb3
+      decay_time_in_ns: 46000
+      shaping_time_in_ns: 6000
+      signal_depth_in_samples: 22290
+      trigger_threshold: 600
+  detector: V14618A
+  elog: https://elog.legend-exp.org/HADES/422
+  high_voltage_in_V: 4500
+  measurement: am_HS1_lat_ssh
+  run: run0041
+  run_live_time_in_s: 300
+  run_start_time: 250603T084522
+  shifter: Simon
+  source_position:
+    phi_in_deg: 0.0
+    r_in_mm: 5.0
+    z_in_mm: 297.0
+run0042:
+  campaign: c1
+  daq_settings:
+    flashcam:
+      card_interface: efb3
+      decay_time_in_ns: 46000
+      shaping_time_in_ns: 6000
+      signal_depth_in_samples: 22290
+      trigger_threshold: 600
+  detector: V14618A
+  elog: https://elog.legend-exp.org/HADES/422
+  high_voltage_in_V: 4500
+  measurement: am_HS1_lat_ssh
+  run: run0042
+  run_live_time_in_s: 300
+  run_start_time: 250603T084522
+  shifter: Simon
+  source_position:
+    phi_in_deg: 0.0
+    r_in_mm: 5.0
+    z_in_mm: 299.0
+run0043:
+  campaign: c1
+  daq_settings:
+    flashcam:
+      card_interface: efb3
+      decay_time_in_ns: 46000
+      shaping_time_in_ns: 6000
+      signal_depth_in_samples: 22290
+      trigger_threshold: 600
+  detector: V14618A
+  elog: https://elog.legend-exp.org/HADES/422
+  high_voltage_in_V: 4500
+  measurement: am_HS1_lat_ssh
+  run: run0043
+  run_live_time_in_s: 300
+  run_start_time: 250603T084522
+  shifter: Simon
+  source_position:
+    phi_in_deg: 0.0
+    r_in_mm: 5.0
+    z_in_mm: 301.0
+run0044:
+  campaign: c1
+  daq_settings:
+    flashcam:
+      card_interface: efb3
+      decay_time_in_ns: 46000
+      shaping_time_in_ns: 6000
+      signal_depth_in_samples: 22290
+      trigger_threshold: 600
+  detector: V14618A
+  elog: https://elog.legend-exp.org/HADES/422
+  high_voltage_in_V: 4500
+  measurement: am_HS1_lat_ssh
+  run: run0044
+  run_live_time_in_s: 300
+  run_start_time: 250603T084522
+  shifter: Simon
+  source_position:
+    phi_in_deg: 0.0
+    r_in_mm: 5.0
+    z_in_mm: 303.0
+run0045:
+  campaign: c1
+  daq_settings:
+    flashcam:
+      card_interface: efb3
+      decay_time_in_ns: 46000
+      shaping_time_in_ns: 6000
+      signal_depth_in_samples: 22290
+      trigger_threshold: 600
+  detector: V14618A
+  elog: https://elog.legend-exp.org/HADES/422
+  high_voltage_in_V: 4500
+  measurement: am_HS1_lat_ssh
+  run: run0045
+  run_live_time_in_s: 300
+  run_start_time: 250603T084522
+  shifter: Simon
+  source_position:
+    phi_in_deg: 0.0
+    r_in_mm: 5.0
+    z_in_mm: 305.0
+run0046:
+  campaign: c1
+  daq_settings:
+    flashcam:
+      card_interface: efb3
+      decay_time_in_ns: 46000
+      shaping_time_in_ns: 6000
+      signal_depth_in_samples: 22290
+      trigger_threshold: 600
+  detector: V14618A
+  elog: https://elog.legend-exp.org/HADES/422
+  high_voltage_in_V: 4500
+  measurement: am_HS1_lat_ssh
+  run: run0046
+  run_live_time_in_s: 300
+  run_start_time: 250603T084522
+  shifter: Simon
+  source_position:
+    phi_in_deg: 0.0
+    r_in_mm: 5.0
+    z_in_mm: 307.0
+run0047:
+  campaign: c1
+  daq_settings:
+    flashcam:
+      card_interface: efb3
+      decay_time_in_ns: 46000
+      shaping_time_in_ns: 6000
+      signal_depth_in_samples: 22290
+      trigger_threshold: 600
+  detector: V14618A
+  elog: https://elog.legend-exp.org/HADES/422
+  high_voltage_in_V: 4500
+  measurement: am_HS1_lat_ssh
+  run: run0047
+  run_live_time_in_s: 300
+  run_start_time: 250603T084522
+  shifter: Simon
+  source_position:
+    phi_in_deg: 0.0
+    r_in_mm: 5.0
+    z_in_mm: 309.0
+run0048:
+  campaign: c1
+  daq_settings:
+    flashcam:
+      card_interface: efb3
+      decay_time_in_ns: 46000
+      shaping_time_in_ns: 6000
+      signal_depth_in_samples: 22290
+      trigger_threshold: 600
+  detector: V14618A
+  elog: https://elog.legend-exp.org/HADES/422
+  high_voltage_in_V: 4500
+  measurement: am_HS1_lat_ssh
+  run: run0048
+  run_live_time_in_s: 300
+  run_start_time: 250603T084522
+  shifter: Simon
+  source_position:
+    phi_in_deg: 0.0
+    r_in_mm: 5.0
+    z_in_mm: 311.0
+run0049:
+  campaign: c1
+  daq_settings:
+    flashcam:
+      card_interface: efb3
+      decay_time_in_ns: 46000
+      shaping_time_in_ns: 6000
+      signal_depth_in_samples: 22290
+      trigger_threshold: 600
+  detector: V14618A
+  elog: https://elog.legend-exp.org/HADES/422
+  high_voltage_in_V: 4500
+  measurement: am_HS1_lat_ssh
+  run: run0049
+  run_live_time_in_s: 300
+  run_start_time: 250603T084522
+  shifter: Simon
+  source_position:
+    phi_in_deg: 0.0
+    r_in_mm: 5.0
+    z_in_mm: 313.0
+run0050:
+  campaign: c1
+  daq_settings:
+    flashcam:
+      card_interface: efb3
+      decay_time_in_ns: 46000
+      shaping_time_in_ns: 6000
+      signal_depth_in_samples: 22290
+      trigger_threshold: 600
+  detector: V14618A
+  elog: https://elog.legend-exp.org/HADES/422
+  high_voltage_in_V: 4500
+  measurement: am_HS1_lat_ssh
+  run: run0050
+  run_live_time_in_s: 300
+  run_start_time: 250603T084522
+  shifter: Simon
+  source_position:
+    phi_in_deg: 0.0
+    r_in_mm: 5.0
+    z_in_mm: 315.0
+run0051:
+  campaign: c1
+  daq_settings:
+    flashcam:
+      card_interface: efb3
+      decay_time_in_ns: 46000
+      shaping_time_in_ns: 6000
+      signal_depth_in_samples: 22290
+      trigger_threshold: 600
+  detector: V14618A
+  elog: https://elog.legend-exp.org/HADES/422
+  high_voltage_in_V: 4500
+  measurement: am_HS1_lat_ssh
+  run: run0051
+  run_live_time_in_s: 300
+  run_start_time: 250603T084522
+  shifter: Simon
+  source_position:
+    phi_in_deg: 0.0
+    r_in_mm: 5.0
+    z_in_mm: 317.0
+run0052:
+  campaign: c1
+  daq_settings:
+    flashcam:
+      card_interface: efb3
+      decay_time_in_ns: 46000
+      shaping_time_in_ns: 6000
+      signal_depth_in_samples: 22290
+      trigger_threshold: 600
+  detector: V14618A
+  elog: https://elog.legend-exp.org/HADES/422
+  high_voltage_in_V: 4500
+  measurement: am_HS1_lat_ssh
+  run: run0052
+  run_live_time_in_s: 300
+  run_start_time: 250603T084522
+  shifter: Simon
+  source_position:
+    phi_in_deg: 0.0
+    r_in_mm: 5.0
+    z_in_mm: 319.0
+run0053:
+  campaign: c1
+  daq_settings:
+    flashcam:
+      card_interface: efb3
+      decay_time_in_ns: 46000
+      shaping_time_in_ns: 6000
+      signal_depth_in_samples: 22290
+      trigger_threshold: 600
+  detector: V14618A
+  elog: https://elog.legend-exp.org/HADES/422
+  high_voltage_in_V: 4500
+  measurement: am_HS1_lat_ssh
+  run: run0053
+  run_live_time_in_s: 300
+  run_start_time: 250603T084522
+  shifter: Simon
+  source_position:
+    phi_in_deg: 0.0
+    r_in_mm: 5.0
+    z_in_mm: 321.0
+run0054:
+  campaign: c1
+  daq_settings:
+    flashcam:
+      card_interface: efb3
+      decay_time_in_ns: 46000
+      shaping_time_in_ns: 6000
+      signal_depth_in_samples: 22290
+      trigger_threshold: 600
+  detector: V14618A
+  elog: https://elog.legend-exp.org/HADES/422
+  high_voltage_in_V: 4500
+  measurement: am_HS1_lat_ssh
+  run: run0054
+  run_live_time_in_s: 300
+  run_start_time: 250603T084522
+  shifter: Simon
+  source_position:
+    phi_in_deg: 0.0
+    r_in_mm: 5.0
+    z_in_mm: 323.0
+run0055:
+  campaign: c1
+  daq_settings:
+    flashcam:
+      card_interface: efb3
+      decay_time_in_ns: 46000
+      shaping_time_in_ns: 6000
+      signal_depth_in_samples: 22290
+      trigger_threshold: 600
+  detector: V14618A
+  elog: https://elog.legend-exp.org/HADES/422
+  high_voltage_in_V: 4500
+  measurement: am_HS1_lat_ssh
+  run: run0055
+  run_live_time_in_s: 300
+  run_start_time: 250603T132516
+  shifter: Simon
+  source_position:
+    phi_in_deg: 0.0
+    r_in_mm: 5.0
+    z_in_mm: 273.0
+run0056:
+  campaign: c1
+  daq_settings:
+    flashcam:
+      card_interface: efb3
+      decay_time_in_ns: 46000
+      shaping_time_in_ns: 6000
+      signal_depth_in_samples: 22290
+      trigger_threshold: 600
+  detector: V14618A
+  elog: https://elog.legend-exp.org/HADES/422
+  high_voltage_in_V: 4500
+  measurement: am_HS1_lat_ssh
+  run: run0056
+  run_live_time_in_s: 300
+  run_start_time: 250603T132516
+  shifter: Simon
+  source_position:
+    phi_in_deg: 5.0
+    r_in_mm: 5.0
+    z_in_mm: 273.0
+run0057:
+  campaign: c1
+  daq_settings:
+    flashcam:
+      card_interface: efb3
+      decay_time_in_ns: 46000
+      shaping_time_in_ns: 6000
+      signal_depth_in_samples: 22290
+      trigger_threshold: 600
+  detector: V14618A
+  elog: https://elog.legend-exp.org/HADES/422
+  high_voltage_in_V: 4500
+  measurement: am_HS1_lat_ssh
+  run: run0057
+  run_live_time_in_s: 300
+  run_start_time: 250603T132516
+  shifter: Simon
+  source_position:
+    phi_in_deg: 10.0
+    r_in_mm: 5.0
+    z_in_mm: 273.0
+run0058:
+  campaign: c1
+  daq_settings:
+    flashcam:
+      card_interface: efb3
+      decay_time_in_ns: 46000
+      shaping_time_in_ns: 6000
+      signal_depth_in_samples: 22290
+      trigger_threshold: 600
+  detector: V14618A
+  elog: https://elog.legend-exp.org/HADES/422
+  high_voltage_in_V: 4500
+  measurement: am_HS1_lat_ssh
+  run: run0058
+  run_live_time_in_s: 300
+  run_start_time: 250603T132516
+  shifter: Simon
+  source_position:
+    phi_in_deg: 15.0
+    r_in_mm: 5.0
+    z_in_mm: 273.0
+run0059:
+  campaign: c1
+  daq_settings:
+    flashcam:
+      card_interface: efb3
+      decay_time_in_ns: 46000
+      shaping_time_in_ns: 6000
+      signal_depth_in_samples: 22290
+      trigger_threshold: 600
+  detector: V14618A
+  elog: https://elog.legend-exp.org/HADES/422
+  high_voltage_in_V: 4500
+  measurement: am_HS1_lat_ssh
+  run: run0059
+  run_live_time_in_s: 300
+  run_start_time: 250603T132516
+  shifter: Simon
+  source_position:
+    phi_in_deg: 20.0
+    r_in_mm: 5.0
+    z_in_mm: 273.0
+run0060:
+  campaign: c1
+  daq_settings:
+    flashcam:
+      card_interface: efb3
+      decay_time_in_ns: 46000
+      shaping_time_in_ns: 6000
+      signal_depth_in_samples: 22290
+      trigger_threshold: 600
+  detector: V14618A
+  elog: https://elog.legend-exp.org/HADES/422
+  high_voltage_in_V: 4500
+  measurement: am_HS1_lat_ssh
+  run: run0060
+  run_live_time_in_s: 300
+  run_start_time: 250603T132516
+  shifter: Simon
+  source_position:
+    phi_in_deg: 25.0
+    r_in_mm: 5.0
+    z_in_mm: 273.0
+run0061:
+  campaign: c1
+  daq_settings:
+    flashcam:
+      card_interface: efb3
+      decay_time_in_ns: 46000
+      shaping_time_in_ns: 6000
+      signal_depth_in_samples: 22290
+      trigger_threshold: 600
+  detector: V14618A
+  elog: https://elog.legend-exp.org/HADES/422
+  high_voltage_in_V: 4500
+  measurement: am_HS1_lat_ssh
+  run: run0061
+  run_live_time_in_s: 300
+  run_start_time: 250603T132516
+  shifter: Simon
+  source_position:
+    phi_in_deg: 30.0
+    r_in_mm: 5.0
+    z_in_mm: 273.0
+run0062:
+  campaign: c1
+  daq_settings:
+    flashcam:
+      card_interface: efb3
+      decay_time_in_ns: 46000
+      shaping_time_in_ns: 6000
+      signal_depth_in_samples: 22290
+      trigger_threshold: 600
+  detector: V14618A
+  elog: https://elog.legend-exp.org/HADES/422
+  high_voltage_in_V: 4500
+  measurement: am_HS1_lat_ssh
+  run: run0062
+  run_live_time_in_s: 300
+  run_start_time: 250603T132516
+  shifter: Simon
+  source_position:
+    phi_in_deg: 35.0
+    r_in_mm: 5.0
+    z_in_mm: 273.0
+run0063:
+  campaign: c1
+  daq_settings:
+    flashcam:
+      card_interface: efb3
+      decay_time_in_ns: 46000
+      shaping_time_in_ns: 6000
+      signal_depth_in_samples: 22290
+      trigger_threshold: 600
+  detector: V14618A
+  elog: https://elog.legend-exp.org/HADES/422
+  high_voltage_in_V: 4500
+  measurement: am_HS1_lat_ssh
+  run: run0063
+  run_live_time_in_s: 300
+  run_start_time: 250603T132516
+  shifter: Simon
+  source_position:
+    phi_in_deg: 40.0
+    r_in_mm: 5.0
+    z_in_mm: 273.0
+run0064:
+  campaign: c1
+  daq_settings:
+    flashcam:
+      card_interface: efb3
+      decay_time_in_ns: 46000
+      shaping_time_in_ns: 6000
+      signal_depth_in_samples: 22290
+      trigger_threshold: 600
+  detector: V14618A
+  elog: https://elog.legend-exp.org/HADES/422
+  high_voltage_in_V: 4500
+  measurement: am_HS1_lat_ssh
+  run: run0064
+  run_live_time_in_s: 300
+  run_start_time: 250603T132516
+  shifter: Simon
+  source_position:
+    phi_in_deg: 45.0
+    r_in_mm: 5.0
+    z_in_mm: 273.0
+run0065:
+  campaign: c1
+  daq_settings:
+    flashcam:
+      card_interface: efb3
+      decay_time_in_ns: 46000
+      shaping_time_in_ns: 6000
+      signal_depth_in_samples: 22290
+      trigger_threshold: 600
+  detector: V14618A
+  elog: https://elog.legend-exp.org/HADES/422
+  high_voltage_in_V: 4500
+  measurement: am_HS1_lat_ssh
+  run: run0065
+  run_live_time_in_s: 300
+  run_start_time: 250603T132516
+  shifter: Simon
+  source_position:
+    phi_in_deg: 50.0
+    r_in_mm: 5.0
+    z_in_mm: 273.0
+run0066:
+  campaign: c1
+  daq_settings:
+    flashcam:
+      card_interface: efb3
+      decay_time_in_ns: 46000
+      shaping_time_in_ns: 6000
+      signal_depth_in_samples: 22290
+      trigger_threshold: 600
+  detector: V14618A
+  elog: https://elog.legend-exp.org/HADES/422
+  high_voltage_in_V: 4500
+  measurement: am_HS1_lat_ssh
+  run: run0066
+  run_live_time_in_s: 300
+  run_start_time: 250603T132516
+  shifter: Simon
+  source_position:
+    phi_in_deg: 55.0
+    r_in_mm: 5.0
+    z_in_mm: 273.0
+run0067:
+  campaign: c1
+  daq_settings:
+    flashcam:
+      card_interface: efb3
+      decay_time_in_ns: 46000
+      shaping_time_in_ns: 6000
+      signal_depth_in_samples: 22290
+      trigger_threshold: 600
+  detector: V14618A
+  elog: https://elog.legend-exp.org/HADES/422
+  high_voltage_in_V: 4500
+  measurement: am_HS1_lat_ssh
+  run: run0067
+  run_live_time_in_s: 300
+  run_start_time: 250603T132516
+  shifter: Simon
+  source_position:
+    phi_in_deg: 60.0
+    r_in_mm: 5.0
+    z_in_mm: 273.0
+run0068:
+  campaign: c1
+  daq_settings:
+    flashcam:
+      card_interface: efb3
+      decay_time_in_ns: 46000
+      shaping_time_in_ns: 6000
+      signal_depth_in_samples: 22290
+      trigger_threshold: 600
+  detector: V14618A
+  elog: https://elog.legend-exp.org/HADES/422
+  high_voltage_in_V: 4500
+  measurement: am_HS1_lat_ssh
+  run: run0068
+  run_live_time_in_s: 300
+  run_start_time: 250603T132516
+  shifter: Simon
+  source_position:
+    phi_in_deg: 65.0
+    r_in_mm: 5.0
+    z_in_mm: 273.0
+run0069:
+  campaign: c1
+  daq_settings:
+    flashcam:
+      card_interface: efb3
+      decay_time_in_ns: 46000
+      shaping_time_in_ns: 6000
+      signal_depth_in_samples: 22290
+      trigger_threshold: 600
+  detector: V14618A
+  elog: https://elog.legend-exp.org/HADES/422
+  high_voltage_in_V: 4500
+  measurement: am_HS1_lat_ssh
+  run: run0069
+  run_live_time_in_s: 300
+  run_start_time: 250603T132516
+  shifter: Simon
+  source_position:
+    phi_in_deg: 70.0
+    r_in_mm: 5.0
+    z_in_mm: 273.0
+run0070:
+  campaign: c1
+  daq_settings:
+    flashcam:
+      card_interface: efb3
+      decay_time_in_ns: 46000
+      shaping_time_in_ns: 6000
+      signal_depth_in_samples: 22290
+      trigger_threshold: 600
+  detector: V14618A
+  elog: https://elog.legend-exp.org/HADES/422
+  high_voltage_in_V: 4500
+  measurement: am_HS1_lat_ssh
+  run: run0070
+  run_live_time_in_s: 300
+  run_start_time: 250603T132516
+  shifter: Simon
+  source_position:
+    phi_in_deg: 75.0
+    r_in_mm: 5.0
+    z_in_mm: 273.0
+run0071:
+  campaign: c1
+  daq_settings:
+    flashcam:
+      card_interface: efb3
+      decay_time_in_ns: 46000
+      shaping_time_in_ns: 6000
+      signal_depth_in_samples: 22290
+      trigger_threshold: 600
+  detector: V14618A
+  elog: https://elog.legend-exp.org/HADES/422
+  high_voltage_in_V: 4500
+  measurement: am_HS1_lat_ssh
+  run: run0071
+  run_live_time_in_s: 300
+  run_start_time: 250603T132516
+  shifter: Simon
+  source_position:
+    phi_in_deg: 80.0
+    r_in_mm: 5.0
+    z_in_mm: 273.0
+run0072:
+  campaign: c1
+  daq_settings:
+    flashcam:
+      card_interface: efb3
+      decay_time_in_ns: 46000
+      shaping_time_in_ns: 6000
+      signal_depth_in_samples: 22290
+      trigger_threshold: 600
+  detector: V14618A
+  elog: https://elog.legend-exp.org/HADES/422
+  high_voltage_in_V: 4500
+  measurement: am_HS1_lat_ssh
+  run: run0072
+  run_live_time_in_s: 300
+  run_start_time: 250603T132516
+  shifter: Simon
+  source_position:
+    phi_in_deg: 85.0
+    r_in_mm: 5.0
+    z_in_mm: 273.0
+run0073:
+  campaign: c1
+  daq_settings:
+    flashcam:
+      card_interface: efb3
+      decay_time_in_ns: 46000
+      shaping_time_in_ns: 6000
+      signal_depth_in_samples: 22290
+      trigger_threshold: 600
+  detector: V14618A
+  elog: https://elog.legend-exp.org/HADES/422
+  high_voltage_in_V: 4500
+  measurement: am_HS1_lat_ssh
+  run: run0073
+  run_live_time_in_s: 300
+  run_start_time: 250603T132516
+  shifter: Simon
+  source_position:
+    phi_in_deg: 90.0
+    r_in_mm: 5.0
+    z_in_mm: 273.0
+run0074:
+  campaign: c1
+  daq_settings:
+    flashcam:
+      card_interface: efb3
+      decay_time_in_ns: 46000
+      shaping_time_in_ns: 6000
+      signal_depth_in_samples: 22290
+      trigger_threshold: 600
+  detector: V14618A
+  elog: https://elog.legend-exp.org/HADES/422
+  high_voltage_in_V: 4500
+  measurement: am_HS1_lat_ssh
+  run: run0074
+  run_live_time_in_s: 300
+  run_start_time: 250603T132516
+  shifter: Simon
+  source_position:
+    phi_in_deg: 95.0
+    r_in_mm: 5.0
+    z_in_mm: 273.0
+run0075:
+  campaign: c1
+  daq_settings:
+    flashcam:
+      card_interface: efb3
+      decay_time_in_ns: 46000
+      shaping_time_in_ns: 6000
+      signal_depth_in_samples: 22290
+      trigger_threshold: 600
+  detector: V14618A
+  elog: https://elog.legend-exp.org/HADES/422
+  high_voltage_in_V: 4500
+  measurement: am_HS1_lat_ssh
+  run: run0075
+  run_live_time_in_s: 300
+  run_start_time: 250603T132516
+  shifter: Simon
+  source_position:
+    phi_in_deg: 100.0
+    r_in_mm: 5.0
+    z_in_mm: 273.0
+run0076:
+  campaign: c1
+  daq_settings:
+    flashcam:
+      card_interface: efb3
+      decay_time_in_ns: 46000
+      shaping_time_in_ns: 6000
+      signal_depth_in_samples: 22290
+      trigger_threshold: 600
+  detector: V14618A
+  elog: https://elog.legend-exp.org/HADES/422
+  high_voltage_in_V: 4500
+  measurement: am_HS1_lat_ssh
+  run: run0076
+  run_live_time_in_s: 300
+  run_start_time: 250603T132516
+  shifter: Simon
+  source_position:
+    phi_in_deg: 105.0
+    r_in_mm: 5.0
+    z_in_mm: 273.0
+run0077:
+  campaign: c1
+  daq_settings:
+    flashcam:
+      card_interface: efb3
+      decay_time_in_ns: 46000
+      shaping_time_in_ns: 6000
+      signal_depth_in_samples: 22290
+      trigger_threshold: 600
+  detector: V14618A
+  elog: https://elog.legend-exp.org/HADES/422
+  high_voltage_in_V: 4500
+  measurement: am_HS1_lat_ssh
+  run: run0077
+  run_live_time_in_s: 300
+  run_start_time: 250603T132516
+  shifter: Simon
+  source_position:
+    phi_in_deg: 110.0
+    r_in_mm: 5.0
+    z_in_mm: 273.0
+run0078:
+  campaign: c1
+  daq_settings:
+    flashcam:
+      card_interface: efb3
+      decay_time_in_ns: 46000
+      shaping_time_in_ns: 6000
+      signal_depth_in_samples: 22290
+      trigger_threshold: 600
+  detector: V14618A
+  elog: https://elog.legend-exp.org/HADES/422
+  high_voltage_in_V: 4500
+  measurement: am_HS1_lat_ssh
+  run: run0078
+  run_live_time_in_s: 300
+  run_start_time: 250603T132516
+  shifter: Simon
+  source_position:
+    phi_in_deg: 115.0
+    r_in_mm: 5.0
+    z_in_mm: 273.0
+run0079:
+  campaign: c1
+  daq_settings:
+    flashcam:
+      card_interface: efb3
+      decay_time_in_ns: 46000
+      shaping_time_in_ns: 6000
+      signal_depth_in_samples: 22290
+      trigger_threshold: 600
+  detector: V14618A
+  elog: https://elog.legend-exp.org/HADES/422
+  high_voltage_in_V: 4500
+  measurement: am_HS1_lat_ssh
+  run: run0079
+  run_live_time_in_s: 300
+  run_start_time: 250603T132516
+  shifter: Simon
+  source_position:
+    phi_in_deg: 120.0
+    r_in_mm: 5.0
+    z_in_mm: 273.0
+run0080:
+  campaign: c1
+  daq_settings:
+    flashcam:
+      card_interface: efb3
+      decay_time_in_ns: 46000
+      shaping_time_in_ns: 6000
+      signal_depth_in_samples: 22290
+      trigger_threshold: 600
+  detector: V14618A
+  elog: https://elog.legend-exp.org/HADES/422
+  high_voltage_in_V: 4500
+  measurement: am_HS1_lat_ssh
+  run: run0080
+  run_live_time_in_s: 300
+  run_start_time: 250603T132516
+  shifter: Simon
+  source_position:
+    phi_in_deg: 125.0
+    r_in_mm: 5.0
+    z_in_mm: 273.0
+run0081:
+  campaign: c1
+  daq_settings:
+    flashcam:
+      card_interface: efb3
+      decay_time_in_ns: 46000
+      shaping_time_in_ns: 6000
+      signal_depth_in_samples: 22290
+      trigger_threshold: 600
+  detector: V14618A
+  elog: https://elog.legend-exp.org/HADES/422
+  high_voltage_in_V: 4500
+  measurement: am_HS1_lat_ssh
+  run: run0081
+  run_live_time_in_s: 300
+  run_start_time: 250603T132516
+  shifter: Simon
+  source_position:
+    phi_in_deg: 130.0
+    r_in_mm: 5.0
+    z_in_mm: 273.0
+run0082:
+  campaign: c1
+  daq_settings:
+    flashcam:
+      card_interface: efb3
+      decay_time_in_ns: 46000
+      shaping_time_in_ns: 6000
+      signal_depth_in_samples: 22290
+      trigger_threshold: 600
+  detector: V14618A
+  elog: https://elog.legend-exp.org/HADES/422
+  high_voltage_in_V: 4500
+  measurement: am_HS1_lat_ssh
+  run: run0082
+  run_live_time_in_s: 300
+  run_start_time: 250603T132516
+  shifter: Simon
+  source_position:
+    phi_in_deg: 135.0
+    r_in_mm: 5.0
+    z_in_mm: 273.0
+run0083:
+  campaign: c1
+  daq_settings:
+    flashcam:
+      card_interface: efb3
+      decay_time_in_ns: 46000
+      shaping_time_in_ns: 6000
+      signal_depth_in_samples: 22290
+      trigger_threshold: 600
+  detector: V14618A
+  elog: https://elog.legend-exp.org/HADES/422
+  high_voltage_in_V: 4500
+  measurement: am_HS1_lat_ssh
+  run: run0083
+  run_live_time_in_s: 300
+  run_start_time: 250603T132516
+  shifter: Simon
+  source_position:
+    phi_in_deg: 140.0
+    r_in_mm: 5.0
+    z_in_mm: 273.0
+run0084:
+  campaign: c1
+  daq_settings:
+    flashcam:
+      card_interface: efb3
+      decay_time_in_ns: 46000
+      shaping_time_in_ns: 6000
+      signal_depth_in_samples: 22290
+      trigger_threshold: 600
+  detector: V14618A
+  elog: https://elog.legend-exp.org/HADES/422
+  high_voltage_in_V: 4500
+  measurement: am_HS1_lat_ssh
+  run: run0084
+  run_live_time_in_s: 300
+  run_start_time: 250603T132516
+  shifter: Simon
+  source_position:
+    phi_in_deg: 145.0
+    r_in_mm: 5.0
+    z_in_mm: 273.0
+run0085:
+  campaign: c1
+  daq_settings:
+    flashcam:
+      card_interface: efb3
+      decay_time_in_ns: 46000
+      shaping_time_in_ns: 6000
+      signal_depth_in_samples: 22290
+      trigger_threshold: 600
+  detector: V14618A
+  elog: https://elog.legend-exp.org/HADES/422
+  high_voltage_in_V: 4500
+  measurement: am_HS1_lat_ssh
+  run: run0085
+  run_live_time_in_s: 300
+  run_start_time: 250603T132516
+  shifter: Simon
+  source_position:
+    phi_in_deg: 150.0
+    r_in_mm: 5.0
+    z_in_mm: 273.0
+run0086:
+  campaign: c1
+  daq_settings:
+    flashcam:
+      card_interface: efb3
+      decay_time_in_ns: 46000
+      shaping_time_in_ns: 6000
+      signal_depth_in_samples: 22290
+      trigger_threshold: 600
+  detector: V14618A
+  elog: https://elog.legend-exp.org/HADES/422
+  high_voltage_in_V: 4500
+  measurement: am_HS1_lat_ssh
+  run: run0086
+  run_live_time_in_s: 300
+  run_start_time: 250603T132516
+  shifter: Simon
+  source_position:
+    phi_in_deg: 155.0
+    r_in_mm: 5.0
+    z_in_mm: 273.0
+run0087:
+  campaign: c1
+  daq_settings:
+    flashcam:
+      card_interface: efb3
+      decay_time_in_ns: 46000
+      shaping_time_in_ns: 6000
+      signal_depth_in_samples: 22290
+      trigger_threshold: 600
+  detector: V14618A
+  elog: https://elog.legend-exp.org/HADES/422
+  high_voltage_in_V: 4500
+  measurement: am_HS1_lat_ssh
+  run: run0087
+  run_live_time_in_s: 300
+  run_start_time: 250603T132516
+  shifter: Simon
+  source_position:
+    phi_in_deg: 160.0
+    r_in_mm: 5.0
+    z_in_mm: 273.0
+run0088:
+  campaign: c1
+  daq_settings:
+    flashcam:
+      card_interface: efb3
+      decay_time_in_ns: 46000
+      shaping_time_in_ns: 6000
+      signal_depth_in_samples: 22290
+      trigger_threshold: 600
+  detector: V14618A
+  elog: https://elog.legend-exp.org/HADES/422
+  high_voltage_in_V: 4500
+  measurement: am_HS1_lat_ssh
+  run: run0088
+  run_live_time_in_s: 300
+  run_start_time: 250603T132516
+  shifter: Simon
+  source_position:
+    phi_in_deg: 165.0
+    r_in_mm: 5.0
+    z_in_mm: 273.0
+run0089:
+  campaign: c1
+  daq_settings:
+    flashcam:
+      card_interface: efb3
+      decay_time_in_ns: 46000
+      shaping_time_in_ns: 6000
+      signal_depth_in_samples: 22290
+      trigger_threshold: 600
+  detector: V14618A
+  elog: https://elog.legend-exp.org/HADES/422
+  high_voltage_in_V: 4500
+  measurement: am_HS1_lat_ssh
+  run: run0089
+  run_live_time_in_s: 300
+  run_start_time: 250603T132516
+  shifter: Simon
+  source_position:
+    phi_in_deg: 170.0
+    r_in_mm: 5.0
+    z_in_mm: 273.0
+run0090:
+  campaign: c1
+  daq_settings:
+    flashcam:
+      card_interface: efb3
+      decay_time_in_ns: 46000
+      shaping_time_in_ns: 6000
+      signal_depth_in_samples: 22290
+      trigger_threshold: 600
+  detector: V14618A
+  elog: https://elog.legend-exp.org/HADES/422
+  high_voltage_in_V: 4500
+  measurement: am_HS1_lat_ssh
+  run: run0090
+  run_live_time_in_s: 300
+  run_start_time: 250603T132516
+  shifter: Simon
+  source_position:
+    phi_in_deg: 175.0
+    r_in_mm: 5.0
+    z_in_mm: 273.0
+run0091:
+  campaign: c1
+  daq_settings:
+    flashcam:
+      card_interface: efb3
+      decay_time_in_ns: 46000
+      shaping_time_in_ns: 6000
+      signal_depth_in_samples: 22290
+      trigger_threshold: 600
+  detector: V14618A
+  elog: https://elog.legend-exp.org/HADES/422
+  high_voltage_in_V: 4500
+  measurement: am_HS1_lat_ssh
+  run: run0091
+  run_live_time_in_s: 300
+  run_start_time: 250603T132516
+  shifter: Simon
+  source_position:
+    phi_in_deg: 180.0
+    r_in_mm: 5.0
+    z_in_mm: 273.0
+run0092:
+  campaign: c1
+  daq_settings:
+    flashcam:
+      card_interface: efb3
+      decay_time_in_ns: 46000
+      shaping_time_in_ns: 6000
+      signal_depth_in_samples: 22290
+      trigger_threshold: 600
+  detector: V14618A
+  elog: https://elog.legend-exp.org/HADES/422
+  high_voltage_in_V: 4500
+  measurement: am_HS1_lat_ssh
+  run: run0092
+  run_live_time_in_s: 300
+  run_start_time: 250603T132516
+  shifter: Simon
+  source_position:
+    phi_in_deg: 185.0
+    r_in_mm: 5.0
+    z_in_mm: 273.0
+run0093:
+  campaign: c1
+  daq_settings:
+    flashcam:
+      card_interface: efb3
+      decay_time_in_ns: 46000
+      shaping_time_in_ns: 6000
+      signal_depth_in_samples: 22290
+      trigger_threshold: 600
+  detector: V14618A
+  elog: https://elog.legend-exp.org/HADES/422
+  high_voltage_in_V: 4500
+  measurement: am_HS1_lat_ssh
+  run: run0093
+  run_live_time_in_s: 300
+  run_start_time: 250603T132516
+  shifter: Simon
+  source_position:
+    phi_in_deg: 190.0
+    r_in_mm: 5.0
+    z_in_mm: 273.0
+run0094:
+  campaign: c1
+  daq_settings:
+    flashcam:
+      card_interface: efb3
+      decay_time_in_ns: 46000
+      shaping_time_in_ns: 6000
+      signal_depth_in_samples: 22290
+      trigger_threshold: 600
+  detector: V14618A
+  elog: https://elog.legend-exp.org/HADES/422
+  high_voltage_in_V: 4500
+  measurement: am_HS1_lat_ssh
+  run: run0094
+  run_live_time_in_s: 300
+  run_start_time: 250603T132516
+  shifter: Simon
+  source_position:
+    phi_in_deg: 195.0
+    r_in_mm: 5.0
+    z_in_mm: 273.0
+run0095:
+  campaign: c1
+  daq_settings:
+    flashcam:
+      card_interface: efb3
+      decay_time_in_ns: 46000
+      shaping_time_in_ns: 6000
+      signal_depth_in_samples: 22290
+      trigger_threshold: 600
+  detector: V14618A
+  elog: https://elog.legend-exp.org/HADES/422
+  high_voltage_in_V: 4500
+  measurement: am_HS1_lat_ssh
+  run: run0095
+  run_live_time_in_s: 300
+  run_start_time: 250603T132516
+  shifter: Simon
+  source_position:
+    phi_in_deg: 200.0
+    r_in_mm: 5.0
+    z_in_mm: 273.0
+run0096:
+  campaign: c1
+  daq_settings:
+    flashcam:
+      card_interface: efb3
+      decay_time_in_ns: 46000
+      shaping_time_in_ns: 6000
+      signal_depth_in_samples: 22290
+      trigger_threshold: 600
+  detector: V14618A
+  elog: https://elog.legend-exp.org/HADES/422
+  high_voltage_in_V: 4500
+  measurement: am_HS1_lat_ssh
+  run: run0096
+  run_live_time_in_s: 300
+  run_start_time: 250603T132516
+  shifter: Simon
+  source_position:
+    phi_in_deg: 205.0
+    r_in_mm: 5.0
+    z_in_mm: 273.0
+run0097:
+  campaign: c1
+  daq_settings:
+    flashcam:
+      card_interface: efb3
+      decay_time_in_ns: 46000
+      shaping_time_in_ns: 6000
+      signal_depth_in_samples: 22290
+      trigger_threshold: 600
+  detector: V14618A
+  elog: https://elog.legend-exp.org/HADES/422
+  high_voltage_in_V: 4500
+  measurement: am_HS1_lat_ssh
+  run: run0097
+  run_live_time_in_s: 300
+  run_start_time: 250603T132516
+  shifter: Simon
+  source_position:
+    phi_in_deg: 210.0
+    r_in_mm: 5.0
+    z_in_mm: 273.0
+run0098:
+  campaign: c1
+  daq_settings:
+    flashcam:
+      card_interface: efb3
+      decay_time_in_ns: 46000
+      shaping_time_in_ns: 6000
+      signal_depth_in_samples: 22290
+      trigger_threshold: 600
+  detector: V14618A
+  elog: https://elog.legend-exp.org/HADES/422
+  high_voltage_in_V: 4500
+  measurement: am_HS1_lat_ssh
+  run: run0098
+  run_live_time_in_s: 300
+  run_start_time: 250603T132516
+  shifter: Simon
+  source_position:
+    phi_in_deg: 215.0
+    r_in_mm: 5.0
+    z_in_mm: 273.0
+run0099:
+  campaign: c1
+  daq_settings:
+    flashcam:
+      card_interface: efb3
+      decay_time_in_ns: 46000
+      shaping_time_in_ns: 6000
+      signal_depth_in_samples: 22290
+      trigger_threshold: 600
+  detector: V14618A
+  elog: https://elog.legend-exp.org/HADES/422
+  high_voltage_in_V: 4500
+  measurement: am_HS1_lat_ssh
+  run: run0099
+  run_live_time_in_s: 300
+  run_start_time: 250603T132516
+  shifter: Simon
+  source_position:
+    phi_in_deg: 220.0
+    r_in_mm: 5.0
+    z_in_mm: 273.0
+run0100:
+  campaign: c1
+  daq_settings:
+    flashcam:
+      card_interface: efb3
+      decay_time_in_ns: 46000
+      shaping_time_in_ns: 6000
+      signal_depth_in_samples: 22290
+      trigger_threshold: 600
+  detector: V14618A
+  elog: https://elog.legend-exp.org/HADES/422
+  high_voltage_in_V: 4500
+  measurement: am_HS1_lat_ssh
+  run: run0100
+  run_live_time_in_s: 300
+  run_start_time: 250603T132516
+  shifter: Simon
+  source_position:
+    phi_in_deg: 225.0
+    r_in_mm: 5.0
+    z_in_mm: 273.0
+run0101:
+  campaign: c1
+  daq_settings:
+    flashcam:
+      card_interface: efb3
+      decay_time_in_ns: 46000
+      shaping_time_in_ns: 6000
+      signal_depth_in_samples: 22290
+      trigger_threshold: 600
+  detector: V14618A
+  elog: https://elog.legend-exp.org/HADES/422
+  high_voltage_in_V: 4500
+  measurement: am_HS1_lat_ssh
+  run: run0101
+  run_live_time_in_s: 300
+  run_start_time: 250603T132516
+  shifter: Simon
+  source_position:
+    phi_in_deg: 230.0
+    r_in_mm: 5.0
+    z_in_mm: 273.0
+run0102:
+  campaign: c1
+  daq_settings:
+    flashcam:
+      card_interface: efb3
+      decay_time_in_ns: 46000
+      shaping_time_in_ns: 6000
+      signal_depth_in_samples: 22290
+      trigger_threshold: 600
+  detector: V14618A
+  elog: https://elog.legend-exp.org/HADES/422
+  high_voltage_in_V: 4500
+  measurement: am_HS1_lat_ssh
+  run: run0102
+  run_live_time_in_s: 300
+  run_start_time: 250603T132516
+  shifter: Simon
+  source_position:
+    phi_in_deg: 235.0
+    r_in_mm: 5.0
+    z_in_mm: 273.0
+run0103:
+  campaign: c1
+  daq_settings:
+    flashcam:
+      card_interface: efb3
+      decay_time_in_ns: 46000
+      shaping_time_in_ns: 6000
+      signal_depth_in_samples: 22290
+      trigger_threshold: 600
+  detector: V14618A
+  elog: https://elog.legend-exp.org/HADES/422
+  high_voltage_in_V: 4500
+  measurement: am_HS1_lat_ssh
+  run: run0103
+  run_live_time_in_s: 300
+  run_start_time: 250603T132516
+  shifter: Simon
+  source_position:
+    phi_in_deg: 240.0
+    r_in_mm: 5.0
+    z_in_mm: 273.0
+run0104:
+  campaign: c1
+  daq_settings:
+    flashcam:
+      card_interface: efb3
+      decay_time_in_ns: 46000
+      shaping_time_in_ns: 6000
+      signal_depth_in_samples: 22290
+      trigger_threshold: 600
+  detector: V14618A
+  elog: https://elog.legend-exp.org/HADES/422
+  high_voltage_in_V: 4500
+  measurement: am_HS1_lat_ssh
+  run: run0104
+  run_live_time_in_s: 300
+  run_start_time: 250603T132516
+  shifter: Simon
+  source_position:
+    phi_in_deg: 245.0
+    r_in_mm: 5.0
+    z_in_mm: 273.0
+run0105:
+  campaign: c1
+  daq_settings:
+    flashcam:
+      card_interface: efb3
+      decay_time_in_ns: 46000
+      shaping_time_in_ns: 6000
+      signal_depth_in_samples: 22290
+      trigger_threshold: 600
+  detector: V14618A
+  elog: https://elog.legend-exp.org/HADES/422
+  high_voltage_in_V: 4500
+  measurement: am_HS1_lat_ssh
+  run: run0105
+  run_live_time_in_s: 300
+  run_start_time: 250603T132516
+  shifter: Simon
+  source_position:
+    phi_in_deg: 250.0
+    r_in_mm: 5.0
+    z_in_mm: 273.0
+run0106:
+  campaign: c1
+  daq_settings:
+    flashcam:
+      card_interface: efb3
+      decay_time_in_ns: 46000
+      shaping_time_in_ns: 6000
+      signal_depth_in_samples: 22290
+      trigger_threshold: 600
+  detector: V14618A
+  elog: https://elog.legend-exp.org/HADES/422
+  high_voltage_in_V: 4500
+  measurement: am_HS1_lat_ssh
+  run: run0106
+  run_live_time_in_s: 300
+  run_start_time: 250603T132516
+  shifter: Simon
+  source_position:
+    phi_in_deg: 255.0
+    r_in_mm: 5.0
+    z_in_mm: 273.0
+run0107:
+  campaign: c1
+  daq_settings:
+    flashcam:
+      card_interface: efb3
+      decay_time_in_ns: 46000
+      shaping_time_in_ns: 6000
+      signal_depth_in_samples: 22290
+      trigger_threshold: 600
+  detector: V14618A
+  elog: https://elog.legend-exp.org/HADES/422
+  high_voltage_in_V: 4500
+  measurement: am_HS1_lat_ssh
+  run: run0107
+  run_live_time_in_s: 300
+  run_start_time: 250603T132516
+  shifter: Simon
+  source_position:
+    phi_in_deg: 260.0
+    r_in_mm: 5.0
+    z_in_mm: 273.0
+run0108:
+  campaign: c1
+  daq_settings:
+    flashcam:
+      card_interface: efb3
+      decay_time_in_ns: 46000
+      shaping_time_in_ns: 6000
+      signal_depth_in_samples: 22290
+      trigger_threshold: 600
+  detector: V14618A
+  elog: https://elog.legend-exp.org/HADES/422
+  high_voltage_in_V: 4500
+  measurement: am_HS1_lat_ssh
+  run: run0108
+  run_live_time_in_s: 300
+  run_start_time: 250603T132516
+  shifter: Simon
+  source_position:
+    phi_in_deg: 265.0
+    r_in_mm: 5.0
+    z_in_mm: 273.0
+run0109:
+  campaign: c1
+  daq_settings:
+    flashcam:
+      card_interface: efb3
+      decay_time_in_ns: 46000
+      shaping_time_in_ns: 6000
+      signal_depth_in_samples: 22290
+      trigger_threshold: 600
+  detector: V14618A
+  elog: https://elog.legend-exp.org/HADES/422
+  high_voltage_in_V: 4500
+  measurement: am_HS1_lat_ssh
+  run: run0109
+  run_live_time_in_s: 300
+  run_start_time: 250603T132516
+  shifter: Simon
+  source_position:
+    phi_in_deg: 270.0
+    r_in_mm: 5.0
+    z_in_mm: 273.0
+run0110:
+  campaign: c1
+  daq_settings:
+    flashcam:
+      card_interface: efb3
+      decay_time_in_ns: 46000
+      shaping_time_in_ns: 6000
+      signal_depth_in_samples: 22290
+      trigger_threshold: 600
+  detector: V14618A
+  elog: https://elog.legend-exp.org/HADES/422
+  high_voltage_in_V: 4500
+  measurement: am_HS1_lat_ssh
+  run: run0110
+  run_live_time_in_s: 300
+  run_start_time: 250603T132516
+  shifter: Simon
+  source_position:
+    phi_in_deg: 275.0
+    r_in_mm: 5.0
+    z_in_mm: 273.0
+run0111:
+  campaign: c1
+  daq_settings:
+    flashcam:
+      card_interface: efb3
+      decay_time_in_ns: 46000
+      shaping_time_in_ns: 6000
+      signal_depth_in_samples: 22290
+      trigger_threshold: 600
+  detector: V14618A
+  elog: https://elog.legend-exp.org/HADES/422
+  high_voltage_in_V: 4500
+  measurement: am_HS1_lat_ssh
+  run: run0111
+  run_live_time_in_s: 300
+  run_start_time: 250603T132516
+  shifter: Simon
+  source_position:
+    phi_in_deg: 280.0
+    r_in_mm: 5.0
+    z_in_mm: 273.0
+run0112:
+  campaign: c1
+  daq_settings:
+    flashcam:
+      card_interface: efb3
+      decay_time_in_ns: 46000
+      shaping_time_in_ns: 6000
+      signal_depth_in_samples: 22290
+      trigger_threshold: 600
+  detector: V14618A
+  elog: https://elog.legend-exp.org/HADES/422
+  high_voltage_in_V: 4500
+  measurement: am_HS1_lat_ssh
+  run: run0112
+  run_live_time_in_s: 300
+  run_start_time: 250603T132516
+  shifter: Simon
+  source_position:
+    phi_in_deg: 285.0
+    r_in_mm: 5.0
+    z_in_mm: 273.0
+run0113:
+  campaign: c1
+  daq_settings:
+    flashcam:
+      card_interface: efb3
+      decay_time_in_ns: 46000
+      shaping_time_in_ns: 6000
+      signal_depth_in_samples: 22290
+      trigger_threshold: 600
+  detector: V14618A
+  elog: https://elog.legend-exp.org/HADES/422
+  high_voltage_in_V: 4500
+  measurement: am_HS1_lat_ssh
+  run: run0113
+  run_live_time_in_s: 300
+  run_start_time: 250603T132516
+  shifter: Simon
+  source_position:
+    phi_in_deg: 290.0
+    r_in_mm: 5.0
+    z_in_mm: 273.0
+run0114:
+  campaign: c1
+  daq_settings:
+    flashcam:
+      card_interface: efb3
+      decay_time_in_ns: 46000
+      shaping_time_in_ns: 6000
+      signal_depth_in_samples: 22290
+      trigger_threshold: 600
+  detector: V14618A
+  elog: https://elog.legend-exp.org/HADES/422
+  high_voltage_in_V: 4500
+  measurement: am_HS1_lat_ssh
+  run: run0114
+  run_live_time_in_s: 300
+  run_start_time: 250603T132516
+  shifter: Simon
+  source_position:
+    phi_in_deg: 295.0
+    r_in_mm: 5.0
+    z_in_mm: 273.0
+run0115:
+  campaign: c1
+  daq_settings:
+    flashcam:
+      card_interface: efb3
+      decay_time_in_ns: 46000
+      shaping_time_in_ns: 6000
+      signal_depth_in_samples: 22290
+      trigger_threshold: 600
+  detector: V14618A
+  elog: https://elog.legend-exp.org/HADES/422
+  high_voltage_in_V: 4500
+  measurement: am_HS1_lat_ssh
+  run: run0115
+  run_live_time_in_s: 300
+  run_start_time: 250603T132516
+  shifter: Simon
+  source_position:
+    phi_in_deg: 300.0
+    r_in_mm: 5.0
+    z_in_mm: 273.0
+run0116:
+  campaign: c1
+  daq_settings:
+    flashcam:
+      card_interface: efb3
+      decay_time_in_ns: 46000
+      shaping_time_in_ns: 6000
+      signal_depth_in_samples: 22290
+      trigger_threshold: 600
+  detector: V14618A
+  elog: https://elog.legend-exp.org/HADES/422
+  high_voltage_in_V: 4500
+  measurement: am_HS1_lat_ssh
+  run: run0116
+  run_live_time_in_s: 300
+  run_start_time: 250603T132516
+  shifter: Simon
+  source_position:
+    phi_in_deg: 305.0
+    r_in_mm: 5.0
+    z_in_mm: 273.0
+run0117:
+  campaign: c1
+  daq_settings:
+    flashcam:
+      card_interface: efb3
+      decay_time_in_ns: 46000
+      shaping_time_in_ns: 6000
+      signal_depth_in_samples: 22290
+      trigger_threshold: 600
+  detector: V14618A
+  elog: https://elog.legend-exp.org/HADES/422
+  high_voltage_in_V: 4500
+  measurement: am_HS1_lat_ssh
+  run: run0117
+  run_live_time_in_s: 300
+  run_start_time: 250603T132516
+  shifter: Simon
+  source_position:
+    phi_in_deg: 310.0
+    r_in_mm: 5.0
+    z_in_mm: 273.0
+run0118:
+  campaign: c1
+  daq_settings:
+    flashcam:
+      card_interface: efb3
+      decay_time_in_ns: 46000
+      shaping_time_in_ns: 6000
+      signal_depth_in_samples: 22290
+      trigger_threshold: 600
+  detector: V14618A
+  elog: https://elog.legend-exp.org/HADES/422
+  high_voltage_in_V: 4500
+  measurement: am_HS1_lat_ssh
+  run: run0118
+  run_live_time_in_s: 300
+  run_start_time: 250603T132516
+  shifter: Simon
+  source_position:
+    phi_in_deg: 315.0
+    r_in_mm: 5.0
+    z_in_mm: 273.0
+run0119:
+  campaign: c1
+  daq_settings:
+    flashcam:
+      card_interface: efb3
+      decay_time_in_ns: 46000
+      shaping_time_in_ns: 6000
+      signal_depth_in_samples: 22290
+      trigger_threshold: 600
+  detector: V14618A
+  elog: https://elog.legend-exp.org/HADES/422
+  high_voltage_in_V: 4500
+  measurement: am_HS1_lat_ssh
+  run: run0119
+  run_live_time_in_s: 300
+  run_start_time: 250603T132516
+  shifter: Simon
+  source_position:
+    phi_in_deg: 320.0
+    r_in_mm: 5.0
+    z_in_mm: 273.0
+run0120:
+  campaign: c1
+  daq_settings:
+    flashcam:
+      card_interface: efb3
+      decay_time_in_ns: 46000
+      shaping_time_in_ns: 6000
+      signal_depth_in_samples: 22290
+      trigger_threshold: 600
+  detector: V14618A
+  elog: https://elog.legend-exp.org/HADES/422
+  high_voltage_in_V: 4500
+  measurement: am_HS1_lat_ssh
+  run: run0120
+  run_live_time_in_s: 300
+  run_start_time: 250603T132516
+  shifter: Simon
+  source_position:
+    phi_in_deg: 325.0
+    r_in_mm: 5.0
+    z_in_mm: 273.0
+run0121:
+  campaign: c1
+  daq_settings:
+    flashcam:
+      card_interface: efb3
+      decay_time_in_ns: 46000
+      shaping_time_in_ns: 6000
+      signal_depth_in_samples: 22290
+      trigger_threshold: 600
+  detector: V14618A
+  elog: https://elog.legend-exp.org/HADES/422
+  high_voltage_in_V: 4500
+  measurement: am_HS1_lat_ssh
+  run: run0121
+  run_live_time_in_s: 300
+  run_start_time: 250603T132516
+  shifter: Simon
+  source_position:
+    phi_in_deg: 330.0
+    r_in_mm: 5.0
+    z_in_mm: 273.0
+run0122:
+  campaign: c1
+  daq_settings:
+    flashcam:
+      card_interface: efb3
+      decay_time_in_ns: 46000
+      shaping_time_in_ns: 6000
+      signal_depth_in_samples: 22290
+      trigger_threshold: 600
+  detector: V14618A
+  elog: https://elog.legend-exp.org/HADES/422
+  high_voltage_in_V: 4500
+  measurement: am_HS1_lat_ssh
+  run: run0122
+  run_live_time_in_s: 300
+  run_start_time: 250603T132516
+  shifter: Simon
+  source_position:
+    phi_in_deg: 335.0
+    r_in_mm: 5.0
+    z_in_mm: 273.0
+run0123:
+  campaign: c1
+  daq_settings:
+    flashcam:
+      card_interface: efb3
+      decay_time_in_ns: 46000
+      shaping_time_in_ns: 6000
+      signal_depth_in_samples: 22290
+      trigger_threshold: 600
+  detector: V14618A
+  elog: https://elog.legend-exp.org/HADES/422
+  high_voltage_in_V: 4500
+  measurement: am_HS1_lat_ssh
+  run: run0123
+  run_live_time_in_s: 300
+  run_start_time: 250603T132516
+  shifter: Simon
+  source_position:
+    phi_in_deg: 340.0
+    r_in_mm: 5.0
+    z_in_mm: 273.0
+run0124:
+  campaign: c1
+  daq_settings:
+    flashcam:
+      card_interface: efb3
+      decay_time_in_ns: 46000
+      shaping_time_in_ns: 6000
+      signal_depth_in_samples: 22290
+      trigger_threshold: 600
+  detector: V14618A
+  elog: https://elog.legend-exp.org/HADES/422
+  high_voltage_in_V: 4500
+  measurement: am_HS1_lat_ssh
+  run: run0124
+  run_live_time_in_s: 300
+  run_start_time: 250603T132516
+  shifter: Simon
+  source_position:
+    phi_in_deg: 345.0
+    r_in_mm: 5.0
+    z_in_mm: 273.0
+run0125:
+  campaign: c1
+  daq_settings:
+    flashcam:
+      card_interface: efb3
+      decay_time_in_ns: 46000
+      shaping_time_in_ns: 6000
+      signal_depth_in_samples: 22290
+      trigger_threshold: 600
+  detector: V14618A
+  elog: https://elog.legend-exp.org/HADES/422
+  high_voltage_in_V: 4500
+  measurement: am_HS1_lat_ssh
+  run: run0125
+  run_live_time_in_s: 300
+  run_start_time: 250603T132516
+  shifter: Simon
+  source_position:
+    phi_in_deg: 350.0
+    r_in_mm: 5.0
+    z_in_mm: 273.0
+run0126:
+  campaign: c1
+  daq_settings:
+    flashcam:
+      card_interface: efb3
+      decay_time_in_ns: 46000
+      shaping_time_in_ns: 6000
+      signal_depth_in_samples: 22290
+      trigger_threshold: 600
+  detector: V14618A
+  elog: https://elog.legend-exp.org/HADES/422
+  high_voltage_in_V: 4500
+  measurement: am_HS1_lat_ssh
+  run: run0126
+  run_live_time_in_s: 300
+  run_start_time: 250603T132516
+  shifter: Simon
+  source_position:
+    phi_in_deg: 355.0
+    r_in_mm: 5.0
+    z_in_mm: 273.0

@@ -1,0 +1,22 @@
+run0001:
+  campaign: c1
+  collimator: false
+  daq_settings:
+    flashcam:
+      card_interface: efb2
+      decay_time_in_ns: 44000
+      shaping_time_in_ns: 6000
+      signal_depth_in_samples: 22290
+      trigger_threshold: 1000
+  detector: V02160B
+  elog: https://elog.legend-exp.org/HADES/10
+  high_voltage_in_V: 4500
+  measurement: th_HS2_top_psa
+  run: run0001
+  run_live_time_in_s: 36000
+  run_start_time: 191022T151708
+  shifter: Yoann
+  source_position:
+    phi_in_deg: 0.0
+    r_in_mm: 0.0
+    z_in_mm: 45.0

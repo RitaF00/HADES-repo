@@ -1,0 +1,6 @@
+[submodule "dataprod/config"]
+	path = dataprod/config
+	url = git@github.com:legend-exp/hades-dataflow-config.git
+[submodule "hardware/detectors"]
+	path = hardware/detectors
+	url = git@github.com:legend-exp/legend-detectors

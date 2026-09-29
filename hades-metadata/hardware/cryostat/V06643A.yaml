@@ -1,0 +1,29 @@
+detector:
+  name: V06643A
+  position: 22.03
+holder:
+  geometry:
+    bottom_cyl:
+      inner:
+        height_in_mm: 15.9
+        radius_in_mm: 8.0
+      outer:
+        height_in_mm: 25.4
+        radius_in_mm: 13.0
+    cylinder:
+      inner:
+        height_in_mm: 105.0
+        radius_in_mm: 40.5
+      outer:
+        height_in_mm: 108.0
+        radius_in_mm: 41.3
+  position: 22.0
+wrap:
+  geometry:
+    inner:
+      height_in_mm: 102.97
+      radius_in_mm: 39.5
+    outer:
+      height_in_mm: 103.0
+      radius_in_mm: 40.2
+  position: 22.0

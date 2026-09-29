@@ -1,0 +1,23 @@
+metadata_path = "/global/u2/r/ritaferi/HADES_DATA/hades-metadata"
+db = dbetto.TextDB(metadata_path)
+
+# construct the geometry
+reg = pygeomhades.core.construct(
+    db.hardware.configuration.V03421A.c1.am_HS1_top_dlt.run0001
+)
+
+# visualise
+pygeomtools.viewer.visualize(reg)
+
+
+
+output_file = (
+    "/global/u2/r/ritaferi/HADES_DATA/V03421A/"
+    "V03421A_am_HS1_top_dlt_run0001.gdml"
+)
+
+writer = gdml.Writer()
+writer.addDetector(reg)
+writer.write(output_file)
+
+print(f"File GDML creato: {output_file}")

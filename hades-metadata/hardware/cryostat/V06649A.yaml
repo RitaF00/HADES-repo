@@ -1,0 +1,29 @@
+detector:
+  name: V06649A
+  position: 10.03
+holder:
+  geometry:
+    bottom_cyl:
+      inner:
+        height_in_mm: 15.9
+        radius_in_mm: 8.0
+      outer:
+        height_in_mm: 25.4
+        radius_in_mm: 13.0
+    cylinder:
+      inner:
+        height_in_mm: 105.0
+        radius_in_mm: 41.9
+      outer:
+        height_in_mm: 108.0
+        radius_in_mm: 42.7
+  position: 10.0
+wrap:
+  geometry:
+    inner:
+      height_in_mm: 102.97
+      radius_in_mm: 40.9
+    outer:
+      height_in_mm: 103.0
+      radius_in_mm: 41.6
+  position: 10.0
