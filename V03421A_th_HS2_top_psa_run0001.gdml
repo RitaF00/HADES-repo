@@ -3,23 +3,23 @@
 	<define>
 		<constant name="TWOPI" value="2.*pi"/>
 		<quantity name="wrap_top_thickness" value="1.0" type="length" unit="mm"/>
-		<quantity name="wrap_z" value="119.5" type="length" unit="mm"/>
-		<quantity name="wrap_cavity_radius" value="44.0" type="length" unit="mm"/>
-		<quantity name="wrap_radius" value="44.7" type="length" unit="mm"/>
+		<quantity name="wrap_z" value="100.0" type="length" unit="mm"/>
+		<quantity name="wrap_cavity_radius" value="43.5" type="length" unit="mm"/>
+		<quantity name="wrap_radius" value="44.2" type="length" unit="mm"/>
 		<constant name="TWOPI_1" value="2.*pi"/>
 		<quantity name="edge_height" value="1.3" type="length" unit="mm"/>
 		<quantity name="pos_top_ring_z" value="40.0" type="length" unit="mm"/>
 		<quantity name="end_top_ring_z" value="48.6" type="length" unit="mm"/>
-		<quantity name="pos_bottom_ring_z" value="77.4" type="length" unit="mm"/>
-		<quantity name="end_bottom_ring_z" value="86.0" type="length" unit="mm"/>
-		<quantity name="inner_height" value="118.0" type="length" unit="mm"/>
-		<quantity name="outer_height" value="121.1" type="length" unit="mm"/>
-		<quantity name="end_bottom_cyl_inner_z" value="133.9" type="length" unit="mm"/>
-		<quantity name="end_bottom_cyl_outer_z" value="146.5" type="length" unit="mm"/>
-		<quantity name="inner_radius" value="45.0" type="length" unit="mm"/>
+		<quantity name="pos_bottom_ring_z" value="64.4" type="length" unit="mm"/>
+		<quantity name="end_bottom_ring_z" value="73.0" type="length" unit="mm"/>
+		<quantity name="inner_height" value="105.0" type="length" unit="mm"/>
+		<quantity name="outer_height" value="108.1" type="length" unit="mm"/>
+		<quantity name="end_bottom_cyl_inner_z" value="120.9" type="length" unit="mm"/>
+		<quantity name="end_bottom_cyl_outer_z" value="133.5" type="length" unit="mm"/>
+		<quantity name="inner_radius" value="44.5" type="length" unit="mm"/>
 		<quantity name="bottom_cyl_inner_radius" value="8.0" type="length" unit="mm"/>
-		<quantity name="max_radius" value="48.0" type="length" unit="mm"/>
-		<quantity name="outer_radius" value="45.8" type="length" unit="mm"/>
+		<quantity name="max_radius" value="47.5" type="length" unit="mm"/>
+		<quantity name="outer_radius" value="45.3" type="length" unit="mm"/>
 		<quantity name="bottom_cyl_outer_radius" value="13.0" type="length" unit="mm"/>
 		<constant name="TWOPI_2" value="2.*pi"/>
 		<quantity name="start_cavity_z" value="1.5" type="length" unit="mm"/>
@@ -278,20 +278,19 @@
 			<zplane rmin="0" rmax="bottom_cyl_outer_radius" z="end_bottom_cyl_inner_z"/>
 			<zplane rmin="0" rmax="bottom_cyl_outer_radius" z="end_bottom_cyl_outer_z"/>
 		</polycone>
-		<genericPolycone name="V03422A" startphi="0" deltaphi="6.283185307179586" lunit="mm" aunit="rad">
+		<genericPolycone name="V03421A" startphi="0" deltaphi="6.283185307179586" lunit="mm" aunit="rad">
 			<rzpoint r="0" z="0"/>
 			<rzpoint r="12" z="0"/>
 			<rzpoint r="12" z="2"/>
 			<rzpoint r="15" z="2"/>
 			<rzpoint r="15" z="0"/>
-			<rzpoint r="42.45" z="0"/>
-			<rzpoint r="43.45" z="1"/>
-			<rzpoint r="43.45" z="105"/>
-			<rzpoint r="42.45" z="106"/>
-			<rzpoint r="8.999837197379808" z="106"/>
-			<rzpoint r="4" z="50"/>
-			<rzpoint r="4" z="34"/>
-			<rzpoint r="0" z="34"/>
+			<rzpoint r="42.0" z="0"/>
+			<rzpoint r="43" z="1"/>
+			<rzpoint r="43" z="84.2"/>
+			<rzpoint r="42.0" z="85.2"/>
+			<rzpoint r="4" z="85.2"/>
+			<rzpoint r="4" z="40.2"/>
+			<rzpoint r="0" z="40.2"/>
 		</genericPolycone>
 		<polycone name="cryostat" startphi="0" deltaphi="TWOPI" lunit="mm" aunit="rad">
 			<zplane rmin="0" rmax="cryostat_radius" z="0"/>
@@ -368,9 +367,9 @@
 			<solidref ref="holder"/>
 			<auxiliary auxtype="rmg_color" auxvalue="0.0,0.8,0.2,0.8"/>
 		</volume>
-		<volume name="V03422A">
+		<volume name="V03421A">
 			<materialref ref="EnrichedGermanium0.900"/>
-			<solidref ref="V03422A"/>
+			<solidref ref="V03421A"/>
 			<auxiliary auxtype="rmg_color" auxvalue="0.33,0.33,0.33,1.0"/>
 		</volume>
 		<volume name="cavity_lv">
@@ -379,16 +378,16 @@
 			<auxiliary auxtype="rmg_color" auxvalue="-1"/>
 			<physvol name="wrap_pv_1">
 				<volumeref ref="Wrap"/>
-				<position name="wrap_pv_pos" x="0.000000000000000" y="0.000000000000000" z="3.000000000000000" unit="mm"/>
+				<position name="wrap_pv_pos" x="0.000000000000000" y="0.000000000000000" z="16.500000000000000" unit="mm"/>
 			</physvol>
 			<physvol name="holder_pv_1">
 				<volumeref ref="Holder"/>
-				<position name="holder_pv_pos" x="0.000000000000000" y="0.000000000000000" z="4.000000000000000" unit="mm"/>
+				<position name="holder_pv_pos" x="0.000000000000000" y="0.000000000000000" z="16.500000000000000" unit="mm"/>
 			</physvol>
-			<physvol name="V03422A">
-				<volumeref ref="V03422A"/>
-				<position name="V03422A_pos" x="0.000000000000000" y="0.000000000000000" z="111.500000000000000" unit="mm"/>
-				<rotation name="V03422A_rot" x="0.000000000000000" y="3.141592653589793" z="0.000000000000000" unit="rad"/>
+			<physvol name="V03421A">
+				<volumeref ref="V03421A"/>
+				<position name="V03421A_pos" x="0.000000000000000" y="0.000000000000000" z="102.700000000000003" unit="mm"/>
+				<rotation name="V03421A_rot" x="0.000000000000000" y="3.141592653589793" z="0.000000000000000" unit="rad"/>
 			</physvol>
 		</volume>
 		<volume name="Cryostat">
@@ -470,7 +469,7 @@
 			</physvol>
 			<physvol name="source_pv_1">
 				<volumeref ref="CuSource_Holder"/>
-				<position name="source_pv_pos" x="0.000000000000000" y="-0.000000000000000" z="-72.500000000000000" unit="mm"/>
+				<position name="source_pv_pos" x="29.000000000000000" y="-0.000000000000000" z="-72.500000000000000" unit="mm"/>
 			</physvol>
 			<physvol name="source_holder_pv_1">
 				<volumeref ref="Source_Holder"/>
@@ -495,10 +494,10 @@
 	</structure>
 	<userinfo>
 		<auxiliary auxtype="RMG_detector_meta" auxvalue="">
-			<auxiliary auxtype="V03422A" auxvalue="{&quot;characterization&quot;: {&quot;l200_site&quot;: {&quot;daq&quot;: &quot;flashcam&quot;, &quot;depletion_voltage_in_V&quot;: 3600, &quot;fccd_in_mm&quot;: {&quot;am241&quot;: {&quot;central&quot;: null, &quot;err_corr_neg&quot;: null, &quot;err_corr_pos&quot;: null, &quot;err_uncorr_neg&quot;: null, &quot;err_uncorr_pos&quot;: null}, &quot;ba133&quot;: {&quot;central&quot;: null, &quot;err_corr_neg&quot;: null, &quot;err_corr_pos&quot;: null, &quot;err_uncorr_neg&quot;: null, &quot;err_uncorr_pos&quot;: null}}, &quot;fwhm_in_keV&quot;: {&quot;co60fep&quot;: 1.61, &quot;qbb&quot;: 1.97, &quot;tl208fep&quot;: 2.21}, &quot;location&quot;: &quot;hades&quot;, &quot;recommended_voltage_in_V&quot;: 4100, &quot;survival_fraction&quot;: {&quot;qbb&quot;: 0.293, &quot;tl208dep&quot;: 0.9, &quot;tl208fep&quot;: 0.063, &quot;tl208sep&quot;: 0.049}}, &quot;manufacturer&quot;: {&quot;depletion_voltage_in_V&quot;: 3500, &quot;dl_thickness_in_mm&quot;: 0.95, &quot;fwhm_co57fep_in_keV&quot;: 0.759, &quot;fwhm_co60fep_in_keV&quot;: 1.81, &quot;recommended_voltage_in_V&quot;: 4000}}, &quot;geometry&quot;: {&quot;borehole&quot;: {&quot;depth_in_mm&quot;: 72, &quot;radius_in_mm&quot;: 4}, &quot;groove&quot;: {&quot;depth_in_mm&quot;: 2, &quot;radius_in_mm&quot;: {&quot;inner&quot;: 12, &quot;outer&quot;: 15}}, &quot;height_in_mm&quot;: 106, &quot;pp_contact&quot;: {&quot;depth_in_mm&quot;: 0, &quot;radius_in_mm&quot;: 12}, &quot;radius_in_mm&quot;: 43.45, &quot;taper&quot;: {&quot;borehole&quot;: {&quot;angle_in_deg&quot;: 5.102, &quot;height_in_mm&quot;: 56}, &quot;bottom&quot;: {&quot;angle_in_deg&quot;: 45, &quot;height_in_mm&quot;: 1}, &quot;top&quot;: {&quot;angle_in_deg&quot;: 45, &quot;height_in_mm&quot;: 1}}}, &quot;hades&quot;: {&quot;detector&quot;: {&quot;name&quot;: &quot;V03422A&quot;, &quot;position&quot;: 7.0}, &quot;holder&quot;: {&quot;geometry&quot;: {&quot;bottom_cyl&quot;: {&quot;inner&quot;: {&quot;height_in_mm&quot;: 15.9, &quot;radius_in_mm&quot;: 8.0}, &quot;outer&quot;: {&quot;height_in_mm&quot;: 25.4, &quot;radius_in_mm&quot;: 13.0}}, &quot;cylinder&quot;: {&quot;inner&quot;: {&quot;height_in_mm&quot;: 118.0, &quot;radius_in_mm&quot;: 45.0}, &quot;outer&quot;: {&quot;height_in_mm&quot;: 121.1, &quot;radius_in_mm&quot;: 45.8}}, &quot;edge&quot;: {&quot;height_in_mm&quot;: 1.3, &quot;radius_in_mm&quot;: 48.0}, &quot;rings&quot;: {&quot;height_in_mm&quot;: 8.6, &quot;position_bottom_ring_in_mm&quot;: 77.4, &quot;position_top_ring_in_mm&quot;: 40.0, &quot;radius_in_mm&quot;: 48.0}}, &quot;position&quot;: 5.5}, &quot;wrap&quot;: {&quot;geometry&quot;: {&quot;inner&quot;: {&quot;height_in_mm&quot;: 118.5, &quot;radius_in_mm&quot;: 44.0}, &quot;outer&quot;: {&quot;height_in_mm&quot;: 119.5, &quot;radius_in_mm&quot;: 44.7}}, &quot;position&quot;: 4.5}}, &quot;name&quot;: &quot;V03422A&quot;, &quot;production&quot;: {&quot;crystal&quot;: &quot;422&quot;, &quot;delivered&quot;: &quot;2024-03-14&quot;, &quot;enrichment&quot;: {&quot;unc&quot;: 0.005, &quot;val&quot;: 0.9}, &quot;impcc&quot;: {&quot;array&quot;: {&quot;dist_from_contact_in_mm&quot;: [0, 0], &quot;value_in_1e9e/cm3&quot;: [0, 0]}, &quot;function_pars&quot;: {&quot;gradient_in_1e10e/cm4&quot;: 0, &quot;quadratic_in_1e10e/cm5&quot;: 0, &quot;z0_in_1e10e/cm3&quot;: 0}}, &quot;manufacturer&quot;: &quot;Mirion&quot;, &quot;mass_in_g&quot;: 3418, &quot;order&quot;: 3, &quot;passivation&quot;: true, &quot;reprocessing&quot;: false, &quot;slice&quot;: &quot;A&quot;}, &quot;type&quot;: &quot;icpc&quot;}"/>
+			<auxiliary auxtype="V03421A" auxvalue="{&quot;characterization&quot;: {&quot;l200_site&quot;: {&quot;daq&quot;: &quot;flashcam&quot;, &quot;depletion_voltage_in_V&quot;: 2100, &quot;fccd_in_mm&quot;: {&quot;am241&quot;: {&quot;central&quot;: null, &quot;err_corr_neg&quot;: null, &quot;err_corr_pos&quot;: null, &quot;err_uncorr_neg&quot;: null, &quot;err_uncorr_pos&quot;: null}, &quot;ba133&quot;: {&quot;central&quot;: null, &quot;err_corr_neg&quot;: null, &quot;err_corr_pos&quot;: null, &quot;err_uncorr_neg&quot;: null, &quot;err_uncorr_pos&quot;: null}}, &quot;fwhm_in_keV&quot;: {&quot;co60fep&quot;: 1.65, &quot;qbb&quot;: 2.08, &quot;tl208fep&quot;: 2.34}, &quot;location&quot;: &quot;hades&quot;, &quot;recommended_voltage_in_V&quot;: 2600, &quot;survival_fraction&quot;: {&quot;qbb&quot;: 0.333, &quot;tl208dep&quot;: 0.9, &quot;tl208fep&quot;: 0.083, &quot;tl208sep&quot;: 0.06}}, &quot;manufacturer&quot;: {&quot;depletion_voltage_in_V&quot;: 3000, &quot;dl_thickness_in_mm&quot;: 0.9, &quot;fwhm_co57fep_in_keV&quot;: 0.815, &quot;fwhm_co60fep_in_keV&quot;: 1.7, &quot;recommended_voltage_in_V&quot;: 3500}}, &quot;geometry&quot;: {&quot;borehole&quot;: {&quot;depth_in_mm&quot;: 45, &quot;radius_in_mm&quot;: 4}, &quot;groove&quot;: {&quot;depth_in_mm&quot;: 2, &quot;radius_in_mm&quot;: {&quot;inner&quot;: 12, &quot;outer&quot;: 15}}, &quot;height_in_mm&quot;: 85.2, &quot;pp_contact&quot;: {&quot;depth_in_mm&quot;: 0, &quot;radius_in_mm&quot;: 12}, &quot;radius_in_mm&quot;: 43, &quot;taper&quot;: {&quot;borehole&quot;: {&quot;angle_in_deg&quot;: 0, &quot;height_in_mm&quot;: 0}, &quot;bottom&quot;: {&quot;angle_in_deg&quot;: 45, &quot;height_in_mm&quot;: 1}, &quot;top&quot;: {&quot;angle_in_deg&quot;: 45, &quot;height_in_mm&quot;: 1}}}, &quot;hades&quot;: {&quot;detector&quot;: {&quot;name&quot;: &quot;V03421A&quot;, &quot;position&quot;: 19.0}, &quot;holder&quot;: {&quot;geometry&quot;: {&quot;bottom_cyl&quot;: {&quot;inner&quot;: {&quot;height_in_mm&quot;: 15.9, &quot;radius_in_mm&quot;: 8.0}, &quot;outer&quot;: {&quot;height_in_mm&quot;: 25.4, &quot;radius_in_mm&quot;: 13.0}}, &quot;cylinder&quot;: {&quot;inner&quot;: {&quot;height_in_mm&quot;: 105.0, &quot;radius_in_mm&quot;: 44.5}, &quot;outer&quot;: {&quot;height_in_mm&quot;: 108.1, &quot;radius_in_mm&quot;: 45.3}}, &quot;edge&quot;: {&quot;height_in_mm&quot;: 1.3, &quot;radius_in_mm&quot;: 47.5}, &quot;rings&quot;: {&quot;height_in_mm&quot;: 8.6, &quot;position_bottom_ring_in_mm&quot;: 64.4, &quot;position_top_ring_in_mm&quot;: 40.0, &quot;radius_in_mm&quot;: 47.5}}, &quot;position&quot;: 18.0}, &quot;wrap&quot;: {&quot;geometry&quot;: {&quot;inner&quot;: {&quot;height_in_mm&quot;: 99.0, &quot;radius_in_mm&quot;: 43.5}, &quot;outer&quot;: {&quot;height_in_mm&quot;: 100.0, &quot;radius_in_mm&quot;: 44.2}}, &quot;position&quot;: 18.0}}, &quot;name&quot;: &quot;V03421A&quot;, &quot;production&quot;: {&quot;crystal&quot;: &quot;421&quot;, &quot;delivered&quot;: &quot;2024-03-13&quot;, &quot;enrichment&quot;: {&quot;unc&quot;: 0.005, &quot;val&quot;: 0.9}, &quot;impcc&quot;: {&quot;array&quot;: {&quot;dist_from_contact_in_mm&quot;: [0, 0], &quot;value_in_1e9e/cm3&quot;: [0, 0]}, &quot;function_pars&quot;: {&quot;gradient_in_1e10e/cm4&quot;: 0, &quot;quadratic_in_1e10e/cm5&quot;: 0, &quot;z0_in_1e10e/cm3&quot;: 0}}, &quot;manufacturer&quot;: &quot;Mirion&quot;, &quot;mass_in_g&quot;: 2700, &quot;order&quot;: 3, &quot;passivation&quot;: true, &quot;reprocessing&quot;: false, &quot;slice&quot;: &quot;A&quot;}, &quot;type&quot;: &quot;icpc&quot;}"/>
 		</auxiliary>
 		<auxiliary auxtype="RMG_detector" auxvalue="germanium">
-			<auxiliary auxtype="V03422A" auxvalue="1"/>
+			<auxiliary auxtype="V03421A" auxvalue="1"/>
 		</auxiliary>
 	</userinfo>
 	<setup name="Default" version="1.0">
