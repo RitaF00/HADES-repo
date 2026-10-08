@@ -4,3 +4,7 @@
 
 *.lh5
 .ipynb_checkpoints/
+*.gdml
+*.npz
+*.png
+raw_energy_spectrum/
