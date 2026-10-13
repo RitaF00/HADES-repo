@@ -57,7 +57,7 @@ energy_ranges = [
 ]
 
 peaks = {
-    "gamma_59p9keV": 59.9,
+    "gamma_59p9keV": 59.5,
     "gamma_99keV": 99.0,
     "gamma_103keV": 103.0,
     "gamma_123p1keV": 123.1,

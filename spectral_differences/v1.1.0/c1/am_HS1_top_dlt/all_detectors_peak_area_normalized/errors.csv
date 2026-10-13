@@ -1,0 +1,25 @@
+detector,run,error
+V04199A,run0001,FileNotFoundError: Nessun file LH5 per V04199A/run0001: /global/cfs/cdirs/m2676/data/teststands/hades/prodenv/ref/v1.1.0/generated/tier/hit/V04199A/c1/am_HS1_top_dlt
+V04545A,run0001,FileNotFoundError: Nessun file LH5 per V04545A/run0001: /global/cfs/cdirs/m2676/data/teststands/hades/prodenv/ref/v1.1.0/generated/tier/hit/V04545A/c1/am_HS1_top_dlt
+V08682A,run0001,FileNotFoundError: Nessun file LH5 per V08682A/run0001: /global/cfs/cdirs/m2676/data/teststands/hades/prodenv/ref/v1.1.0/generated/tier/hit/V08682A/c1/am_HS1_top_dlt
+V08682B,run0001,"ValueError: 
+A_G=0\pmnan
+     ^
+ParseFatalException: Unknown symbol: \pmnan, found '\'  (at char 5), (line:1, col:6)"
+V09372A,run0001,FileNotFoundError: Nessun file LH5 per V09372A/run0001: /global/cfs/cdirs/m2676/data/teststands/hades/prodenv/ref/v1.1.0/generated/tier/hit/V09372A/c1/am_HS1_top_dlt
+V04199A,run0002,FileNotFoundError: Nessun file LH5 per V04199A/run0002: /global/cfs/cdirs/m2676/data/teststands/hades/prodenv/ref/v1.1.0/generated/tier/hit/V04199A/c1/am_HS1_top_dlt
+V04545A,run0002,FileNotFoundError: Nessun file LH5 per V04545A/run0002: /global/cfs/cdirs/m2676/data/teststands/hades/prodenv/ref/v1.1.0/generated/tier/hit/V04545A/c1/am_HS1_top_dlt
+V08682A,run0002,FileNotFoundError: Nessun file LH5 per V08682A/run0002: /global/cfs/cdirs/m2676/data/teststands/hades/prodenv/ref/v1.1.0/generated/tier/hit/V08682A/c1/am_HS1_top_dlt
+V08682B,run0002,"ValueError: 
+A_G=0\pmnan
+     ^
+ParseFatalException: Unknown symbol: \pmnan, found '\'  (at char 5), (line:1, col:6)"
+V09372A,run0002,FileNotFoundError: Nessun file LH5 per V09372A/run0002: /global/cfs/cdirs/m2676/data/teststands/hades/prodenv/ref/v1.1.0/generated/tier/hit/V09372A/c1/am_HS1_top_dlt
+V04199A,run0003,FileNotFoundError: Nessun file LH5 per V04199A/run0003: /global/cfs/cdirs/m2676/data/teststands/hades/prodenv/ref/v1.1.0/generated/tier/hit/V04199A/c1/am_HS1_top_dlt
+V04545A,run0003,KeyError: 'run0003'
+V08682A,run0003,FileNotFoundError: Nessun file LH5 per V08682A/run0003: /global/cfs/cdirs/m2676/data/teststands/hades/prodenv/ref/v1.1.0/generated/tier/hit/V08682A/c1/am_HS1_top_dlt
+V08682B,run0003,"ValueError: 
+A_G=0\pmnan
+     ^
+ParseFatalException: Unknown symbol: \pmnan, found '\'  (at char 5), (line:1, col:6)"
+V09372A,run0003,FileNotFoundError: Nessun file LH5 per V09372A/run0003: /global/cfs/cdirs/m2676/data/teststands/hades/prodenv/ref/v1.1.0/generated/tier/hit/V09372A/c1/am_HS1_top_dlt

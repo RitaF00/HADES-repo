@@ -23,7 +23,7 @@ campaign = "c1"
 metadata_path = "/global/u2/r/ritaferi/HADES_DATA/hades-metadata"
 base_dir = Path(metadata_path).parent
 
-reference_detector = "V03421A"
+reference_detector = "V07298B"
 
 detectors = [
     "V03422A",
@@ -59,8 +59,8 @@ heatmap_range = (20, 150)
 position_tolerance = 5.0  # mm: applied independently to r and z
 phi_tolerance = 5.0       # degrees
 
-# Original 0.5 keV bins become 2 keV bins.
-rebin_factor = 4
+# Keep original bins; set 2 or 4 to merge bins.
+rebin_factor = 1
 
 # Mask bins with insufficient reference counts.
 min_reference_counts = 25
@@ -243,13 +243,13 @@ def load_pair_histograms(
     if key_ref not in histogram_cache:
         counts, bins = load_cached_histogram(reference, run_ref)
         histogram_cache[key_ref] = rebin_histogram(
-            counts, bins, 1
+            counts, bins, rebin_factor
         )
 
     if key_other not in histogram_cache:
         counts, bins = load_cached_histogram(detector, run_other)
         histogram_cache[key_other] = rebin_histogram(
-            counts, bins, 1
+            counts, bins, rebin_factor
         )
 
     counts_ref, bins_ref = histogram_cache[key_ref]
@@ -458,6 +458,31 @@ def plot_percent_comparison(
         ax_spectrum.set_title(f"{xmin}–{xmax} keV")
         ax_spectrum.tick_params(axis="x", labelbottom=False)
 
+        peaks = {
+            "gamma_59p9keV": 59.9,
+            "gamma_99keV": 99.0,
+            "gamma_103keV": 103.0,
+            "gamma_123p1keV": 123.1,
+            "gamma_125p3keV": 125.3,
+            "gamma_208p1keV": 208.1,
+            "gamma_335p4keV": 335.4,
+            "gamma_662p4keV": 662.4,
+            "gamma_2614keV": 2615,
+            "gamma_1460p8keV": 1460.8,
+        }
+
+        for name, energy in peaks.items():
+            if xmin <= energy < xmax:
+                ax_spectrum.axvline(
+                    energy,
+                    color="grey",
+                    linestyle="--",
+                    linewidth=0.8,
+                    alpha=0.5,
+                )
+
+
+                
         ax_spectrum.legend(
             fontsize=9,
             labelcolor="linecolor",
@@ -505,6 +530,7 @@ def plot_percent_comparison(
         ax_difference.set_ylabel("Difference (%)")
         ax_difference.set_xlabel("Energy (keV)")
         ax_difference.set_xlim(xmin, xmax)
+        ax_difference.set_ylim(-50, 50)
         ax_difference.grid(axis="y", alpha=0.2)
 
     ax_info = fig.add_subplot(outer_grid[2, 1])
@@ -558,89 +584,96 @@ def plot_percent_comparison(
 # ============================================================
 
 def plot_shape_comparison(
-    detector,
-    run_ref,
-    run_other,
-    counts_ref,
-    counts_other,
-    bins,
+    detector, run_ref, meta_ref, run_other, meta_other,
+    counts_ref, counts_other, bins,
 ):
-    fig, axes = plt.subplots(
-        3,
-        2,
-        figsize=(15, 11),
-        layout="constrained",
-    )
+    fig = plt.figure(figsize=(16, 13), layout="constrained")
+    grid = fig.add_gridspec(3, 2)
+    centers = (bins[:-1] + bins[1:]) / 2
+    peaks = [59.5409, 98.95, 102.97, 123.02, 125.29,
+             208.0, 335.4, 662.4, 1460.8, 2615.0]
 
-    for ax, (xmin, xmax) in zip(axes.flat, energy_ranges):
+    for index, (xmin, xmax) in enumerate(energy_ranges):
+        inner = grid[index // 2, index % 2].subgridspec(
+            2, 1, height_ratios=[3, 1.3], hspace=0,
+        )
+        ax = fig.add_subplot(inner[0])
+        ax_diff = fig.add_subplot(inner[1], sharex=ax)
         mask = select_window(bins, xmin, xmax)
-
         total_ref = counts_ref[mask].sum()
         total_other = counts_other[mask].sum()
-
-        if total_ref <= 0 or total_other <= 0:
-            ax.text(
-                0.5,
-                0.5,
-                "Insufficient counts",
-                transform=ax.transAxes,
-                ha="center",
-                va="center",
+        if total_ref > 0 and total_other > 0:
+            p_ref = counts_ref / total_ref
+            p_other = counts_other / total_other
+            difference = calculate_shape_difference(
+                counts_ref, counts_other, bins, (xmin, xmax),
+                min_reference_counts,
             )
-
-        else:
-            shape_ref = counts_ref / total_ref
-            shape_other = counts_other / total_other
-
-            ax.stairs(
-                shape_ref,
-                bins,
-                color=reference_color,
-                label=reference_detector,
-                linewidth=1.2,
-            )
-
-            ax.stairs(
-                shape_other,
-                bins,
-                color=detector_color,
-                label=detector,
-                linewidth=1.2,
-            )
-
+            ax.stairs(p_ref, bins, color=reference_color,
+                      label=reference_detector, linewidth=1.2)
+            ax.stairs(p_other, bins, color=detector_color,
+                      label=detector, linewidth=1.2)
             ax.set_yscale("log")
-
             positive = np.concatenate([
-                shape_ref[mask & (shape_ref > 0)],
-                shape_other[mask & (shape_other > 0)],
+                p_ref[mask & (p_ref > 0)],
+                p_other[mask & (p_other > 0)],
             ])
-
             if positive.size:
-                ax.set_ylim(
-                    positive.min() / 1.5,
-                    positive.max() * 2,
-                )
-
-            ax.legend(
-                fontsize=9,
-                labelcolor="linecolor",
+                ax.set_ylim(positive.min() / 1.5, positive.max() * 2)
+            ax.legend(fontsize=9, labelcolor="linecolor")
+            ax_diff.stairs(difference, bins,
+                           color=reference_color, linewidth=1)
+            # Conditional multinomial variances include normalization.
+            # Independent spectra; approximate delta-method ratio errors.
+            valid = mask & np.isfinite(difference)
+            pr, po = p_ref[valid], p_other[valid]
+            variance = (
+                po * (1 - po) / total_other / pr**2
+                + po**2 * pr * (1 - pr) / total_ref / pr**4
             )
-
-        ax.set_xlim(xmin, xmax)
+            ax_diff.errorbar(
+                centers[valid], difference[valid],
+                yerr=100 * np.sqrt(np.maximum(variance, 0)),
+                fmt="none", ecolor=reference_color,
+                alpha=0.3, linewidth=0.6,
+            )
+        else:
+            ax.text(0.5, 0.5, "Insufficient counts",
+                    transform=ax.transAxes, ha="center", va="center")
+        for energy in peaks:
+            if xmin <= energy < xmax:
+                ax.axvline(energy, color="grey", linestyle="--",
+                           linewidth=0.8, alpha=0.5)
         ax.set_title(f"Normalized within {xmin}–{xmax} keV")
-        ax.set_xlabel("Energy (keV)")
         ax.set_ylabel("Fraction of window counts / bin")
-        ax.grid(axis="y", alpha=0.2)
+        ax.tick_params(axis="x", labelbottom=False)
+        ax_diff.axhline(0, color="gray", linestyle="--", linewidth=0.8)
+        ax_diff.set_xlim(xmin, xmax)
+        ax_diff.set_ylim(-50, 50)
+        ax_diff.set_ylabel("Shape difference (%)")
+        ax_diff.set_xlabel("Energy (keV)")
+        ax_diff.grid(axis="y", alpha=0.2)
 
-    axes[2, 1].axis("off")
-
-    fig.suptitle(
-        f"Shape comparison — {measure}\n"
-        f"{reference_detector}/{run_ref} "
-        f"vs {detector}/{run_other}",
-        fontsize=14,
+    info = fig.add_subplot(grid[2, 1])
+    info.axis("off")
+    for y, name, run, meta, color in [
+        (0.97, reference_detector, run_ref, meta_ref, reference_color),
+        (0.60, detector, run_other, meta_other, detector_color),
+    ]:
+        info.text(0.03, y, make_metadata_label(name, run, meta),
+                  color=color, fontsize=11, va="top")
+    info.text(
+        0.03, 0.22,
+        "Difference = 100 × (detector shape / reference shape − 1)\n"
+        "Each window normalized independently using all its bins.\n"
+        f"Reference count threshold: {min_reference_counts}\n"
+        "Error bars: approximate 1σ, including normalization.\n"
+        "Displayed difference range: ±50%; larger values are clipped.",
+        fontsize=9, va="top",
     )
-
+    fig.suptitle(f"Shape comparison — {measure}\n"
+                 f"{reference_detector}/{run_ref} vs {detector}/{run_other}",
+                 fontsize=14)
     return fig
 
 
@@ -711,8 +744,8 @@ def calculate_window_summary(
 # SHAPE HEATMAP: 20–150 keV ONLY
 # ============================================================
 
-def plot_shape_heatmap(entries, bins, run_ref, meta_ref):
-    xmin, xmax = heatmap_range
+def plot_shape_heatmap(entries, bins, run_ref, meta_ref, energy_range):
+    xmin, xmax = energy_range
 
     mask = select_window(bins, xmin, xmax)
     indices = np.flatnonzero(mask)
@@ -886,7 +919,7 @@ def main():
 
     percent_dir = output_dir / "percent_differences"
     shape_dir = output_dir / "shape_comparisons"
-    heatmap_dir = output_dir / "shape_heatmaps_20_150keV"
+    heatmap_dir = output_dir / "shape_heatmaps"
 
     for directory in (
         percent_dir,
@@ -909,6 +942,8 @@ def main():
         desc="Detectors",
         unit="detector",
     ):
+        if detector == reference_detector:
+            continue
         try:
             pairs = find_pairs(
                 db,
@@ -1012,7 +1047,9 @@ def main():
                 fig = plot_shape_comparison(
                     detector,
                     run_ref,
+                    meta_ref,
                     run_other,
+                    meta_other,
                     counts_ref,
                     counts_other,
                     bins,
@@ -1033,28 +1070,26 @@ def main():
                     )
                 )
 
-                # Heatmaps use SHAPE differences, not rate differences.
-                shape_difference = calculate_shape_difference(
-                    counts_ref,
-                    counts_other,
-                    bins,
-                    heatmap_range,
-                    min_reference_counts,
-                )
-
-                heatmap_entries.setdefault(run_ref, []).append({
-                    "detector": detector,
-                    "run": run_other,
-                    "position": {
-                        key: float(meta_other["source_position"][key])
-                        for key in (
-                            "r_in_mm",
-                            "z_in_mm",
-                            "phi_in_deg",
-                        )
-                    },
-                    "shape_difference": shape_difference,
-                })
+                # One heatmap per reference run AND normalization window.
+                for energy_range in energy_ranges:
+                    window = select_window(bins, *energy_range)
+                    if (counts_ref[window].sum() <= 0
+                            or counts_other[window].sum() <= 0):
+                        tqdm.write(f"Skipping empty shape window: {energy_range}")
+                        continue
+                    shape_difference = calculate_shape_difference(
+                        counts_ref, counts_other, bins, energy_range,
+                        min_reference_counts,
+                    )
+                    heatmap_entries.setdefault((run_ref, energy_range), []).append({
+                        "detector": detector,
+                        "run": run_other,
+                        "position": {
+                            key: float(meta_other["source_position"][key])
+                            for key in ("r_in_mm", "z_in_mm", "phi_in_deg")
+                        },
+                        "shape_difference": shape_difference,
+                    })
 
                 reference_metadata[run_ref] = meta_ref
 
@@ -1087,13 +1122,12 @@ def main():
 
     # One SHAPE heatmap per reference run.
     if heatmap_bins is not None:
-        xmin, xmax = heatmap_range
-
-        for run_ref, entries in tqdm(
+        for (run_ref, energy_range), entries in tqdm(
             sorted(heatmap_entries.items()),
             desc="Shape heatmaps",
             unit="heatmap",
         ):
+            xmin, xmax = energy_range
             figures_before = set(plt.get_fignums())
 
             try:
@@ -1102,6 +1136,7 @@ def main():
                     heatmap_bins,
                     run_ref,
                     reference_metadata[run_ref],
+                    energy_range,
                 )
 
                 save_figure(
