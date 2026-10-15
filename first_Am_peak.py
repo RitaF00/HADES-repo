@@ -15,15 +15,15 @@ from scipy.stats import exponnorm
 # CONFIGURATION
 # ============================================================
 
-#version = "v1.2.1"
-version = "v1.1.0"
+version = "v1.2.1"
+#version = "v1.1.0"
 campaign = "c1"
-measure = "am_HS1_top_dlt"
+measure = "am_HS6_top_dlt"
 
 metadata_path = "/global/u2/r/ritaferi/HADES_DATA/hades-metadata"
 base_dir = Path(metadata_path).parent
 
-'''
+
 detectors = [
     "V03421A",
     "V03422A",
@@ -55,12 +55,12 @@ detectors = ["V03421A",
             "V08682B",
             "V09372A",
             "V14673A"]
-
+'''
 
 runs = [
     "run0001",
     "run0002",
-    "run0003",
+   # "run0003",
 ]
 
 if version == "v1.2.1":

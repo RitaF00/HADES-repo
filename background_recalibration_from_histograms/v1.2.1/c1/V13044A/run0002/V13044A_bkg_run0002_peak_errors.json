@@ -1,0 +1,10 @@
+[
+    {
+        "energy_keV": 583.191,
+        "error": "ValueError: Centroid or sigma reached a fit bound."
+    },
+    {
+        "energy_keV": 1460.8,
+        "error": "ValueError: Fit has unconstrained parameters."
+    }
+]

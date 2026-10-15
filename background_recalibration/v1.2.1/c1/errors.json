@@ -1,0 +1,97 @@
+[
+    {
+        "detector": "V03421A",
+        "run": "run0003",
+        "error": "AttributeError: module 'pygama.math.functions.hpge_peak' has no attribute 'required_args'"
+    },
+    {
+        "detector": "V03422A",
+        "run": "run0002",
+        "error": "AttributeError: module 'pygama.math.functions.hpge_peak' has no attribute 'required_args'"
+    },
+    {
+        "detector": "V06643A",
+        "run": "run0001",
+        "error": "AttributeError: module 'pygama.math.functions.hpge_peak' has no attribute 'required_args'"
+    },
+    {
+        "detector": "V06659A",
+        "run": "run0002",
+        "error": "AttributeError: module 'pygama.math.functions.hpge_peak' has no attribute 'required_args'"
+    },
+    {
+        "detector": "V07298B",
+        "run": "run0002",
+        "error": "AttributeError: module 'pygama.math.functions.hpge_peak' has no attribute 'required_args'"
+    },
+    {
+        "detector": "V07302A",
+        "run": "run0002",
+        "error": "AttributeError: module 'pygama.math.functions.hpge_peak' has no attribute 'required_args'"
+    },
+    {
+        "detector": "V07302B",
+        "run": "run0002",
+        "error": "AttributeError: module 'pygama.math.functions.hpge_peak' has no attribute 'required_args'"
+    },
+    {
+        "detector": "V07647B",
+        "run": "run0002",
+        "error": "AttributeError: module 'pygama.math.functions.hpge_peak' has no attribute 'required_args'"
+    },
+    {
+        "detector": "V10437B",
+        "run": "run0002",
+        "error": "AttributeError: module 'pygama.math.functions.hpge_peak' has no attribute 'required_args'"
+    },
+    {
+        "detector": "V10447B",
+        "run": "run0002",
+        "error": "AttributeError: module 'pygama.math.functions.hpge_peak' has no attribute 'required_args'"
+    },
+    {
+        "detector": "V10784A",
+        "run": "run0002",
+        "error": "AttributeError: module 'pygama.math.functions.hpge_peak' has no attribute 'required_args'"
+    },
+    {
+        "detector": "V11924A",
+        "run": "",
+        "error": "FileNotFoundError: /global/u2/r/ritaferi/HADES_DATA/hades-metadata/hardware/configuration/V11924A/c1/bkg[.yaml|.yml|.json] is not a valid file or directory"
+    },
+    {
+        "detector": "V11925A",
+        "run": "run0002",
+        "error": "AttributeError: module 'pygama.math.functions.hpge_peak' has no attribute 'required_args'"
+    },
+    {
+        "detector": "V11947B",
+        "run": "run0002",
+        "error": "AttributeError: module 'pygama.math.functions.hpge_peak' has no attribute 'required_args'"
+    },
+    {
+        "detector": "V13044A",
+        "run": "run0002",
+        "error": "AttributeError: module 'pygama.math.functions.hpge_peak' has no attribute 'required_args'"
+    },
+    {
+        "detector": "V13049A",
+        "run": "run0002",
+        "error": "AttributeError: module 'pygama.math.functions.hpge_peak' has no attribute 'required_args'"
+    },
+    {
+        "detector": "V14618A",
+        "run": "run0002",
+        "error": "AttributeError: module 'pygama.math.functions.hpge_peak' has no attribute 'required_args'"
+    },
+    {
+        "detector": "V14654A",
+        "run": "run0002",
+        "error": "AttributeError: module 'pygama.math.functions.hpge_peak' has no attribute 'required_args'"
+    },
+    {
+        "detector": "V14673A",
+        "run": "run0002",
+        "error": "AttributeError: module 'pygama.math.functions.hpge_peak' has no attribute 'required_args'"
+    }
+]
