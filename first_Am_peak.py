@@ -1,5 +1,6 @@
 from pathlib import Path
 import csv
+import json
 
 import dbetto
 import lh5
@@ -18,7 +19,7 @@ from scipy.stats import exponnorm
 version = "v1.2.1"
 #version = "v1.1.0"
 campaign = "c1"
-measure = "am_HS6_top_dlt"
+measure = "am_HS1_top_dlt"
 
 metadata_path = "/global/u2/r/ritaferi/HADES_DATA/hades-metadata"
 base_dir = Path(metadata_path).parent
@@ -60,7 +61,7 @@ detectors = ["V03421A",
 runs = [
     "run0001",
     "run0002",
-   # "run0003",
+    "run0003",
 ]
 
 if version == "v1.2.1":
@@ -86,6 +87,11 @@ output_dir = (
     / campaign
     / measure
     / "all_detectors_peak_area_normalized"
+)
+
+# Background calibrati prodotti con background_efb3_single_file.py.
+background_dir = (
+    base_dir / "background_calibration_single_file" / version / campaign
 )
 
 parameter_names = [
@@ -826,7 +832,7 @@ def plot_run(entries, run, colors, legend_mode="full"):
     # The two versions have exactly the same canvas and spectrum-axis area.
     # A separate legend axis prevents longer labels from shrinking the plot.
     height = max(4, 0.60 * len(entries) + 1.5)
-    fig = plt.figure(figsize=(8, 6), dpi=dpi)
+    fig = plt.figure(figsize=(12, 5), dpi=dpi)
     grid = fig.add_gridspec(1, 2, width_ratios=[3, 2], wspace=0.05)
     ax = fig.add_subplot(grid[0, 0])
     ax_legend = fig.add_subplot(grid[0, 1])
@@ -874,8 +880,245 @@ def plot_run(entries, run, colors, legend_mode="full"):
 
 
 # ============================================================
+# CALIBRATED BACKGROUND: ALL AVAILABLE efb3 RUNS PER DETECTOR
+# ============================================================
+
+_background_cache = {}
+
+
+def get_calibrated_background(db, detector, target_bins):
+    # target_bins is the fixed histogram_bins used throughout this script.
+    if detector in _background_cache:
+        return _background_cache[detector]
+
+    counts_total = np.zeros(len(target_bins) - 1, dtype=np.int64)
+    time_total = 0.0
+    included_runs = []
+    try:
+        config = db.hardware.configuration[detector][campaign]["bkg"]
+    except (KeyError, FileNotFoundError):
+        print(f"{detector}: no efb3 background", flush=True)
+        _background_cache[detector] = None
+        return None
+
+    for bkg_run in sorted(config):
+        if not (bkg_run.startswith("run") and bkg_run[3:].isdigit()):
+            continue
+        try:
+            meta = config[bkg_run]
+            card = meta["daq_settings"]["flashcam"]["card_interface"]
+            if card != "efb3":
+                continue
+            folder = background_dir / detector / bkg_run
+            stem = f"{detector}_bkg_{bkg_run}"
+            energy_path = folder / f"{stem}_e_cal.npy"
+            calibration_path = folder / f"{stem}_calibration.json"
+            if not energy_path.exists() or not calibration_path.exists():
+                continue
+            with calibration_path.open(encoding="utf-8") as stream:
+                calibration = json.load(stream)
+            if (calibration.get("detector") != detector
+                    or calibration.get("run") != bkg_run
+                    or calibration.get("card_interface") != "efb3"):
+                raise ValueError("Inconsistent background calibration metadata.")
+            live_time = float(meta["run_live_time_in_s"])
+            if not np.isfinite(live_time) or live_time <= 0:
+                raise ValueError("Invalid background live time.")
+            saved_time = calibration.get("run_live_time_in_s")
+            if saved_time is not None and not np.isclose(float(saved_time), live_time):
+                raise ValueError("Background live times disagree.")
+            energy = np.load(energy_path, mmap_mode="r", allow_pickle=False)
+            if energy.ndim != 1:
+                raise ValueError("Background energy array must be 1D.")
+            # Rehistogram events: do not split the saved 1 keV counts
+            # into artificial 0.1 keV bins.
+            run_counts = np.zeros_like(counts_total)
+            for first in range(0, energy.size, 1000000):
+                values = np.asarray(energy[first:first + 1000000])
+                run_counts += np.histogram(
+                    values[np.isfinite(values)], bins=target_bins
+                )[0]
+            counts_total += run_counts
+            time_total += live_time
+            included_runs.append(bkg_run)
+            print(f"{detector}: calibrated bkg {bkg_run}, t={live_time:g} s", flush=True)
+        except (OSError, KeyError, TypeError, ValueError) as exc:
+            print(f"Skipping background {detector}/{bkg_run}: {exc}", flush=True)
+
+    if not included_runs:
+        print(f"{detector}: no efb3 background", flush=True)
+        _background_cache[detector] = None
+        return None
+
+    result = {"counts": counts_total, "live_time_s": time_total,
+              "runs": included_runs}
+    _background_cache[detector] = result
+    return result
+
+
+def plot_background_subtracted(entries, run, colors, legend_mode):
+    # Reuse exactly the same layout and legend as the original overlay.
+    fig = plot_run(entries, run, colors, legend_mode=legend_mode)
+    ax = fig.axes[0]
+    visible_values = np.concatenate([entry["values"] for entry in entries])
+    absolute = np.abs(visible_values[np.isfinite(visible_values)])
+    maximum = float(absolute.max()) if absolute.size else 0.0
+    threshold = max(maximum * 1e-4, 1e-12)
+    ax.set_yscale("symlog", linthresh=threshold)
+    ymin = min(float(visible_values.min()), 0.0)
+    ymax = max(float(visible_values.max()), threshold)
+    #ax.set_ylim(ymin * 1.2 if ymin < 0 else -threshold, ymax * 1.5)
+    ax.set_ylim(1e-5, 1)
+    ax.axhline(0, color="gray", linewidth=0.6)
+    ax.set_ylabel("Background-subtracted counts / Gaussian peak area / bin")
+    ax.set_title(f"{measure} — {run} — background subtracted", fontsize=10)
+    return fig
+
+
+# ============================================================
 # EXECUTION
 # ============================================================
+def save_source_background_plot(
+    detector,
+    run,
+    meta,
+    counts,
+    bins,
+    bkg,
+):
+    source_time = float(meta["run_live_time_in_s"])
+    background_time = float(bkg["live_time_s"])
+
+    if (
+        not np.isfinite([source_time, background_time]).all()
+        or source_time <= 0
+        or background_time <= 0
+    ):
+        raise ValueError("Invalid source or background live time.")
+
+    alpha = source_time / background_time
+    scaled_background = alpha * bkg["counts"]
+
+    centers = (bins[:-1] + bins[1:]) / 2
+    widths = np.diff(bins)
+
+    ylabel = (
+        f"Counts / {widths[0]:g} keV"
+        if np.allclose(widths, widths[0])
+        else "Counts / bin"
+    )
+
+    fig, axes = plt.subplots(
+        1,
+        2,
+        figsize=(10, 3.5),
+        dpi=dpi,
+        layout="constrained",
+    )
+
+    for ax, (xmin, xmax) in zip(
+        axes,
+        [(0, 3500), (0, 500)],
+    ):
+        ax.stairs(
+            counts,
+            bins,
+            color="navy",
+            linewidth=0.8,
+            label="Source data",
+        )
+
+        ax.stairs(
+            scaled_background,
+            bins,
+            color="darkorange",
+            linewidth=0.8,
+            label="Background scaled to source live time",
+        )
+
+        visible = (
+            (centers >= xmin)
+            & (centers < xmax)
+        )
+
+        positive = np.concatenate([
+            counts[visible & (counts > 0)],
+            scaled_background[
+                visible & (scaled_background > 0)
+            ],
+        ])
+
+        ax.set_yscale("log")
+        ax.set_xlim(xmin, xmax)
+
+        if positive.size:
+            ax.set_ylim(
+                positive.min() / 2,
+                positive.max() * 2,
+            )
+
+        ax.set_xlabel("Energy (keV)")
+        ax.set_ylabel(ylabel)
+        ax.set_title(f"{xmin}–{xmax} keV", fontsize=9)
+        ax.grid(axis="y", alpha=0.2)
+
+    axes[0].legend(
+        loc="upper right",
+        frameon=False,
+        fontsize=7,
+    )
+
+    axes[1].text(
+        0.03,
+        0.04,
+        f"Source live time: {source_time / 3600:g} h\n"
+        f"Background live time: {background_time / 3600:g} h\n"
+        f"Background runs: {', '.join(bkg['runs'])}\n"
+        f"Scale: {alpha:.5g}",
+        transform=axes[1].transAxes,
+        fontsize=7,
+        va="bottom",
+        bbox={
+            "facecolor": "white",
+            "edgecolor": "none",
+            "alpha": 0.85,
+        },
+    )
+
+    fig.suptitle(
+        f"{detector}/{run} — {measure}",
+        fontsize=10,
+    )
+
+    directory = (
+        output_dir
+        / "source_background_comparison"
+        / detector
+    )
+    directory.mkdir(parents=True, exist_ok=True)
+
+    path = directory / (
+        f"{detector}_{measure}_{run}"
+        "_source_background_full_and_zoom.png"
+    )
+
+    try:
+        fig.savefig(
+            path,
+            dpi=dpi,
+            bbox_inches="tight",
+            facecolor="white",
+        )
+
+        print(f"Saved: {path}", flush=True)
+
+        if show_plots:
+            plt.show()
+
+    finally:
+        plt.close(fig)
+
+
 
 def main():
     output_dir.mkdir(
@@ -906,6 +1149,7 @@ def main():
         )
 
         entries = []
+        subtracted_entries = []
 
         for detector in detector_list:
             try:
@@ -984,6 +1228,71 @@ def main():
                     "edges": bins[first:last + 1],
                 })
 
+                # Additional spectrum: time-scaled background subtraction.
+                # Fit remains on raw source data; Poisson fit is NOT applied
+                # to signed background-subtracted counts.
+                try:
+                    bkg = get_calibrated_background(db, detector, bins)
+                    if bkg is not None:
+                        # Il confronto mostra i conteggi originali della sorgente
+                        # e il background scalato al suo live time, senza /area.
+                        # Un errore grafico non deve bloccare la sottrazione.
+                        try:
+                            save_source_background_plot(
+                                detector=detector,
+                                run=run,
+                                meta=meta,
+                                counts=counts,
+                                bins=bins,
+                                bkg=bkg,
+                            )
+                        except Exception as plot_exc:
+                            print(
+                                f"Source/background plot failed {detector}/{run}: {plot_exc}",
+                                flush=True,
+                            )
+                            errors.append({
+                                "detector": detector,
+                                "run": run,
+                                "error": f"Source/background plot: {plot_exc}",
+                            })
+
+                        source_time = float(meta["run_live_time_in_s"])
+                        if not np.isfinite(source_time) or source_time <= 0:
+                            raise ValueError("Invalid source live time.")
+                        alpha = source_time / bkg["live_time_s"]
+                        scaled_background = alpha * bkg["counts"]
+                        net = counts - scaled_background
+                        variance = counts + alpha**2 * bkg["counts"]
+                        area = result["area_peak"]
+                        subtracted_entries.append({
+                            "detector": detector, "meta": meta,
+                            "values": net[first:last] / area,
+                            "edges": bins[first:last + 1],
+                        })
+                        net_dir = output_dir / "background_subtracted" / detector
+                        net_dir.mkdir(parents=True, exist_ok=True)
+                        np.savez_compressed(
+                            net_dir / f"{detector}_{measure}_{run}_net.npz",
+                            bins=bins, source_counts=counts,
+                            background_counts=bkg["counts"],
+                            scaled_background=scaled_background,
+                            net_counts=net,
+                            statistical_error=np.sqrt(variance),
+                            normalized_counts=net / area,
+                            normalized_statistical_error=np.sqrt(variance) / area,
+                            gaussian_area=area,
+                            source_live_time_s=source_time,
+                            background_live_time_s=bkg["live_time_s"],
+                            scale=alpha,
+                            background_runs=np.array(bkg["runs"]),
+                        )
+                        print(f"{detector}/{run}: background scale={alpha:.6g}", flush=True)
+                except Exception as exc:
+                    print(f"Background subtraction failed {detector}/{run}: {exc}", flush=True)
+                    errors.append({"detector": detector, "run": run,
+                                   "error": f"Background subtraction: {exc}"})
+
                 print(
                     "Normalization: divide by "
                     f"{result['area_peak']:.6g} counts",
@@ -1041,12 +1350,32 @@ def main():
             finally:
                 plt.close(fig)
 
+        if subtracted_entries:
+            for legend_mode in ("full", "detectors"):
+                fig = plot_background_subtracted(
+                    subtracted_entries, run, colors, legend_mode
+                )
+                try:
+                    path = output_dir / (
+                        f"overlay_background_subtracted_{run}_"
+                        f"{xmin:g}_{xmax:g}keV_legend_{legend_mode}.png"
+                    )
+                    fig.savefig(path, dpi=dpi, facecolor="white")
+                    print(f"Saved: {path}", flush=True)
+                    if show_plots:
+                        plt.show()
+                finally:
+                    plt.close(fig)
+        else:
+            print(f"{run}: no detectors with usable calibrated efb3 background.", flush=True)
+
     print(
         f"\nResults saved in: {output_dir}\n"
         f"Successful fits: {len(fit_rows)}\n"
         f"Skipped detector/runs: {len(errors)}",
         flush=True,
     )
+
 
 
 if __name__ == "__main__":

@@ -1,0 +1,216 @@
+{
+    "energy_field": "hit/cuspEmax_ctc_cal",
+    "qc_selection": "finite energy & ~is_discharge & is_positive_polarity_candidate",
+    "files": [
+        {
+            "path": "/global/cfs/cdirs/m2676/data/teststands/hades/prodenv/ref/v1.2.1/generated/tier/hit/V11947B/c1/bkg/char_data-V11947B-bkg-r002-20240420T081210Z-tier_hit.lh5",
+            "size": 47198208,
+            "mtime_ns": 1774266607869776517
+        },
+        {
+            "path": "/global/cfs/cdirs/m2676/data/teststands/hades/prodenv/ref/v1.2.1/generated/tier/hit/V11947B/c1/bkg/char_data-V11947B-bkg-r002-20240420T082210Z-tier_hit.lh5",
+            "size": 47194112,
+            "mtime_ns": 1774266581252426617
+        },
+        {
+            "path": "/global/cfs/cdirs/m2676/data/teststands/hades/prodenv/ref/v1.2.1/generated/tier/hit/V11947B/c1/bkg/char_data-V11947B-bkg-r002-20240420T083215Z-tier_hit.lh5",
+            "size": 47120384,
+            "mtime_ns": 1774266597914971494
+        },
+        {
+            "path": "/global/cfs/cdirs/m2676/data/teststands/hades/prodenv/ref/v1.2.1/generated/tier/hit/V11947B/c1/bkg/char_data-V11947B-bkg-r002-20240420T084217Z-tier_hit.lh5",
+            "size": 46940160,
+            "mtime_ns": 1774266586981390862
+        },
+        {
+            "path": "/global/cfs/cdirs/m2676/data/teststands/hades/prodenv/ref/v1.2.1/generated/tier/hit/V11947B/c1/bkg/char_data-V11947B-bkg-r002-20240420T085218Z-tier_hit.lh5",
+            "size": 47108096,
+            "mtime_ns": 1774266595966139913
+        },
+        {
+            "path": "/global/cfs/cdirs/m2676/data/teststands/hades/prodenv/ref/v1.2.1/generated/tier/hit/V11947B/c1/bkg/char_data-V11947B-bkg-r002-20240420T090223Z-tier_hit.lh5",
+            "size": 47112192,
+            "mtime_ns": 1774266592047902852
+        },
+        {
+            "path": "/global/cfs/cdirs/m2676/data/teststands/hades/prodenv/ref/v1.2.1/generated/tier/hit/V11947B/c1/bkg/char_data-V11947B-bkg-r002-20240420T091225Z-tier_hit.lh5",
+            "size": 47108096,
+            "mtime_ns": 1774266602036857793
+        },
+        {
+            "path": "/global/cfs/cdirs/m2676/data/teststands/hades/prodenv/ref/v1.2.1/generated/tier/hit/V11947B/c1/bkg/char_data-V11947B-bkg-r002-20240420T092227Z-tier_hit.lh5",
+            "size": 47267840,
+            "mtime_ns": 1774266612956020660
+        },
+        {
+            "path": "/global/cfs/cdirs/m2676/data/teststands/hades/prodenv/ref/v1.2.1/generated/tier/hit/V11947B/c1/bkg/char_data-V11947B-bkg-r002-20240420T093230Z-tier_hit.lh5",
+            "size": 46931968,
+            "mtime_ns": 1774266595535733308
+        },
+        {
+            "path": "/global/cfs/cdirs/m2676/data/teststands/hades/prodenv/ref/v1.2.1/generated/tier/hit/V11947B/c1/bkg/char_data-V11947B-bkg-r002-20240420T094235Z-tier_hit.lh5",
+            "size": 47112192,
+            "mtime_ns": 1774266588824327685
+        },
+        {
+            "path": "/global/cfs/cdirs/m2676/data/teststands/hades/prodenv/ref/v1.2.1/generated/tier/hit/V11947B/c1/bkg/char_data-V11947B-bkg-r002-20240420T095240Z-tier_hit.lh5",
+            "size": 47218688,
+            "mtime_ns": 1774266587295593139
+        },
+        {
+            "path": "/global/cfs/cdirs/m2676/data/teststands/hades/prodenv/ref/v1.2.1/generated/tier/hit/V11947B/c1/bkg/char_data-V11947B-bkg-r002-20240420T100244Z-tier_hit.lh5",
+            "size": 47198208,
+            "mtime_ns": 1774266595233053426
+        },
+        {
+            "path": "/global/cfs/cdirs/m2676/data/teststands/hades/prodenv/ref/v1.2.1/generated/tier/hit/V11947B/c1/bkg/char_data-V11947B-bkg-r002-20240420T101246Z-tier_hit.lh5",
+            "size": 47063040,
+            "mtime_ns": 1774266569220478833
+        },
+        {
+            "path": "/global/cfs/cdirs/m2676/data/teststands/hades/prodenv/ref/v1.2.1/generated/tier/hit/V11947B/c1/bkg/char_data-V11947B-bkg-r002-20240420T102249Z-tier_hit.lh5",
+            "size": 47239168,
+            "mtime_ns": 1774266584082597760
+        },
+        {
+            "path": "/global/cfs/cdirs/m2676/data/teststands/hades/prodenv/ref/v1.2.1/generated/tier/hit/V11947B/c1/bkg/char_data-V11947B-bkg-r002-20240420T103254Z-tier_hit.lh5",
+            "size": 47128576,
+            "mtime_ns": 1774266572039977003
+        },
+        {
+            "path": "/global/cfs/cdirs/m2676/data/teststands/hades/prodenv/ref/v1.2.1/generated/tier/hit/V11947B/c1/bkg/char_data-V11947B-bkg-r002-20240420T104258Z-tier_hit.lh5",
+            "size": 47046656,
+            "mtime_ns": 1774266622411870327
+        },
+        {
+            "path": "/global/cfs/cdirs/m2676/data/teststands/hades/prodenv/ref/v1.2.1/generated/tier/hit/V11947B/c1/bkg/char_data-V11947B-bkg-r002-20240420T105258Z-tier_hit.lh5",
+            "size": 47267840,
+            "mtime_ns": 1774266583616172914
+        },
+        {
+            "path": "/global/cfs/cdirs/m2676/data/teststands/hades/prodenv/ref/v1.2.1/generated/tier/hit/V11947B/c1/bkg/char_data-V11947B-bkg-r002-20240420T110302Z-tier_hit.lh5",
+            "size": 47054848,
+            "mtime_ns": 1774266589059695134
+        },
+        {
+            "path": "/global/cfs/cdirs/m2676/data/teststands/hades/prodenv/ref/v1.2.1/generated/tier/hit/V11947B/c1/bkg/char_data-V11947B-bkg-r002-20240420T111306Z-tier_hit.lh5",
+            "size": 47038464,
+            "mtime_ns": 1774266577173726113
+        },
+        {
+            "path": "/global/cfs/cdirs/m2676/data/teststands/hades/prodenv/ref/v1.2.1/generated/tier/hit/V11947B/c1/bkg/char_data-V11947B-bkg-r002-20240420T112310Z-tier_hit.lh5",
+            "size": 47063040,
+            "mtime_ns": 1774266587606783289
+        },
+        {
+            "path": "/global/cfs/cdirs/m2676/data/teststands/hades/prodenv/ref/v1.2.1/generated/tier/hit/V11947B/c1/bkg/char_data-V11947B-bkg-r002-20240420T113314Z-tier_hit.lh5",
+            "size": 47108096,
+            "mtime_ns": 1774266596306165426
+        },
+        {
+            "path": "/global/cfs/cdirs/m2676/data/teststands/hades/prodenv/ref/v1.2.1/generated/tier/hit/V11947B/c1/bkg/char_data-V11947B-bkg-r002-20240420T114319Z-tier_hit.lh5",
+            "size": 47173632,
+            "mtime_ns": 1774266585087314497
+        },
+        {
+            "path": "/global/cfs/cdirs/m2676/data/teststands/hades/prodenv/ref/v1.2.1/generated/tier/hit/V11947B/c1/bkg/char_data-V11947B-bkg-r002-20240420T115323Z-tier_hit.lh5",
+            "size": 47112192,
+            "mtime_ns": 1774266566116298836
+        },
+        {
+            "path": "/global/cfs/cdirs/m2676/data/teststands/hades/prodenv/ref/v1.2.1/generated/tier/hit/V11947B/c1/bkg/char_data-V11947B-bkg-r002-20240420T120324Z-tier_hit.lh5",
+            "size": 47259648,
+            "mtime_ns": 1774266594588589275
+        },
+        {
+            "path": "/global/cfs/cdirs/m2676/data/teststands/hades/prodenv/ref/v1.2.1/generated/tier/hit/V11947B/c1/bkg/char_data-V11947B-bkg-r002-20240420T121328Z-tier_hit.lh5",
+            "size": 47198208,
+            "mtime_ns": 1774266588187410443
+        },
+        {
+            "path": "/global/cfs/cdirs/m2676/data/teststands/hades/prodenv/ref/v1.2.1/generated/tier/hit/V11947B/c1/bkg/char_data-V11947B-bkg-r002-20240420T122330Z-tier_hit.lh5",
+            "size": 47026176,
+            "mtime_ns": 1774266572770407441
+        },
+        {
+            "path": "/global/cfs/cdirs/m2676/data/teststands/hades/prodenv/ref/v1.2.1/generated/tier/hit/V11947B/c1/bkg/char_data-V11947B-bkg-r002-20240420T123331Z-tier_hit.lh5",
+            "size": 47116288,
+            "mtime_ns": 1774266590146889004
+        },
+        {
+            "path": "/global/cfs/cdirs/m2676/data/teststands/hades/prodenv/ref/v1.2.1/generated/tier/hit/V11947B/c1/bkg/char_data-V11947B-bkg-r002-20240420T124334Z-tier_hit.lh5",
+            "size": 47104000,
+            "mtime_ns": 1774266617745824144
+        },
+        {
+            "path": "/global/cfs/cdirs/m2676/data/teststands/hades/prodenv/ref/v1.2.1/generated/tier/hit/V11947B/c1/bkg/char_data-V11947B-bkg-r002-20240420T125335Z-tier_hit.lh5",
+            "size": 47271936,
+            "mtime_ns": 1774266569841516897
+        },
+        {
+            "path": "/global/cfs/cdirs/m2676/data/teststands/hades/prodenv/ref/v1.2.1/generated/tier/hit/V11947B/c1/bkg/char_data-V11947B-bkg-r002-20240420T130339Z-tier_hit.lh5",
+            "size": 47185920,
+            "mtime_ns": 1774266586641123119
+        },
+        {
+            "path": "/global/cfs/cdirs/m2676/data/teststands/hades/prodenv/ref/v1.2.1/generated/tier/hit/V11947B/c1/bkg/char_data-V11947B-bkg-r002-20240420T131341Z-tier_hit.lh5",
+            "size": 47362048,
+            "mtime_ns": 1774266576036231457
+        },
+        {
+            "path": "/global/cfs/cdirs/m2676/data/teststands/hades/prodenv/ref/v1.2.1/generated/tier/hit/V11947B/c1/bkg/char_data-V11947B-bkg-r002-20240420T132342Z-tier_hit.lh5",
+            "size": 47026176,
+            "mtime_ns": 1774266622895896781
+        },
+        {
+            "path": "/global/cfs/cdirs/m2676/data/teststands/hades/prodenv/ref/v1.2.1/generated/tier/hit/V11947B/c1/bkg/char_data-V11947B-bkg-r002-20240420T133345Z-tier_hit.lh5",
+            "size": 47046656,
+            "mtime_ns": 1774266570203075115
+        },
+        {
+            "path": "/global/cfs/cdirs/m2676/data/teststands/hades/prodenv/ref/v1.2.1/generated/tier/hit/V11947B/c1/bkg/char_data-V11947B-bkg-r002-20240420T134348Z-tier_hit.lh5",
+            "size": 47243264,
+            "mtime_ns": 1774266585419368595
+        },
+        {
+            "path": "/global/cfs/cdirs/m2676/data/teststands/hades/prodenv/ref/v1.2.1/generated/tier/hit/V11947B/c1/bkg/char_data-V11947B-bkg-r002-20240420T135349Z-tier_hit.lh5",
+            "size": 47198208,
+            "mtime_ns": 1774266584436090488
+        },
+        {
+            "path": "/global/cfs/cdirs/m2676/data/teststands/hades/prodenv/ref/v1.2.1/generated/tier/hit/V11947B/c1/bkg/char_data-V11947B-bkg-r002-20240420T140349Z-tier_hit.lh5",
+            "size": 47194112,
+            "mtime_ns": 1774266589933620483
+        },
+        {
+            "path": "/global/cfs/cdirs/m2676/data/teststands/hades/prodenv/ref/v1.2.1/generated/tier/hit/V11947B/c1/bkg/char_data-V11947B-bkg-r002-20240420T141354Z-tier_hit.lh5",
+            "size": 47099904,
+            "mtime_ns": 1774266574614786175
+        },
+        {
+            "path": "/global/cfs/cdirs/m2676/data/teststands/hades/prodenv/ref/v1.2.1/generated/tier/hit/V11947B/c1/bkg/char_data-V11947B-bkg-r002-20240420T142359Z-tier_hit.lh5",
+            "size": 47226880,
+            "mtime_ns": 1774266579735031053
+        },
+        {
+            "path": "/global/cfs/cdirs/m2676/data/teststands/hades/prodenv/ref/v1.2.1/generated/tier/hit/V11947B/c1/bkg/char_data-V11947B-bkg-r002-20240420T143402Z-tier_hit.lh5",
+            "size": 47030272,
+            "mtime_ns": 1774266604333310189
+        },
+        {
+            "path": "/global/cfs/cdirs/m2676/data/teststands/hades/prodenv/ref/v1.2.1/generated/tier/hit/V11947B/c1/bkg/char_data-V11947B-bkg-r002-20240420T144407Z-tier_hit.lh5",
+            "size": 47104000,
+            "mtime_ns": 1774266575587747006
+        },
+        {
+            "path": "/global/cfs/cdirs/m2676/data/teststands/hades/prodenv/ref/v1.2.1/generated/tier/hit/V11947B/c1/bkg/char_data-V11947B-bkg-r002-20240420T145409Z-tier_hit.lh5",
+            "size": 47030272,
+            "mtime_ns": 1774266574097874632
+        },
+        {
+            "path": "/global/cfs/cdirs/m2676/data/teststands/hades/prodenv/ref/v1.2.1/generated/tier/hit/V11947B/c1/bkg/char_data-V11947B-bkg-r002-20240420T150411Z-tier_hit.lh5",
+            "size": 47034368,
+            "mtime_ns": 1774266591180564317
+        }
+    ]
+}

@@ -1,0 +1,7 @@
+[
+    {
+        "detector": "V11924A",
+        "run": "",
+        "error": "FileNotFoundError: /global/u2/r/ritaferi/HADES_DATA/hades-metadata/hardware/configuration/V11924A/c1/bkg[.yaml|.yml|.json] is not a valid file or directory"
+    }
+]

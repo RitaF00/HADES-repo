@@ -1,6 +1,6 @@
 detector,run,error
-V11924A,run0001,FileNotFoundError: /global/u2/r/ritaferi/HADES_DATA/hades-metadata/hardware/configuration/V11924A/c1/am_HS1_top_dlt[.json|.yaml|.yml] is not a valid file or directory
-V11924A,run0002,FileNotFoundError: /global/u2/r/ritaferi/HADES_DATA/hades-metadata/hardware/configuration/V11924A/c1/am_HS1_top_dlt[.json|.yaml|.yml] is not a valid file or directory
+V11924A,run0001,FileNotFoundError: /global/u2/r/ritaferi/HADES_DATA/hades-metadata/hardware/configuration/V11924A/c1/am_HS1_top_dlt[.json|.yml|.yaml] is not a valid file or directory
+V11924A,run0002,FileNotFoundError: /global/u2/r/ritaferi/HADES_DATA/hades-metadata/hardware/configuration/V11924A/c1/am_HS1_top_dlt[.json|.yml|.yaml] is not a valid file or directory
 V06659A,run0003,KeyError: 'run0003'
-V11924A,run0003,FileNotFoundError: /global/u2/r/ritaferi/HADES_DATA/hades-metadata/hardware/configuration/V11924A/c1/am_HS1_top_dlt[.json|.yaml|.yml] is not a valid file or directory
+V11924A,run0003,FileNotFoundError: /global/u2/r/ritaferi/HADES_DATA/hades-metadata/hardware/configuration/V11924A/c1/am_HS1_top_dlt[.json|.yml|.yaml] is not a valid file or directory
 V13049A,run0003,KeyError: 'run0003'

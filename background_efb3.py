@@ -1,3 +1,8 @@
+"""Calibrate each efb3 background run using its first 15 LH5 files.
+Use pygama quadratic calibration, then apply it to ALL QC-selected finite run events.
+Output paths and existing output filenames are preserved.
+Run: pixi run python background_efb3_first15_quadratic_QC.py
+"""
 from pathlib import Path
 import json
 
@@ -34,34 +39,21 @@ energy_parameter = energy_field.rsplit("/", 1)[-1]
 input_upper_cut = 8000
 
 # Rilegge i file LH5 anche se esiste la cache.
-force_rebuild = True
+force_rebuild = False
 
 # Mostra tutti i plot oltre a salvarli.
 show_plots = True
 
 dpi = 150
-
 detectors = [
-    "V03421A",
-    "V03422A",
-    "V06643A",
-    "V06659A",
-    "V07298B",
-    "V07302A",
-    "V07302B",
-    "V07647B",
-    "V10437B",
-    "V10447B",
-    "V10784A",
-    "V11924A",
-    "V11925A",
-    "V11947B",
-    "V13044A",
-    "V13049A",
-    "V14618A",
-    "V14654A",
-    "V14673A",
+    "V03421A", "V03422A", "V06643A", "V06659A", "V07298B",
+    "V07302A", "V07302B", "V07647B", "V10437B", "V10447B",
+    "V10784A", "V11924A", "V11925A", "V11947B", "V13044A",
+    "V13049A", "V14618A", "V14654A", "V14673A",
 ]
+
+# Primi 15 file cronologici per il fit; tutti per lo spettro finale.
+calibration_n_files = 15
 
 base = Path(
     "/global/cfs/cdirs/m2676/data/teststands/hades/"
@@ -77,7 +69,7 @@ cache_dir = (
 
 output_dir = (
     Path("/global/u2/r/ritaferi/HADES_DATA")
-    / "background_recalibration_pygama"
+    / "background_calibration_single_file"
     / version
     / campaign
 )
@@ -87,12 +79,20 @@ output_dir.mkdir(parents=True, exist_ok=True)
 # Spettro finale: bin da 1 keV.
 bins_cal = np.linspace(0, 3500, 3501)
 
-peak_pars_selected = [
+peak_pars = [
+    (238.632, (5, 5), pgf.hpge_peak),
+    (351.932, (4, 4), pgf.hpge_peak),
     (583.191, (20, 20), pgf.hpge_peak),
+    (609.31, (20, 20), pgf.hpge_peak),
     (727.330, (30, 30), pgf.hpge_peak),
-    (1460.8,  (30, 30), pgf.hpge_peak),
+    (911.204, (10, 10), pgf.hpge_peak),
+    (1460.8, (30, 30), pgf.gauss_on_step),
+    (1764.494, (30, 30), pgf.gauss_on_step),
+    (2103.53, (50, 50), pgf.hpge_peak),
+    (2204.210, (50, 50), pgf.hpge_peak),
     (2614.50, (60, 60), pgf.hpge_peak),
 ]
+peak_pars_ene = [entry[0] for entry in peak_pars]
 
 # Eventuali stime iniziali specifiche.
 # Unità: keV / unità dell'energia di input.
@@ -222,11 +222,31 @@ def save_pygama_plot(method, path, *args, **kwargs):
 # ============================================================
 # LOAD OR BUILD EVENT-ENERGY CACHE
 #
-# Salva le energie finite prima del taglio <8000.
+# Salva SOLO le energie finite DOPO QC, prima del taglio <8000.
 # ============================================================
 
+def read_qc_energies(filename):
+    """Select energies and QC flags from the SAME file."""
+    hit = lh5.read("hit", str(filename))
+    values = np.asarray(hit[energy_parameter].nda, dtype=float)
+    discharge = np.asarray(hit["is_discharge"].nda, dtype=bool)
+    positive = np.asarray(
+        hit["is_positive_polarity_candidate"].nda, dtype=bool
+    )
+    if (values.ndim != 1 or discharge.shape != values.shape
+            or positive.shape != values.shape):
+        raise ValueError(f"Energy/QC flag shapes do not match: {filename}")
+    mask = np.isfinite(values) & (~discharge) & positive
+    selected = values[mask]
+    print(
+        f"    QC selected: {selected.size:,}/{values.size:,}",
+        flush=True,
+    )
+    return selected
+
+
 def load_or_build_energies(detector, run, files):
-    folder = cache_dir / detector / energy_parameter
+    folder = cache_dir / detector / energy_parameter / "QC"
     folder.mkdir(parents=True, exist_ok=True)
 
     path = folder / (
@@ -237,6 +257,7 @@ def load_or_build_energies(detector, run, files):
 
     manifest = {
         "energy_field": energy_field,
+        "qc_selection": "finite energy & ~is_discharge & is_positive_polarity_candidate",
         "files": [
             {
                 "path": str(filename),
@@ -295,15 +316,7 @@ def load_or_build_energies(detector, run, files):
             flush=True,
         )
 
-        values = np.asarray(
-            lh5.read(
-                energy_field,
-                str(filename),
-            ).nda,
-            dtype=float,
-        ).reshape(-1)
-
-        values = values[np.isfinite(values)]
+        values = read_qc_energies(filename)
 
         if values.size:
             arrays.append(values)
@@ -336,39 +349,89 @@ def load_or_build_energies(detector, run, files):
 # PROCESS ONE DETECTOR / RUN
 # ============================================================
 
+
+def serializable(value):
+    """Convert pygama/iminuit result containers to JSON-compatible data."""
+    from collections.abc import Mapping
+    if value is None or isinstance(value, (str, bool, int)):
+        return value
+    if isinstance(value, (float, np.floating)):
+        return float(value) if np.isfinite(value) else None
+    if isinstance(value, np.integer):
+        return int(value)
+    if isinstance(value, Mapping):
+        return {str(k): serializable(v) for k, v in value.items()}
+    if hasattr(value, "to_dict"):
+        return serializable(value.to_dict())
+    if isinstance(value, (list, tuple, np.ndarray)):
+        return [serializable(v) for v in value]
+    if callable(getattr(value, "required_args", None)):
+        return {"name": getattr(value, "name", type(value).__name__),
+                "required_args": list(value.required_args())}
+    try:
+        return [serializable(v) for v in value]
+    except TypeError:
+        return str(value)
+
+
+def save_fit_parameters(peak_parameters, run_dir, stem):
+    import csv
+    save_json(serializable(peak_parameters), run_dir / f"{stem}_fit_parameters.json")
+    rows = []
+    for energy, info in peak_parameters.items():
+        pars = info.get("parameters")
+        errs = info.get("uncertainties", info.get("errors"))
+        if pars is None:
+            continue
+        if hasattr(pars, "to_dict"):
+            named = pars.to_dict()
+        elif isinstance(pars, dict):
+            named = pars
+        else:
+            func = info.get("function")
+            names = list(func.required_args())
+            if len(names) != len(pars):
+                names = [f"p{i}" for i in range(len(pars))]
+            named = dict(zip(names, pars))
+        for i, (name, val) in enumerate(named.items()):
+            error = None
+            if errs is not None:
+                try:
+                    error = errs[name]
+                except (KeyError, TypeError, IndexError):
+                    try:
+                        error = errs[i]
+                    except (KeyError, TypeError, IndexError):
+                        pass
+            rows.append({"energy_keV": energy, "parameter": name,
+                         "value": val, "uncertainty": error})
+            print(f"  {energy} keV | {name}: {val} +/- {error}", flush=True)
+    with (run_dir / f"{stem}_fit_parameters.csv").open("w", newline="") as stream:
+        writer = csv.DictWriter(stream, fieldnames=["energy_keV", "parameter", "value", "uncertainty"])
+        writer.writeheader()
+        writer.writerows(rows)
+
+
 def process_run(detector, run, meta, files):
     run_dir = output_dir / detector / run
     run_dir.mkdir(parents=True, exist_ok=True)
 
     stem = f"{detector}_{measure}_{run}"
 
-    all_energies = load_or_build_energies(
-        detector,
-        run,
-        files,
-    )
-
-    mask = (
-        np.isfinite(all_energies)
-        & (all_energies < input_upper_cut)
-    )
-
-    e_uncal = np.asarray(
-        all_energies[mask],
-        dtype=float,
-    )
-
-    del all_energies, mask
-
+    file_names_bkg = [str(filename) for filename in files]
+    calibration_files = file_names_bkg[:calibration_n_files]
+    if not calibration_files:
+        raise FileNotFoundError("No background files for calibration.")
+    # QC are applied before fitting, independently in every input file.
+    calibration_arrays = [read_qc_energies(f) for f in calibration_files]
+    e_uncal = np.concatenate(calibration_arrays)
+    del calibration_arrays
+    # This upper cut is ONLY for fitting, not the final full-run energies.
+    e_uncal = e_uncal[e_uncal < input_upper_cut]
     if e_uncal.size == 0:
-        raise ValueError(
-            "No energies remain after selection."
-        )
-
-    print(
-        f"Selected events: {e_uncal.size:,}",
-        flush=True,
-    )
+        raise ValueError("No calibration events after selection.")
+    print(f"Files used for calibration: {len(calibration_files)}/{len(files)}", flush=True)
+    print(f"Events used for calibration: {e_uncal.size:,}", flush=True)
 
     percentile = float(
         np.percentile(e_uncal, 99.9)
@@ -379,10 +442,7 @@ def process_run(detector, run, meta, files):
             "Invalid 99.9 percentile."
         )
 
-    guess_kev = guess_overrides.get(
-        (detector, run),
-        2614.553 / percentile,
-    )
+    guess_kev = 2614.553 / percentile
 
     # --------------------------------------------------------
     # INPUT SPECTRUM
@@ -397,7 +457,6 @@ def process_run(detector, run, meta, files):
         e_uncal,
         bins=1000,
         histtype="step",
-        color="navy",
         linewidth=0.8,
     )
 
@@ -416,7 +475,7 @@ def process_run(detector, run, meta, files):
     ax.set_ylabel("Counts / bin")
 
     ax.set_title(
-        f"{detector}/{run} — input spectrum"
+        f"{detector}/{run} — input spectrum (QC)"
     )
 
     ax.legend(
@@ -434,17 +493,11 @@ def process_run(detector, run, meta, files):
     # --------------------------------------------------------
 
     hpgecal = pgc.HPGeCalibration(
-        energy_parameter,
-        [item[0] for item in peak_pars_selected],
+        "cuspEmax_ctc",  # Nome dell'oggetto come nella chiamata richiesta.
+        peak_pars_ene,
         guess_kev=guess_kev,
-        deg=1,
+        deg=2,
         debug_mode=True,
-    )
-
-    print("Finding peaks...", flush=True)
-
-    hpgecal.hpge_find_energy_peaks(
-        e_uncal
     )
 
     print("Getting peaks...", flush=True)
@@ -457,7 +510,8 @@ def process_run(detector, run, meta, files):
 
     hpgecal.hpge_fit_energy_peaks(
         e_uncal,
-        peak_pars=peak_pars_selected,
+        peak_pars=peak_pars,
+        bin_width_kev=0.1,
     )
 
     if not hpgecal.results:
@@ -478,15 +532,16 @@ def process_run(detector, run, meta, files):
             "Pygama returned no fitted peak parameters."
         )
 
+    save_fit_parameters(peak_parameters, run_dir, stem)
+
     coefficients = np.asarray(
         hpgecal.pars,
         dtype=float,
     )
 
     if (
-        coefficients.shape != (2,)
+        coefficients.shape != (3,)
         or not np.isfinite(coefficients).all()
-        or coefficients[1] <= 0
     ):
         raise ValueError(
             f"Invalid calibration coefficients: {coefficients}"
@@ -495,20 +550,24 @@ def process_run(detector, run, meta, files):
     print(
         f"Coefficients for {detector}/{run}:\n"
         f"  a0 = {coefficients[0]:.10g}\n"
-        f"  a1 = {coefficients[1]:.10g}",
+        f"  a1 = {coefficients[1]:.10g}\n"
+        f"  a2 = {coefficients[2]:.10g}",
         flush=True,
     )
 
     # --------------------------------------------------------
     # APPLY CALIBRATION
     #
-    # E_cal = a0 + a1 * E_input
+    # E_cal = a0 + a1 * E_input + a2 * E_input**2
     # --------------------------------------------------------
 
-    e_cal = np.polynomial.polynomial.polyval(
-        e_uncal,
-        coefficients,
-    )
+    # Applica la calibrazione a TUTTE le energie finite DOPO QC del run.
+    # Il taglio <8000 serve solo per il fit, non per questo array.
+    total_input = load_or_build_energies(detector, run, files)
+    e_cal = np.polynomial.polynomial.polyval(total_input, coefficients)
+    total_events = int(e_cal.size)
+    del total_input
+    print(f"TOTAL calibrated events: {total_events:,}", flush=True)
 
     if not np.isfinite(e_cal).all():
         raise ValueError(
@@ -546,6 +605,8 @@ def process_run(detector, run, meta, files):
     np.savez(
         run_dir / f"{stem}_calibrated_spectrum.npz",
         counts=counts_cal,
+        counts_clean=counts_cal,  # Both keys contain the QC-selected spectrum.
+        qc_applied=True,
         bins=bins_cal,
         calibration_coefficients=coefficients,
     )
@@ -559,13 +620,19 @@ def process_run(detector, run, meta, files):
             "measurement": measure,
             "card_interface": required_card,
             "energy_field": energy_field,
+        "qc_selection": "finite energy & ~is_discharge & is_positive_polarity_candidate",
             "input_upper_cut": input_upper_cut,
-            "selected_events": e_uncal.size,
+            "calibration_file": calibration_files[0],
+            "calibration_files": calibration_files,
+            "calibration_file_count": len(calibration_files),
+            "calibration_events": e_uncal.size,
+            "total_calibrated_events": total_events,
             "guess_kev": guess_kev,
-            "degree": 1,
+            "degree": 2,
             "coefficient_order": [
                 "constant",
                 "linear",
+                "quadratic",
             ],
             "coefficients": coefficients,
             "peak_parameter_keys": [
@@ -593,16 +660,17 @@ def process_run(detector, run, meta, files):
             "peak_fits",
             hpgecal.plot_fits,
             {
-                "figsize": (9, 6),
-                "ncols": 2,
-                "nrows": 2,
+                "figsize": (12, 8),
+                "ncols": 4,
+                "nrows": 4,
                 "fontsize": 9,
             },
         ),
         (
             "calibration_fit",
-            hpgecal.plot_cal_fit,
+            hpgecal.plot_cal_fit_with_errors,
             {
+                "erange": (0, 3500),
                 "figsize": (8, 6),
             },
         ),
@@ -632,6 +700,36 @@ def process_run(detector, run, meta, files):
                 "error": message,
             })
 
+    resolution_results = {}
+    for resolution_model in (pgc.FWHMLinear, pgc.FWHMQuadratic):
+        try:
+            hpgecal.get_energy_res_curve(
+                resolution_model,
+                interp_energy_kev={"Qbb": 2039.0},
+            )
+            model_name = resolution_model.__name__
+            for result_dict in reversed(list(hpgecal.results.values())):
+                if model_name in result_dict:
+                    resolution_results[model_name] = serializable(result_dict[model_name])
+                    break
+        except Exception as exc:
+            message = f"{type(exc).__name__}: {exc}"
+            print(f"Resolution fit error ({resolution_model.__name__}): {message}", flush=True)
+            plot_errors.append({"plot": resolution_model.__name__, "error": message})
+    save_json(resolution_results, run_dir / f"{stem}_energy_resolution.json")
+    if resolution_results:
+        try:
+            save_pygama_plot(
+                hpgecal.plot_eres_fit,
+                run_dir / f"{stem}_energy_resolution.png",
+                e_uncal,
+                figsize=(8, 6),
+            )
+        except Exception as exc:
+            message = f"{type(exc).__name__}: {exc}"
+            print(f"Resolution plot error: {message}", flush=True)
+            plot_errors.append({"plot": "energy_resolution", "error": message})
+
     save_json(
         plot_errors,
         run_dir / f"{stem}_plot_errors.json",
@@ -653,7 +751,7 @@ def process_run(detector, run, meta, files):
         linewidth=0.8,
     )
 
-    for energy, _, _ in peak_pars_selected:
+    for energy, _, _ in peak_pars:
         ax.axvline(
             energy,
             color="orange",
@@ -669,7 +767,7 @@ def process_run(detector, run, meta, files):
     ax.set_ylabel("Counts / 1 keV")
 
     ax.set_title(
-        f"{detector}/{run} — {required_card}"
+        f"{detector}/{run} — {required_card} — QC"
     )
 
     save_figure(
@@ -870,7 +968,7 @@ if entries:
     ax.set_ylabel("Counts / 1 keV")
 
     ax.set_title(
-        f"Background — {required_card} — {version}"
+        f"Background — {required_card} — {version} — QC"
     )
 
     ax.legend(

@@ -1,0 +1,182 @@
+[
+    {
+        "detector": "V03421A",
+        "run": "run0003",
+        "coefficients": [
+            0.024349189373197078,
+            0.5430557593647466,
+            8.091018112256545e-08
+        ],
+        "energy_path": "/global/u2/r/ritaferi/HADES_DATA/background_calibration_single_file/v1.2.1/c1/V03421A/run0003/V03421A_bkg_run0003_e_cal.npy"
+    },
+    {
+        "detector": "V03422A",
+        "run": "run0002",
+        "coefficients": [
+            0.14230942943163427,
+            0.5429142638074114,
+            1.4813206850131973e-07
+        ],
+        "energy_path": "/global/u2/r/ritaferi/HADES_DATA/background_calibration_single_file/v1.2.1/c1/V03422A/run0002/V03422A_bkg_run0002_e_cal.npy"
+    },
+    {
+        "detector": "V06643A",
+        "run": "run0001",
+        "coefficients": [
+            -0.09315358275307517,
+            0.3932452905309514,
+            4.466448689345244e-07
+        ],
+        "energy_path": "/global/u2/r/ritaferi/HADES_DATA/background_calibration_single_file/v1.2.1/c1/V06643A/run0001/V06643A_bkg_run0001_e_cal.npy"
+    },
+    {
+        "detector": "V06659A",
+        "run": "run0002",
+        "coefficients": [
+            0.06840882832739226,
+            0.39373624576356214,
+            3.32724061167117e-07
+        ],
+        "energy_path": "/global/u2/r/ritaferi/HADES_DATA/background_calibration_single_file/v1.2.1/c1/V06659A/run0002/V06659A_bkg_run0002_e_cal.npy"
+    },
+    {
+        "detector": "V07298B",
+        "run": "run0002",
+        "coefficients": [
+            0.05702555350899274,
+            0.5420587163696476,
+            1.1646190530283006e-07
+        ],
+        "energy_path": "/global/u2/r/ritaferi/HADES_DATA/background_calibration_single_file/v1.2.1/c1/V07298B/run0002/V07298B_bkg_run0002_e_cal.npy"
+    },
+    {
+        "detector": "V07302A",
+        "run": "run0002",
+        "coefficients": [
+            0.3680345035593291,
+            0.3942204088011865,
+            2.4217471484006314e-07
+        ],
+        "energy_path": "/global/u2/r/ritaferi/HADES_DATA/background_calibration_single_file/v1.2.1/c1/V07302A/run0002/V07302A_bkg_run0002_e_cal.npy"
+    },
+    {
+        "detector": "V07302B",
+        "run": "run0002",
+        "coefficients": [
+            -0.04697892068202236,
+            0.542641993834477,
+            8.843589498822906e-08
+        ],
+        "energy_path": "/global/u2/r/ritaferi/HADES_DATA/background_calibration_single_file/v1.2.1/c1/V07302B/run0002/V07302B_bkg_run0002_e_cal.npy"
+    },
+    {
+        "detector": "V07647B",
+        "run": "run0002",
+        "coefficients": [
+            0.4056559817897778,
+            0.3940324087713629,
+            3.1144368439855887e-07
+        ],
+        "energy_path": "/global/u2/r/ritaferi/HADES_DATA/background_calibration_single_file/v1.2.1/c1/V07647B/run0002/V07647B_bkg_run0002_e_cal.npy"
+    },
+    {
+        "detector": "V10437B",
+        "run": "run0002",
+        "coefficients": [
+            0.2919465305224094,
+            0.3938031402986038,
+            3.7287286793824776e-07
+        ],
+        "energy_path": "/global/u2/r/ritaferi/HADES_DATA/background_calibration_single_file/v1.2.1/c1/V10437B/run0002/V10437B_bkg_run0002_e_cal.npy"
+    },
+    {
+        "detector": "V10447B",
+        "run": "run0002",
+        "coefficients": [
+            0.020286219095623892,
+            0.543067478889982,
+            3.0106016039506547e-08
+        ],
+        "energy_path": "/global/u2/r/ritaferi/HADES_DATA/background_calibration_single_file/v1.2.1/c1/V10447B/run0002/V10447B_bkg_run0002_e_cal.npy"
+    },
+    {
+        "detector": "V10784A",
+        "run": "run0002",
+        "coefficients": [
+            -0.03840566656890587,
+            0.39415577132211055,
+            1.8821496470186394e-07
+        ],
+        "energy_path": "/global/u2/r/ritaferi/HADES_DATA/background_calibration_single_file/v1.2.1/c1/V10784A/run0002/V10784A_bkg_run0002_e_cal.npy"
+    },
+    {
+        "detector": "V11925A",
+        "run": "run0002",
+        "coefficients": [
+            -0.004624293528195267,
+            0.3948319308900373,
+            1.8337686653389385e-07
+        ],
+        "energy_path": "/global/u2/r/ritaferi/HADES_DATA/background_calibration_single_file/v1.2.1/c1/V11925A/run0002/V11925A_bkg_run0002_e_cal.npy"
+    },
+    {
+        "detector": "V11947B",
+        "run": "run0002",
+        "coefficients": [
+            -0.07225271521156174,
+            0.39470915271970736,
+            2.1860260868713697e-07
+        ],
+        "energy_path": "/global/u2/r/ritaferi/HADES_DATA/background_calibration_single_file/v1.2.1/c1/V11947B/run0002/V11947B_bkg_run0002_e_cal.npy"
+    },
+    {
+        "detector": "V13044A",
+        "run": "run0002",
+        "coefficients": [
+            -0.056643893988848504,
+            0.39437579915276133,
+            1.9619090013565918e-07
+        ],
+        "energy_path": "/global/u2/r/ritaferi/HADES_DATA/background_calibration_single_file/v1.2.1/c1/V13044A/run0002/V13044A_bkg_run0002_e_cal.npy"
+    },
+    {
+        "detector": "V13049A",
+        "run": "run0002",
+        "coefficients": [
+            -0.4006570660883426,
+            0.3938722629326389,
+            4.196200417650934e-07
+        ],
+        "energy_path": "/global/u2/r/ritaferi/HADES_DATA/background_calibration_single_file/v1.2.1/c1/V13049A/run0002/V13049A_bkg_run0002_e_cal.npy"
+    },
+    {
+        "detector": "V14618A",
+        "run": "run0002",
+        "coefficients": [
+            0.030908813664609625,
+            0.542704976011571,
+            1.5731729554488421e-07
+        ],
+        "energy_path": "/global/u2/r/ritaferi/HADES_DATA/background_calibration_single_file/v1.2.1/c1/V14618A/run0002/V14618A_bkg_run0002_e_cal.npy"
+    },
+    {
+        "detector": "V14654A",
+        "run": "run0002",
+        "coefficients": [
+            -0.14082565956027793,
+            0.3945892375820862,
+            2.143892321214034e-07
+        ],
+        "energy_path": "/global/u2/r/ritaferi/HADES_DATA/background_calibration_single_file/v1.2.1/c1/V14654A/run0002/V14654A_bkg_run0002_e_cal.npy"
+    },
+    {
+        "detector": "V14673A",
+        "run": "run0002",
+        "coefficients": [
+            -0.040558157572604614,
+            0.5432401254962637,
+            1.529476090856309e-08
+        ],
+        "energy_path": "/global/u2/r/ritaferi/HADES_DATA/background_calibration_single_file/v1.2.1/c1/V14673A/run0002/V14673A_bkg_run0002_e_cal.npy"
+    }
+]
