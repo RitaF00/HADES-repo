@@ -6,5 +6,6 @@
 .ipynb_checkpoints/
 *.gdml
 *.npz
+*.npy
 *.png
 raw_energy_spectrum/
