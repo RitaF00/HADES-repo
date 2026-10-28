@@ -1,0 +1,733 @@
+{
+  "detector": "V07647B",
+  "run": "run0001",
+  "version": "v1.2.1",
+  "campaign": "c1",
+  "measurement": "am_HS6_top_dlt",
+  "errors": [],
+  "qc_applied": true,
+  "qc_selection": "finite energy & ~is_discharge & is_positive_polarity_candidate",
+  "counting_method": {
+    "60": {
+      "sigma_keV": {
+        "N60": 0.30279778622097686
+      },
+      "sigma_source": "detector YAML eres_quadratic",
+      "n_sigma": 3.0,
+      "windows": {
+        "left": {
+          "requested_range_keV": [
+            56.5,
+            57.5
+          ],
+          "actual_range_keV": [
+            56.5,
+            57.5
+          ],
+          "width_keV": 1.0,
+          "n_bins": 10,
+          "counts": 556838.0
+        },
+        "right": {
+          "requested_range_keV": [
+            61.5,
+            62.5
+          ],
+          "actual_range_keV": [
+            61.5,
+            62.5
+          ],
+          "width_keV": 1.0,
+          "n_bins": 10,
+          "counts": 11976.0
+        },
+        "N60": {
+          "requested_range_keV": [
+            58.59160664133707,
+            60.40839335866293
+          ],
+          "actual_range_keV": [
+            58.5,
+            60.5
+          ],
+          "width_keV": 2.0,
+          "n_bins": 20,
+          "energy_keV": 59.5,
+          "sigma_keV": 0.30279778622097686,
+          "counts": 6503129.0
+        }
+      },
+      "background_density_counts_per_keV": 284407.0,
+      "peaks": {
+        "N60": {
+          "value": 5934315.0,
+          "error": 2659.3125051411316,
+          "gross_counts": 6503129.0,
+          "background_counts": 568814.0,
+          "background_scale": 1.0
+        }
+      },
+      "peak_order": [
+        "N60"
+      ],
+      "covariance": [
+        [
+          7071943.0
+        ]
+      ],
+      "sum": {
+        "value": 5934315.0,
+        "error": 2659.3125051411316
+      },
+      "assumption": "Locally constant continuum; independent Poisson bins; fixed windows",
+      "gaussian_acceptance_corrected": false,
+      "resolution_metadata": {
+        "file": "/global/cfs/cdirs/m2676/data/teststands/hades/prodenv/ref/v1.2.1/generated/par/hit/V07647B/c1/am_HS1_lat_dlt/char_data-V07647B-am_HS1_lat_dlt-r001-20210609T073732Z-par_hit.yaml",
+        "available_files": [
+          "/global/cfs/cdirs/m2676/data/teststands/hades/prodenv/ref/v1.2.1/generated/par/hit/V07647B/c1/am_HS1_lat_dlt/char_data-V07647B-am_HS1_lat_dlt-r001-20210609T073732Z-par_hit.yaml"
+        ],
+        "file_selection": "first file in sorted order",
+        "measurement": "am_HS1_lat_dlt",
+        "energy_parameter": "cuspEmax_ctc_cal",
+        "parameters": {
+          "a": 0.3994572033994164,
+          "b": 0.0018308411270355268,
+          "c": 2.9197668495852327e-08
+        },
+        "fwhm_to_sigma": 2.355,
+        "expression": "sqrt(a + b*E + c*E**2) / 2.355",
+        "uncertainty_note": "Resolution parameters and window boundaries treated as fixed"
+      }
+    },
+    "100": {
+      "sigma_keV": {
+        "N99": 0.32366511967023914,
+        "N103": 0.3257051340963479
+      },
+      "sigma_source": "detector YAML eres_quadratic",
+      "n_sigma": 3.0,
+      "windows": {
+        "left": {
+          "requested_range_keV": [
+            94.0,
+            96.0
+          ],
+          "actual_range_keV": [
+            94.0,
+            96.0
+          ],
+          "width_keV": 2.0,
+          "n_bins": 20,
+          "counts": 4088.0
+        },
+        "right": {
+          "requested_range_keV": [
+            105.0,
+            107.0
+          ],
+          "actual_range_keV": [
+            105.0,
+            107.0
+          ],
+          "width_keV": 2.0,
+          "n_bins": 20,
+          "counts": 2830.0
+        },
+        "N99": {
+          "requested_range_keV": [
+            98.02900464098929,
+            99.97099535901071
+          ],
+          "actual_range_keV": [
+            98.0,
+            100.0
+          ],
+          "width_keV": 2.0,
+          "n_bins": 20,
+          "energy_keV": 99.0,
+          "sigma_keV": 0.32366511967023914,
+          "counts": 11186.0
+        },
+        "N103": {
+          "requested_range_keV": [
+            102.02288459771096,
+            103.97711540228904
+          ],
+          "actual_range_keV": [
+            102.0,
+            104.0
+          ],
+          "width_keV": 2.0,
+          "n_bins": 20,
+          "energy_keV": 103.0,
+          "sigma_keV": 0.3257051340963479,
+          "counts": 10454.0
+        }
+      },
+      "background_density_counts_per_keV": 1729.5,
+      "peaks": {
+        "N99": {
+          "value": 7727.0,
+          "error": 113.64638137661929,
+          "gross_counts": 11186.0,
+          "background_counts": 3459.0,
+          "background_scale": 0.5
+        },
+        "N103": {
+          "value": 6995.0,
+          "error": 110.37889290983127,
+          "gross_counts": 10454.0,
+          "background_counts": 3459.0,
+          "background_scale": 0.5
+        }
+      },
+      "peak_order": [
+        "N99",
+        "N103"
+      ],
+      "covariance": [
+        [
+          12915.5,
+          1729.5
+        ],
+        [
+          1729.5,
+          12183.5
+        ]
+      ],
+      "sum": {
+        "value": 14722.0,
+        "error": 168.99112402726956
+      },
+      "assumption": "Locally constant continuum; independent Poisson bins; fixed windows",
+      "gaussian_acceptance_corrected": false,
+      "resolution_metadata": {
+        "file": "/global/cfs/cdirs/m2676/data/teststands/hades/prodenv/ref/v1.2.1/generated/par/hit/V07647B/c1/am_HS1_lat_dlt/char_data-V07647B-am_HS1_lat_dlt-r001-20210609T073732Z-par_hit.yaml",
+        "available_files": [
+          "/global/cfs/cdirs/m2676/data/teststands/hades/prodenv/ref/v1.2.1/generated/par/hit/V07647B/c1/am_HS1_lat_dlt/char_data-V07647B-am_HS1_lat_dlt-r001-20210609T073732Z-par_hit.yaml"
+        ],
+        "file_selection": "first file in sorted order",
+        "measurement": "am_HS1_lat_dlt",
+        "energy_parameter": "cuspEmax_ctc_cal",
+        "parameters": {
+          "a": 0.3994572033994164,
+          "b": 0.0018308411270355268,
+          "c": 2.9197668495852327e-08
+        },
+        "fwhm_to_sigma": 2.355,
+        "expression": "sqrt(a + b*E + c*E**2) / 2.355",
+        "uncertainty_note": "Resolution parameters and window boundaries treated as fixed"
+      }
+    },
+    "ratio": {
+      "value": 403.09163157179734,
+      "error": 4.630539121928431,
+      "definition": "N60 / (N99 + N103)",
+      "uncertainty_method": "Poisson delta method; shared-sideband covariance included; fixed windows",
+      "denominator": 14722.0,
+      "denominator_error": 168.99112402726956,
+      "check_counts": false
+    }
+  },
+  "metadata": {
+    "source_position": {
+      "phi_in_deg": 0.0,
+      "r_in_mm": 0.0,
+      "z_in_mm": 200.0
+    },
+    "live_time_s": 21600,
+    "high_voltage_V": 3900
+  },
+  "fit_60": {
+    "parameters": {
+      "N60": {
+        "value": 6031681.441488849,
+        "error": null
+      },
+      "mu60": {
+        "value": 59.21339573668754,
+        "error": null
+      },
+      "sigma60": {
+        "value": 0.31188053088222717,
+        "error": null
+      },
+      "N60_tail": {
+        "value": 574710.4024566188,
+        "error": null
+      },
+      "tau60": {
+        "value": 1.7400275495657231,
+        "error": null
+      },
+      "B60": {
+        "value": 17117.215397396238,
+        "error": null
+      },
+      "S60": {
+        "value": 438967.7800204143,
+        "error": null
+      }
+    },
+    "parameter_order": [
+      "N60",
+      "mu60",
+      "sigma60",
+      "N60_tail",
+      "tau60",
+      "B60",
+      "S60"
+    ],
+    "fit_method": "pygama.math.binned_fitting.fit_binned / Least Squares",
+    "chi_square": 2678.5277906534516,
+    "p_value": 0.0,
+    "fwhm_reference": "60",
+    "fwhm_peaks": {
+      "60": {
+        "value": 0.7344225117320863,
+        "error": null
+      }
+    },
+    "covariance": [
+      [
+        23651776.62927323,
+        -0.7547032451784309,
+        0.4090202368853699,
+        159443910.5011003,
+        530.3732514576532,
+        -29278.263974071408,
+        -31119649.838522397
+      ],
+      [
+        -0.7547032451784309,
+        5.010827482412163e-08,
+        -1.9340542365085776e-08,
+        -6.269254500593154,
+        -2.1214649190100627e-05,
+        8.937262591099557e-05,
+        1.2309307047721423
+      ],
+      [
+        0.4090202368853699,
+        -1.9340542365085776e-08,
+        2.110170255086033e-08,
+        3.180540963075191,
+        1.0937265906358968e-05,
+        -0.001520243138931534,
+        -0.6255394952354087
+      ],
+      [
+        159443910.5011003,
+        -6.269254500593154,
+        3.180540963075191,
+        2037910492.3374484,
+        6236.292705188025,
+        -143800.3363465054,
+        -394283556.63230944
+      ],
+      [
+        530.3732514576532,
+        -2.1214649190100627e-05,
+        1.0937265906358968e-05,
+        6236.292705188025,
+        0.019509570555791816,
+        -0.4988896915729222,
+        -1207.1710082660932
+      ],
+      [
+        -29278.263974071408,
+        8.937262591099557e-05,
+        -0.001520243138931534,
+        -143800.3363465054,
+        -0.4988896915729222,
+        10021.072945296777,
+        18369.97323646273
+      ],
+      [
+        -31119649.838522397,
+        1.2309307047721423,
+        -0.6255394952354087,
+        -394283556.63230944,
+        -1207.1710082660932,
+        18369.97323646273,
+        76536116.3993536
+      ]
+    ],
+    "fit_range_keV": [
+      56.0,
+      62.0
+    ],
+    "fwhm": 0.7344225117320863,
+    "fwhm_error": null,
+    "deviance": 2833.6789301982217,
+    "ndof": 53,
+    "full_rank": false,
+    "at_bounds": false,
+    "active_mask": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "nfev": null,
+    "message": "pygama fit_binned: Least Squares; wrapper does not expose Minuit convergence status"
+  },
+  "fit_100": {
+    "parameters": {
+      "N99": {
+        "value": 7478.049219949362,
+        "error": 112.4323112456309
+      },
+      "mu99": {
+        "value": 98.75688997922869,
+        "error": 0.00537150466210079
+      },
+      "sigma99": {
+        "value": 0.3339507099065837,
+        "error": 0.004843450497571927
+      },
+      "N103": {
+        "value": 7489.35351716508,
+        "error": 106.86050161448793
+      },
+      "mu103": {
+        "value": 102.78377646402268,
+        "error": 0.005162970193929084
+      },
+      "sigma103": {
+        "value": 0.3327605641076878,
+        "error": 0.004523035619033083
+      },
+      "N101": {
+        "value": 681.1596762349235,
+        "error": 70.34575773243392
+      },
+      "mu101": {
+        "value": 100.8619325375164,
+        "error": 0.03756261961793683
+      },
+      "sigma101": {
+        "value": 0.34732388528597985,
+        "error": 0.03853627403960841
+      },
+      "B100": {
+        "value": 1378.8035326312668,
+        "error": 20.2666869748806
+      },
+      "S100": {
+        "value": 375.60081383706006,
+        "error": 16.974403833298766
+      }
+    },
+    "parameter_order": [
+      "N99",
+      "mu99",
+      "sigma99",
+      "N103",
+      "mu103",
+      "sigma103",
+      "N101",
+      "mu101",
+      "sigma101",
+      "B100",
+      "S100"
+    ],
+    "fit_method": "pygama.math.binned_fitting.fit_binned / Least Squares",
+    "chi_square": 147.23035365620368,
+    "p_value": 0.00864398438583368,
+    "fwhm_reference": "99",
+    "fwhm_peaks": {
+      "99": {
+        "value": 0.7863938107022215,
+        "error": 0.011405454100692327
+      },
+      "103": {
+        "value": 0.7835912315720653,
+        "error": 0.010650934736411486
+      },
+      "101": {
+        "value": 0.8178852315491311,
+        "error": 0.09074598883395069
+      }
+    },
+    "covariance": [
+      [
+        12641.024612085364,
+        -0.04275565150516274,
+        0.1869764933173765,
+        705.3964256296845,
+        -0.01634702022383592,
+        0.02435843073392384,
+        1067.4835494138981,
+        -0.03408313257748494,
+        0.3565404209639212,
+        -175.28934665475646,
+        -416.8229830563668
+      ],
+      [
+        -0.04275565150516274,
+        2.885451611031369e-05,
+        -1.4128698069053785e-06,
+        0.0047906423779981635,
+        4.4572766604517953e-07,
+        2.0949594395239367e-07,
+        -0.007414511116929015,
+        7.891516887307951e-07,
+        -3.4397800860766807e-06,
+        -0.008141024777738525,
+        0.011440415921706831
+      ],
+      [
+        0.1869764933173765,
+        -1.4128698069053785e-06,
+        2.345951383427828e-05,
+        0.025669704294899398,
+        -5.804210171888383e-07,
+        8.932847388106274e-07,
+        0.036288504847310894,
+        -2.792763382542788e-07,
+        1.0821825733263792e-05,
+        -0.006581941758280258,
+        -0.014663156252066564
+      ],
+      [
+        705.3964256296845,
+        0.0047906423779981635,
+        0.025669704294899398,
+        11419.166805341365,
+        -0.023715502750182155,
+        0.14636947787085108,
+        742.486679754834,
+        -0.05640812500925026,
+        0.2156989624101214,
+        -572.1002241380254,
+        129.490457163334
+      ],
+      [
+        -0.01634702022383592,
+        4.4572766604517953e-07,
+        -5.804210171888383e-07,
+        -0.023715502750182155,
+        2.6657426643861698e-05,
+        -1.594328175866384e-06,
+        -0.0009560367428053086,
+        1.5111656910271446e-06,
+        2.3773020379869723e-06,
+        -0.008314126253944959,
+        0.011314744701571067
+      ],
+      [
+        0.02435843073392384,
+        2.0949594395239367e-07,
+        8.932847388106274e-07,
+        0.14636947787085108,
+        -1.594328175866384e-06,
+        2.0458233366280194e-05,
+        0.021524053714451312,
+        -3.5440085250840026e-06,
+        3.1738096182197783e-06,
+        -0.021275977021513928,
+        0.005506431785404961
+      ],
+      [
+        1067.4835494138981,
+        -0.007414511116929015,
+        0.036288504847310894,
+        742.486679754834,
+        -0.0009560367428053086,
+        0.021524053714451312,
+        4948.525745251671,
+        -0.17055203767277488,
+        1.541461261262659,
+        -367.01658752954495,
+        -144.72136739233773
+      ],
+      [
+        -0.03408313257748494,
+        7.891516887307951e-07,
+        -2.792763382542788e-07,
+        -0.05640812500925026,
+        1.5111656910271446e-06,
+        -3.5440085250840026e-06,
+        -0.17055203767277488,
+        0.0014119947449093503,
+        -0.00017832171079232317,
+        0.01692524950184719,
+        0.0049304269957504195
+      ],
+      [
+        0.3565404209639212,
+        -3.4397800860766807e-06,
+        1.0821825733263792e-05,
+        0.2156989624101214,
+        2.3773020379869723e-06,
+        3.1738096182197783e-06,
+        1.541461261262659,
+        -0.00017832171079232317,
+        0.0014869968926703918,
+        -0.12677840438422217,
+        -0.05131089243630435
+      ],
+      [
+        -175.28934665475646,
+        -0.008141024777738525,
+        -0.006581941758280258,
+        -572.1002241380254,
+        -0.008314126253944959,
+        -0.021275977021513928,
+        -367.01658752954495,
+        0.01692524950184719,
+        -0.12677840438422217,
+        410.7386009843486,
+        -210.50966062141762
+      ],
+      [
+        -416.8229830563668,
+        0.011440415921706831,
+        -0.014663156252066564,
+        129.490457163334,
+        0.011314744701571067,
+        0.005506431785404961,
+        -144.72136739233773,
+        0.0049304269957504195,
+        -0.05131089243630435,
+        -210.50966062141762,
+        288.13038963151627
+      ]
+    ],
+    "fit_range_keV": [
+      95.0,
+      107.0
+    ],
+    "fwhm": 0.7863938107022215,
+    "fwhm_error": 0.011405454100692327,
+    "deviance": 147.76675829204805,
+    "ndof": 109,
+    "full_rank": true,
+    "at_bounds": false,
+    "active_mask": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "nfev": null,
+    "message": "pygama fit_binned: Least Squares; wrapper does not expose Minuit convergence status"
+  },
+  "counting_resolution": {
+    "file": "/global/cfs/cdirs/m2676/data/teststands/hades/prodenv/ref/v1.2.1/generated/par/hit/V07647B/c1/am_HS1_lat_dlt/char_data-V07647B-am_HS1_lat_dlt-r001-20210609T073732Z-par_hit.yaml",
+    "available_files": [
+      "/global/cfs/cdirs/m2676/data/teststands/hades/prodenv/ref/v1.2.1/generated/par/hit/V07647B/c1/am_HS1_lat_dlt/char_data-V07647B-am_HS1_lat_dlt-r001-20210609T073732Z-par_hit.yaml"
+    ],
+    "file_selection": "first file in sorted order",
+    "measurement": "am_HS1_lat_dlt",
+    "energy_parameter": "cuspEmax_ctc_cal",
+    "parameters": {
+      "a": 0.3994572033994164,
+      "b": 0.0018308411270355268,
+      "c": 2.9197668495852327e-08
+    },
+    "fwhm_to_sigma": 2.355,
+    "expression": "sqrt(a + b*E + c*E**2) / 2.355",
+    "uncertainty_note": "Resolution parameters and window boundaries treated as fixed"
+  },
+  "ratio_counting": {
+    "value": 403.09163157179734,
+    "error": 4.630539121928431,
+    "definition": "N60 / (N99 + N103)",
+    "uncertainty_method": "Poisson delta method; shared-sideband covariance included; fixed windows",
+    "denominator": 14722.0,
+    "denominator_error": 168.99112402726956,
+    "check_counts": false
+  },
+  "ratio": {
+    "value": 402.9878494905586,
+    "error": 4.309297268926188,
+    "definition": "N60 / (N99 + N103)",
+    "uncertainty_method": "Delta method; includes Cov(N99,N103); disjoint fit windows",
+    "check_fit": true
+  },
+  "DLF": {
+    "definition": "[N(30\u201345 keV) \u2212 scale*N(130\u2013145 keV)] / N60_net_counting",
+    "windows": {
+      "slow_pulse": {
+        "requested_range_keV": [
+          35.0,
+          40.0
+        ],
+        "actual_range_keV": [
+          35.0,
+          40.0
+        ],
+        "width_keV": 5.0,
+        "counts": 536245.0,
+        "error": 732.2875118421725
+      },
+      "background": {
+        "requested_range_keV": [
+          80.0,
+          85.0
+        ],
+        "actual_range_keV": [
+          80.0,
+          85.0
+        ],
+        "width_keV": 5.0,
+        "counts": 14962.0,
+        "error": 122.31925441237777
+      },
+      "slow_pulse_inner": {
+        "requested_range_keV": [
+          35.0,
+          40.0
+        ],
+        "actual_range_keV": [
+          35.0,
+          40.0
+        ],
+        "width_keV": 5.0,
+        "counts": 536245.0,
+        "error": 732.2875118421725
+      },
+      "background_alternative": {
+        "requested_range_keV": [
+          80.0,
+          85.0
+        ],
+        "actual_range_keV": [
+          80.0,
+          85.0
+        ],
+        "width_keV": 5.0,
+        "counts": 14962.0,
+        "error": 122.31925441237777
+      }
+    },
+    "background_scale": 1.0,
+    "SP_net": {
+      "value": 521283.0,
+      "error": 742.4331619748676
+    },
+    "N60_net": {
+      "value": 5934315.0,
+      "error": 2659.3125051411316
+    },
+    "ratio": {
+      "value": 0.0878421519585664,
+      "error": 0.00013115515866055828
+    },
+    "uncertainty_method": "Independent Poisson windows; delta method; fixed windows",
+    "check_counts": false
+  },
+  "status": "ok"
+}

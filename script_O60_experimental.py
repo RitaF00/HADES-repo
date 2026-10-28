@@ -70,6 +70,8 @@ names60 = ["N60", "mu60", "sigma60", "N60_tail", "tau60", "B60", "S60"]
 names100 = ["N99", "mu99", "sigma99", "N103", "mu103", "sigma103",
             "N101", "mu101", "sigma101", "B100", "S100"]
 
+QC_SELECTION = '~is_discharge & ((is_positive_polarity_candidate == 127) | (is_positive_polarity_candidate == 63)); is_low_cuspEmax ignored; no additional energy selection'
+
 def load_histogram(detector, run):
     path = (
         spectrum_dir
@@ -89,8 +91,14 @@ def load_histogram(detector, run):
                 bins = np.asarray(
                     spectrum["bins"], dtype=float
                 ).copy()
+                saved_selection = (
+                    str(spectrum["qc_selection"].item())
+                    if "qc_selection" in spectrum.files else None
+                )
 
             valid = (
+                saved_selection == QC_SELECTION
+                and
                 counts.ndim == 1
                 and bins.ndim == 1
                 and counts.size == histogram_bins.size - 1
@@ -155,6 +163,9 @@ def load_histogram(detector, run):
 
     counts_clean = np.zeros_like(counts)
 
+    total_events = 0
+    selected_events = 0
+
     # Read one file at a time; sum all files of the run.
     for index, filename in enumerate(files, start=1):
         print(
@@ -164,23 +175,28 @@ def load_histogram(detector, run):
 
         hit = lh5.read("hit", str(filename))
         energy = np.asarray(hit["cuspEmax_ctc_cal"].nda, dtype=float)
-        is_discharge = np.asarray(hit["is_discharge"].nda, dtype=bool)
-        is_positive = np.asarray(
-            hit["is_positive_polarity_candidate"].nda, dtype=bool
-        )
+        discharge_raw = np.asarray(hit["is_discharge"].nda)
+        positive_bits = np.asarray(hit["is_positive_polarity_candidate"].nda)
         if (energy.ndim != 1
-                or is_discharge.shape != energy.shape
-                or is_positive.shape != energy.shape):
+                or discharge_raw.shape != energy.shape
+                or positive_bits.shape != energy.shape):
             raise ValueError(f"Energy/QC flag shapes do not match: {filename}")
+        if not np.isin(discharge_raw, [0, 1]).all():
+            raise ValueError(f"is_discharge is not boolean: {filename}")
+        if (not np.issubdtype(positive_bits.dtype, np.integer)
+                or np.any(positive_bits < 0) or np.any(positive_bits > 255)):
+            raise ValueError(f"Invalid packed 8-bit QC field: {filename}")
 
-        finite = np.isfinite(energy)
-        mask = finite & (~is_discharge) & is_positive
-        partial_counts, _ = np.histogram(energy[finite], bins=histogram_bins)
-        partial_clean, _ = np.histogram(energy[mask], bins=histogram_bins)
+        is_discharge = discharge_raw.astype(bool)
+        mask = (~is_discharge) & ((positive_bits == 127) | (positive_bits == 63))
+        partial_counts = np.histogram(energy, bins=histogram_bins)[0]
+        partial_clean = np.histogram(energy[mask], bins=histogram_bins)[0]
         counts += partial_counts
         counts_clean += partial_clean
-        print(f"  QC selected: {mask.sum():,}/{energy.size:,}", flush=True)
-        del hit, energy, is_discharge, is_positive, finite, mask
+        total_events += energy.size
+        selected_events += int(mask.sum())
+        print(f"  QC selected (all energies): {mask.sum():,}/{energy.size:,}", flush=True)
+        del hit, energy, discharge_raw, positive_bits, is_discharge, mask
         del partial_counts, partial_clean
 
     path.parent.mkdir(parents=True, exist_ok=True)
@@ -192,7 +208,9 @@ def load_histogram(detector, run):
                 stream,
                 counts=counts,
                 counts_clean=counts_clean,
-                qc_selection="finite energy & ~is_discharge & is_positive_polarity_candidate",
+                qc_selection=QC_SELECTION,
+                total_events=total_events,
+                selected_events=selected_events,
                 bins=histogram_bins,
             )
 
@@ -201,7 +219,13 @@ def load_histogram(detector, run):
     finally:
         temporary.unlink(missing_ok=True)
 
-    print(f"Salvato: {path}", flush=True)
+    print(
+        f"Salvato: {path}\n"
+        f"Eventi totali: {total_events:,}\n"
+        f"Eventi selezionati (tutte le energie): {selected_events:,}\n"
+        f"Conteggi QC nei bin: {counts_clean.sum():,}",
+        flush=True,
+    )
 
     return counts_clean.astype(float), histogram_bins.copy()
 
@@ -730,7 +754,7 @@ def calculate_odlf(counts, bins, peak60):
     widths = np.diff(bins)
     windows = {}
     for name, low, high in [
-        ("slow_pulse", 30., 45.), ("background", 130., 145.),
+        ("slow_pulse", 35., 40.), ("background", 80., 85.),
         ("slow_pulse_inner", 35., 40.),
         ("background_alternative", 80., 85.),
     ]:
@@ -750,7 +774,7 @@ def calculate_odlf(counts, bins, peak60):
     sp = signal["counts"]-scale*background["counts"]
     variance = signal["counts"]+scale**2*background["counts"]
     result = dict(
-        definition="[N(30–45 keV) − scale*N(130–145 keV)] / N60_net_counting",
+        definition="[N(35–40 keV) − scale*N(80–85 keV)] / N60_net_counting",
         windows=windows, background_scale=float(scale),
         SP_net=dict(value=float(sp), error=float(np.sqrt(variance))),
         N60_net=None, ratio=dict(value=None, error=None),
@@ -835,7 +859,7 @@ def main():
             record = dict(detector=detector, run=run, version=version,
                           campaign=campaign, measurement=measure, errors=[],
                           qc_applied=True,
-                          qc_selection="finite energy & ~is_discharge & is_positive_polarity_candidate")
+                          qc_selection=QC_SELECTION)
             fits = {"60": None, "100": None}
             counts, bins = None, None
             record["counting_method"] = None
