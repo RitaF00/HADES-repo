@@ -6,7 +6,8 @@ Adaptation of legacy model; NOT an exact reproduction of legacy gauss_cdf.
 Gaussian and low-tail PDFs come from pygama.math.distributions.
 Areas are total Gaussian counts, not peak heights.
 Least Squares evaluates models at bin centers and excludes empty bins.
-Independent Gaussian sigmas and shared step height in 95–107 keV.
+Independent Gaussian sigmas; shared relative step S in 95–107 keV.
+B is the right continuum density; each step height is B*S.
 Bounds/initial values are adapted to the area parametrization.
 """
 from pathlib import Path
@@ -57,8 +58,8 @@ detectors = [
 
 
 
-fit_range60 = (56.0, 62.0)
-fit_range100 = (95.0, 107.0)
+fit_range60 = (57.0, 62.0)
+fit_range100 = (97.0, 105.0)
 histogram_bins = np.linspace(0, 3500, 35001)
 dpi = 300
 force_rebuild = False
@@ -453,16 +454,16 @@ def plot_counting_regions(counts, bins, counting, detector, run, meta):
     return fig
 
 
-def step_density(x, mu, sigma, height, xlo, xhi):
-    """Low-energy step S*Phi((mu-x)/sigma), using pygama.step.
+def step_density(x, mu, sigma, background, relative_step, xlo, xhi):
+    """Low-energy step B*S*Phi((mu-x)/sigma), in counts/keV.
 
-    pygama normalizes (1-erf) over the fit range; undo that
-    normalization so height retains units counts/keV.
+    B is the right continuum density and S is dimensionless.
+    xlo/xhi are retained for compatibility with the density interface.
     """
-    if height == 0:
-        return np.zeros_like(x, dtype=float)
-    area = height * float(np.diff(step_primitive(np.array([xlo, xhi]), mu, sigma))[0])
-    return area * pgf.step.get_pdf(np.asarray(x, float), xlo, xhi, mu, sigma, -1.0)
+    x = np.asarray(x, dtype=float)
+    return background * relative_step * 0.5 * erfc(
+        (x - mu) / (np.sqrt(2) * sigma)
+    )
 
 
 def density60(x, p, xlo, xhi):
@@ -471,7 +472,7 @@ def density60(x, p, xlo, xhi):
         "gaussian": n * pgf.gaussian.get_pdf(x, mu, sigma),
         # Positive tau in pygama.exgauss gives the LOW-energy tail.
         "tail": nt * pgf.exgauss.get_pdf(x, mu, sigma, tau),
-        "continuum": background + step_density(x, mu, sigma, step, xlo, xhi),
+        "continuum": background + step_density(x, mu, sigma, background, step, xlo, xhi),
     }
     out["total"] = sum(out.values())
     return out
@@ -483,8 +484,8 @@ def density100(x, p, xlo, xhi):
         "gaussian_99": n99 * pgf.gaussian.get_pdf(x, m99, s99),
         "gaussian_103": n103 * pgf.gaussian.get_pdf(x, m103, s103),
         "gaussian_101": n101 * pgf.gaussian.get_pdf(x, m101, s101),
-        "step_99": step_density(x, m99, s99, step, xlo, xhi),
-        "step_103": step_density(x, m103, s103, step, xlo, xhi),
+        "step_99": step_density(x, m99, s99, bg, step, xlo, xhi),
+        "step_103": step_density(x, m103, s103, bg, step, xlo, xhi),
         "background": np.full_like(x, bg),
     }
     out["total"] = sum(out.values())
@@ -495,7 +496,8 @@ def fit_region_pygama(counts, bins, region):
     """Modern pygama least squares with Poisson variances at bin centers.
 
     This is an adaptation of the legacy fit, not a bitwise reproduction.
-    Areas N are total Gaussian counts; B and S are counts/keV.
+    Areas N are total Gaussian counts; B is counts/keV and S is dimensionless.
+    Each step has height B*S; right continuum B, far-left B*(1+n_steps*S).
     Empty bins are excluded by pygama's Least Squares implementation.
     """
     counts, bins = np.asarray(counts, float), np.asarray(bins, float)
@@ -523,7 +525,7 @@ def fit_region_pygama(counts, bins, region):
         names = names60
         density = density60
         p0 = [area_guess(59.5, .3), 59.5, .3,
-              area_guess(59.5, .3)*.1, 1., background, background*.5]
+              area_guess(59.5, .3)*.1, 1., background, .5]
         limits = [(0., None), (58.8, 60.3), (.02, 1.5),
                   (0., None), (.02, 10.), (0., None), (0., None)]
         def model(x, N60, mu60, sigma60, N60_tail, tau60, B60, S60):
@@ -536,8 +538,8 @@ def fit_region_pygama(counts, bins, region):
         p0 = [area_guess(99., .5), 99., .5,
               area_guess(103., .5), 103., .5,
               area_guess(small_mu, .5)*.1, small_mu, .5,
-              background, background*.5]
-        # Bounds keep the three components identifiable. Shared step height.
+              background, .5]
+        # Bounds keep the components identifiable. Shared relative step S.
         limits = [(0., None), (98.5, 99.5), (.02, 1.5),
                   (0., None), (102.5, 103.5), (.02, 1.5),
                   (0., None), (100., 101.6), (.02, 1.5),
@@ -661,6 +663,7 @@ def fit_summary(result, names):
         "parameters": {name: {"value": float(v), "error": float(e)}
                        for name, v, e in zip(names, result["parameters"], result["errors"])},
         "parameter_order": names,
+        "continuum_parameterization": "B + B*S*sum(Phi((mu-E)/sigma)); B in counts/keV, S dimensionless",
         "fit_method": result["fit_method"],
         "chi_square": result["chi_square"],
         "p_value": result["p_value"],
@@ -737,7 +740,7 @@ def plot_two_regions(results, detector, run, meta, ratio):
 
 
 # ============================================================
-# SLOW PULSE OBSERVABLE: (30–45 minus scaled 130–145) / N60
+# SLOW PULSE OBSERVABLE: (35–40 minus scaled 80–85) / N60
 # ============================================================
 
 # ============================================================

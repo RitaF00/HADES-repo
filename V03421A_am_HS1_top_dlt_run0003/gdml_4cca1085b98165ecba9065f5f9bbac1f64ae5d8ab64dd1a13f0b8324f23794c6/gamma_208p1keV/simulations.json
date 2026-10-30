@@ -1,0 +1,20 @@
+{
+  "detector": "V03421A",
+  "measurement": "am_HS1_top_dlt",
+  "run": "run0003",
+  "peak": "gamma_208p1keV",
+  "energy_keV": 208.1,
+  "gdml_file": "/global/u2/r/ritaferi/HADES_DATA/V03421A_am_HS1_top_dlt_run0003.gdml",
+  "gdml_sha256": "4cca1085b98165ecba9065f5f9bbac1f64ae5d8ab64dd1a13f0b8324f23794c6",
+  "active": [
+    {
+      "file": "legacy_c0b431cfe33afcec3b7dd94d4da93c70c76fa93898d74ad72a15d90c9a667993.lh5",
+      "N_sim": 1000000,
+      "legacy_sha256": "c0b431cfe33afcec3b7dd94d4da93c70c76fa93898d74ad72a15d90c9a667993",
+      "original_file": "/global/u2/r/ritaferi/HADES_DATA/V03421A_am_HS1_top_dlt_run0003_gamma_208p1keV.lh5",
+      "geometry_provenance": "Same GDML assumed by user; not verified from legacy file"
+    }
+  ],
+  "history": [],
+  "N_sim_total": 1000000
+}
